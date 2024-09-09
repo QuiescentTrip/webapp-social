@@ -14,7 +14,7 @@ export default function Component(): JSX.Element {
     <div className="w-full max-w-[40%] mx-auto">
       <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
         <img
-          src="https://picsum.photos/200/300"
+          src="https://picsum.photos/1000/1000"
           alt="Post Image"
           width={600}
           height={400}
@@ -34,28 +34,6 @@ export default function Component(): JSX.Element {
               <div className="text-sm text-muted-foreground">2 hours ago</div>
             </div>
           </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <MoveHorizontalIcon className="w-4 h-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>
-                <BookmarkIcon className="w-4 h-4 mr-2" />
-                Save
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <StarIcon className="w-4 h-4 mr-2" />
-                Add to favorites
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <FileWarningIcon className="w-4 h-4 mr-2" />
-                Report
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
         </div>
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
