@@ -1,3 +1,6 @@
+using System.Text.Json;
+using Microsoft.Data.Sqlite;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -23,7 +26,7 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
+    var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
@@ -35,6 +38,39 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
+
+app.MapPost("/api/savestring", async (HttpContext context) =>
+{
+    using var reader = new StreamReader(context.Request.Body);
+    var requestBody = await reader.ReadToEndAsync();
+    var data = JsonSerializer.Deserialize<Dictionary<string, string>>(requestBody);
+
+    if (data != null && data.TryGetValue("input", out var input))
+    {
+        using (var connection = new SqliteConnection("Data Source=socialmedia.db"))
+        {
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText =
+            @"
+                INSERT INTO Inputs (Content, CreatedAt)
+                VALUES ($content, $createdAt)
+            ";
+            command.Parameters.AddWithValue("$content", input);
+            command.Parameters.AddWithValue("$createdAt", DateTime.UtcNow);
+
+            command.ExecuteNonQuery();
+        }
+
+        return Results.Ok(new { message = "Input saved successfully" });
+    }
+
+    return Results.BadRequest(new { message = "Invalid input" });
+})
+.WithName("saveString")
+.WithOpenApi();
+
 
 app.Run();
 
