@@ -19,7 +19,7 @@ Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bil
 - [ ] Profile
 
 ## Ressurser:
-- [Innstallere tailwind med aspnet](https://github.com/angeldev96/tailwind-aspdotnet/tree/master)
+- ~~[Innstallere tailwind med aspnet](https://github.com/angeldev96/tailwind-aspdotnet/tree/master)~~ Bruker ikke aspnet til frontend
 - [chadcn components](https://ui.shadcn.com/docs/components/accordion)
 - [Likt prosjekt](https://github.com/teddysmithdev/FinShark)
 - [Likt prosjekt, men noen år gammel med dotnet 6?](https://github.com/CodAffection/React-CRUD-with-Asp.Net-Core-Web-API)
