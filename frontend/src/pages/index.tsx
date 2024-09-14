@@ -20,6 +20,7 @@ export default function Home() {
         <Post />
         
         <hr className="border-gray-300 w-[50%] mx-auto" />
+        
         <Pagination>
   <PaginationContent>
     <PaginationItem>
