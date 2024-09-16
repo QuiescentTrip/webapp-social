@@ -1573,16 +1573,13 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving 
 2024-09-16 17:34:39.826 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.CreatePost (SocialMediaApi) in 42.3453ms
 2024-09-16 17:34:39.826 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.CreatePost (SocialMediaApi)'
 2024-09-16 17:34:39.826 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Post - 500 null text/plain; charset=utf-8 44.6394ms
-2024-09-16 17:34:42.706 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-2024-09-16 17:34:42.795 +02:00 [ERR] Hosting failed to start
-System.IO.IOException: Failed to bind to address http://127.0.0.1:5193: address already in use.
- ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
- ---> System.Net.Sockets.SocketException (98): Address already in use
-   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
-   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
-   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
-   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
-   --- End of inner exception stack trace ---
+2024-09-16 17:37:42.862 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-16 17:37:42.864 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 1.9028ms
+2024-09-16 17:37:42.972 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-16 17:37:42.972 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.278ms
+2024-09-16 17:37:43.134 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-16 17:37:43.140 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.59ms
+tack trace ---
    at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
    at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
    at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
