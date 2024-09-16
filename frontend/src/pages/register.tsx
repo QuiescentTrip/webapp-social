@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import Head from "next/head";
 import Footer from "~/components/footer";
 import Navbar from "~/components/navbar";

@@ -18,9 +18,9 @@ namespace SocialMediaApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePost([FromBody] Post post)
         {
-            if (post == null)
+            if (!ModelState.IsValid)
             {
-                return BadRequest("Post data is null");
+                return BadRequest(ModelState);
             }
 
             post.Created = DateTime.UtcNow;
@@ -28,12 +28,23 @@ namespace SocialMediaApi.Controllers
 
             if (result)
             {
-                return CreatedAtAction(nameof(CreatePost), new { id = post.Id }, post);
+                return CreatedAtAction(nameof(GetPost), new { id = post.Id }, post);
             }
             else
             {
                 return StatusCode(500, "An error occurred while creating the post");
             }
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPost(int id)
+        {
+            var post = await _postRepository.GetPostById(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+            return Ok(post);
         }
     }
 }

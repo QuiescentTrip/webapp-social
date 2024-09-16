@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import Head from "next/head";
 import Footer from "~/components/footer";
 import Navbar from "~/components/navbar";
@@ -53,7 +52,7 @@ export default function Login() {
 
 					<div className="w-full max-w-md p-8 rounded-lg shadow-2xl border-2 border-secondary dark:border-primary dark:bg-secondary dark:border">
 
-						<h2 className="text-2xl font-semibold text-center text-gray-700 dark:text-white">Register</h2>
+						<h2 className="text-2xl font-semibold text-center text-gray-700 dark:text-white">Login</h2>
 
 							<LoginForm formData={{email: formData.email, password: formData.password}} onChange={handleChange} sendForm={sendForm}/>
 
