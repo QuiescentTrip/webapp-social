@@ -3,7 +3,7 @@ Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bil
 
 ## How to run
 - Først clone
-- Front end kjøres med `npm run dev`
+- Front end kjøres med `(cd .\frontend\) npm run dev`
 - Backend kjøres med `dotnet watch run` - tilgang til swagger
 - Må ha sql serveren oppe.
 
