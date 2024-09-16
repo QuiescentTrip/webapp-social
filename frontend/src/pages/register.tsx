@@ -5,7 +5,7 @@ import Navbar from "~/components/navbar";
 import { Button } from "~/components/ui/button"
 import { useState } from "react";
 
-export default function Login() {
+export default function Register() {
 
 	// formdata som skal sendes til backend
 	const [formData, setFormData] = useState({
@@ -55,7 +55,7 @@ export default function Login() {
 
 						<h2 className="text-2xl font-semibold text-center text-gray-700 dark:text-white">Register</h2>
 
-							<LoginForm formData={{email: formData.email, password: formData.password}} onChange={handleChange} sendForm={sendForm}/>
+							<RegisterForm formData={formData} onChange={handleChange} sendForm={sendForm}/>
 
 					</div>
 				</div>
@@ -99,25 +99,32 @@ const TextInput: React.FC<TextInput> = ({ id, type, label, value, onChange }) =>
   );
 };
 
-const LoginForm = ({ formData, onChange, sendForm }:
-				   { formData:
-						{
-							email: string;
-							password: string 
-						};
-					onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-					sendForm: (event: React.FormEvent) => void }) => (
+const RegisterForm = ({ formData, onChange, sendForm }: 
+					  { formData: 
+							{ 
+								email: string;
+								name: string;
+								username: string; 
+								password: string; 
+								repassword: string
+							}; 
+						onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+						sendForm: (event: React.FormEvent) => void }) => (
 
 				<div>
 
                 <form className="mt-8 space-y-6">
 
 					<TextInput id="email" type="email" label="Email" value={formData.email} onChange={onChange} />
+					<TextInput id="name" type="name" label="Full name" value={formData.name} onChange={onChange} />
+					<TextInput id="username" type="username" label="Username" value={formData.username} onChange={onChange} />
 					<TextInput id="password" type="password" label="Password" value={formData.password} onChange={onChange} />
+					<TextInput id="repassword" type="password" label="Re-enter password" value={formData.repassword} onChange={onChange} />
 
-                  <Button className="w-full bg-gray-700 dark:bg-primary" onClick={sendForm}>Login</Button>
+                  <Button className="w-full bg-gray-700 dark:bg-primary" onClick={sendForm}>Register</Button>
 
                 </form>
               </div>
 
 );
+
