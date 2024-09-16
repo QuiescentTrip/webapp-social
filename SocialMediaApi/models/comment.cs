@@ -1,10 +1,15 @@
 using System;
 
-public class Comment
+namespace SocialMediaApi.Models
 {
-    public int Id { get; set; }
-    public string Content { get; set; }
-    public int PostId { get; set; }
-    public Post Post { get; set; }
-    public DateTime Created { get; set; }
+    public class Comment
+    {
+        public int Id { get; set; }
+        public required string Content { get; set; }
+        public int PostId { get; set; }
+        public required Post Post { get; set; }
+        public DateTime Created { get; set; }
+        public string? UserId { get; set; }
+        public ApplicationUser? User { get; set; }
+    }
 }

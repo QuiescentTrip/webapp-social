@@ -1,12 +1,17 @@
 using System;
 using System.Collections.Generic;
 
-public class Post
+namespace SocialMediaApi.Models
 {
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public string ImageUrl { get; set; }
-    public int Likes { get; set; }
-    public DateTime Created { get; set; }
-    public List<Comment> Comments { get; set; } = new List<Comment>();
+    public class Post
+    {
+        public int Id { get; set; }
+        public required string Title { get; set; }
+        public required string ImageUrl { get; set; }
+        public int Likes { get; set; }
+        public DateTime Created { get; set; }
+        public string? UserId { get; set; }
+        public ApplicationUser? User { get; set; }
+        public List<Comment> Comments { get; set; } = new List<Comment>();
+    }
 }
