@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import type { Post as PostType } from "~/types/post";
 
 export default function Home() {
+  const [page, setPage] = useState<number>(1);
   const [posts, setPosts] = useState<PostType[]>([]);
   useEffect(() => {
     getAllPosts()
@@ -33,17 +34,19 @@ export default function Home() {
           ))}
         <Pagination>
           <PaginationContent>
+            {page !== 1 && (
+              <PaginationItem>
+                <PaginationPrevious href="#" onClick={() => setPage(page - 1)}/>
+              </PaginationItem>
+            )}
             <PaginationItem>
-              <PaginationPrevious href="#" />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href="#">1</PaginationLink>
+              <PaginationLink href="#">{page}</PaginationLink>
             </PaginationItem>
             <PaginationItem>
               <PaginationEllipsis />
             </PaginationItem>
             <PaginationItem>
-              <PaginationNext href="#" />
+              <PaginationNext href="#" onClick={() => setPage(page + 1)}/>
             </PaginationItem>
           </PaginationContent>
         </Pagination>

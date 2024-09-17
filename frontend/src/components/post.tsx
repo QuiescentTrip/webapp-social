@@ -2,7 +2,7 @@
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar"
 import { Button } from "./ui/button"
 import Comment from "./ui/comment"
-import React from "react"
+import React, { useState } from "react"
 import { type SVGProps } from 'react';
 
 interface ComponentProps {
@@ -10,7 +10,17 @@ interface ComponentProps {
   imageUrl: string;
 }
 
-const exampleComments = [
+interface CommentData {
+  avatarSrc: string;
+  avatarFallback: string;
+  name: string;
+  content: string;
+}
+
+//todo: get loggedin from backend
+const loggedin = true;
+
+const exampleComments: CommentData[] = [
   {
     avatarSrc: "https://picsum.photos/250/250",
     avatarFallback: "AC",
@@ -32,6 +42,8 @@ const exampleComments = [
 ]
 
 export default function Component({ likes, imageUrl }: ComponentProps): JSX.Element {
+  const [commentText, setCommentText] = useState<string>("");
+
   return (
     <div className="w-full 2xl:max-w-[40%] lg:max-w-[60%] max-w-[80%] mx-auto outline outline-1 outline-gray-300 rounded-xl">
       <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
@@ -57,27 +69,57 @@ export default function Component({ likes, imageUrl }: ComponentProps): JSX.Elem
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon">
               <HeartIcon className="w-4 h-4" />
               <span className="sr-only">Like</span>
             </Button>
-            <Button variant="ghost" size="icon">
+            <Button
+              variant="ghost"
+              size="icon"
+            >
               <MessageCircleIcon className="w-4 h-4" />
               <span className="sr-only">Comment</span>
             </Button>
           </div>
           <div className="text-sm font-medium">
-            <span className="text-primary">{likes}</span> likes
+            <span className="text-primary">{likes}</span> {likes === 1 ? "like" : "likes"}
           </div>
         </div>
-        <div className="space-y-2">
+        {loggedin && (
+          <CommentInput commentText={commentText} setCommentText={setCommentText} />
+        )}
+            
+        </div>
+        <div className="space-y-2 mt-4">
           {exampleComments.map((comment, index) => (
             <Comment key={index} {...comment} />
           ))}   
         </div>
       </div>
+      
+    </div>
+  )
+}
+
+function CommentInput({ commentText, setCommentText }: { commentText: string; setCommentText: (text: string) => void }): JSX.Element {
+  return (
+    <div className="flex focus-within:ring-2 focus-within:ring-primary focus-within:ring-opacity-50 rounded-md">
+      <input
+        type="text"
+        placeholder="Write a comment..."
+        value={commentText}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCommentText(e.target.value)}
+        className="flex-grow px-2 py-1 border rounded-l-md focus:outline-none"
+      />
+      <button
+        type="submit"
+        className="px-4 py-1 bg-primary text-white rounded-r-md focus:outline-none"
+      >
+        Post
+      </button>
     </div>
   )
 }
