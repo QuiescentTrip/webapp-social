@@ -4,6 +4,6 @@ namespace SocialMediaApi.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        // Add any additional properties you want for your user
+        public string? Name { get; set; }  // Make it nullable
     }
 }
