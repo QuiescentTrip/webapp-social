@@ -1,19 +1,42 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/1TGqjuhGPnB
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+/* eslint-disable @next/next/no-img-element */
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar"
 import { Button } from "./ui/button"
-import Link from "next/link"
+import Comment from "./ui/comment"
 import React from "react"
+import { type SVGProps } from 'react';
 
-export default function Component(): JSX.Element {
+interface ComponentProps {
+  likes: number;
+  imageUrl: string;
+}
+
+const exampleComments = [
+  {
+    avatarSrc: "https://picsum.photos/250/250",
+    avatarFallback: "AC",
+    name: "john",
+    content: "Wow, this photo is absolutely stunning! 😍✨",
+  },
+  {
+    avatarSrc: "https://picsum.photos/250/250",
+    avatarFallback: "AC",
+    name: "amelia",
+    content: "This post just made my day! 😃👍",
+  },
+  {
+    avatarSrc: "https://picsum.photos/250/250",
+    avatarFallback: "AC", 
+    name: "jane",
+    content: "This is a beautiful photo! 🌸🌟",
+  }
+]
+
+export default function Component({ likes, imageUrl }: ComponentProps): JSX.Element {
   return (
-    <div className="w-full max-w-[40%] mx-auto">
+    <div className="w-full 2xl:max-w-[40%] lg:max-w-[60%] max-w-[80%] mx-auto outline outline-1 outline-gray-300 rounded-xl">
       <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
         <img
-          src="https://picsum.photos/1000/1000"
+          src={imageUrl}
           alt="Post Image"
           width={600}
           height={400}
@@ -46,57 +69,20 @@ export default function Component(): JSX.Element {
             </Button>
           </div>
           <div className="text-sm font-medium">
-            <span className="text-primary">1,234</span> likes
+            <span className="text-primary">{likes}</span> likes
           </div>
         </div>
         <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Avatar>
-              <AvatarImage src="/placeholder-user.jpg" alt="@shadcn" />
-              <AvatarFallback>AC</AvatarFallback>
-            </Avatar>
-            <div>
-              <Link href="#" className="font-medium" prefetch={false}>
-                john
-              </Link>
-              Wow, this photo is absolutely stunning! 😍✨
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <Avatar>
-              <AvatarImage src="/placeholder-user.jpg" alt="@shadcn" />
-              <AvatarFallback>AC</AvatarFallback>
-            </Avatar>
-            <div>
-              <Link href="#" className="font-medium" prefetch={false}>
-                amelia
-              </Link>
-              This post just made my day! 😃👍
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <Avatar>
-              <AvatarImage src="/placeholder-user.jpg" alt="@shadcn" />
-              <AvatarFallback>AC</AvatarFallback>
-            </Avatar>
-            <div>
-              <Link href="#" className="font-medium" prefetch={false}>
-                emily
-              </Link>
-              I love the colors in this photo! 🌈
-            </div>
-          </div>
+          {exampleComments.map((comment, index) => (
+            <Comment key={index} {...comment} />
+          ))}   
         </div>
       </div>
     </div>
   )
 }
 
-interface IconProps extends React.SVGProps<SVGSVGElement> {}
-
-
-
-function HeartIcon(props: IconProps): JSX.Element {
+function HeartIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       {...props}
@@ -115,7 +101,7 @@ function HeartIcon(props: IconProps): JSX.Element {
   )
 }
 
-function MessageCircleIcon(props: IconProps): JSX.Element {
+function MessageCircleIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
       {...props}
@@ -133,4 +119,3 @@ function MessageCircleIcon(props: IconProps): JSX.Element {
     </svg>
   )
 }
-

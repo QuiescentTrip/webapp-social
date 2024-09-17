@@ -50,6 +50,7 @@ namespace SocialMediaApi.DAL
             }
             catch (Exception e)
             {
+                Console.WriteLine($"{e}");
                 _logger.LogError($"Error in CreatePost: {e.Message}");
                 return false;
             }

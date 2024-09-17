@@ -30,7 +30,7 @@ public static class DBInit
             {
                 user = new ApplicationUser
                 {
-                    UserName = "example@example.com",
+                    UserName = "example",
                     Email = "example@example.com"
                 };
                 await userManager.CreateAsync(user, "ExamplePassword123!");
@@ -39,7 +39,7 @@ public static class DBInit
             var post = new Post
             {
                 Title = "Example Post",
-                ImageUrl = "https://example.com/image.jpg",
+                ImageUrl = "https://picsum.photos/1000/1000",
                 Likes = 0,
                 Created = DateTime.UtcNow,
                 UserId = user.Id

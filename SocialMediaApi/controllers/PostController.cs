@@ -46,5 +46,12 @@ namespace SocialMediaApi.Controllers
             }
             return Ok(post);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllPosts()
+        {
+            var posts = await _postRepository.GetAllPosts();
+            return Ok(posts);
+        }
     }
 }
