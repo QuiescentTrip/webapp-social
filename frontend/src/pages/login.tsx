@@ -53,7 +53,9 @@ export default function Login() {
                             description: message,
                         });
                     }
-                } catch(error) {
+                } 
+				// todo: make it so wrong username or password does not rely on try catch
+				catch(error) {
                     toast({
                         variant: "destructive",
                         title: "Login failed",
