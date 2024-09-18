@@ -30,3 +30,7 @@ export interface Comment {
   created: string;
   userId: string;
 }
+export interface LoginCredentials {
+  email: string;
+  password: string;
+}

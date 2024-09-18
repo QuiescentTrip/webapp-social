@@ -1,0 +1,688 @@
+2024-09-17 19:36:59.002 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-09-17 19:36:59.618 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-17 19:36:59.626 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-17 19:36:59.637 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-17 19:36:59.647 +02:00 [INF] Applying migration '20240916152335_InitialCreate'.
+2024-09-17 19:36:59.713 +02:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_AspNetRoles" PRIMARY KEY,
+    "Name" TEXT NULL,
+    "NormalizedName" TEXT NULL,
+    "ConcurrencyStamp" TEXT NULL
+);
+2024-09-17 19:39:27.505 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-17 19:39:27.536 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-17 19:39:27.542 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-17 19:39:27.551 +02:00 [INF] Applying migration '20240916152335_InitialCreate'.
+2024-09-17 19:39:27.603 +02:00 [ERR] Failed executing DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_AspNetRoles" PRIMARY KEY,
+    "Name" TEXT NULL,
+    "NormalizedName" TEXT NULL,
+    "ConcurrencyStamp" TEXT NULL
+);
+2024-09-17 19:39:41.884 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-17 19:39:41.936 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-17 19:39:48.632 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-17 19:39:48.664 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-17 19:39:48.670 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-17 19:39:48.679 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-09-17 19:39:56.281 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-09-17 19:39:56.713 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-17 19:39:56.717 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-17 19:39:56.723 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-17 19:39:56.732 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-09-17 19:39:56.844 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2024-09-17 19:39:56.973 +02:00 [INF] Now listening on: http://localhost:5193
+2024-09-17 19:39:56.974 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-17 19:39:56.975 +02:00 [INF] Hosting environment: Development
+2024-09-17 19:39:56.975 +02:00 [INF] Content root path: /home/quiescent/Documents/webapp-social/SocialMediaApi
+2024-09-17 19:39:57.484 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:39:57.484 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:39:57.505 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-09-17 19:39:57.511 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:39:57.511 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:39:57.514 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 31.0446ms
+2024-09-17 19:39:57.514 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 31.0478ms
+2024-09-17 19:39:57.518 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:39:57.523 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:39:57.524 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:39:57.531 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:39:57.631 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:39:57.678 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:39:57.728 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:39:57.729 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:39:57.729 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:39:57.729 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:39:57.731 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 195.7827ms
+2024-09-17 19:39:57.731 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:39:57.733 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 215.4862ms
+2024-09-17 19:39:57.775 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:39:57.775 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:39:57.776 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 46.7912ms
+2024-09-17 19:39:57.776 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:39:57.776 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 48.4312ms
+2024-09-17 19:40:58.212 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:40:58.213 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:40:58.213 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 1.144ms
+2024-09-17 19:40:58.218 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:40:58.219 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:40:58.219 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:40:58.219 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:40:58.223 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:40:58.224 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:40:58.225 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 5.5069ms
+2024-09-17 19:40:58.225 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:40:58.225 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 6.588ms
+2024-09-17 19:40:58.225 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:40:58.225 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:40:58.225 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:40:58.226 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:40:58.227 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:40:58.228 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:40:58.228 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 2.2139ms
+2024-09-17 19:40:58.228 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:40:58.228 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.9608ms
+2024-09-17 19:41:48.224 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:41:48.225 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:41:48.225 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.6851ms
+2024-09-17 19:41:48.230 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:41:48.230 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:41:48.230 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:41:48.230 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:41:48.231 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:41:48.232 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:41:48.232 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.6263ms
+2024-09-17 19:41:48.232 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:41:48.232 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.4046ms
+2024-09-17 19:41:48.233 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:41:48.233 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:41:48.233 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:41:48.233 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:41:48.234 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:41:48.235 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:41:48.235 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.9716ms
+2024-09-17 19:41:48.235 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:41:48.235 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.705ms
+2024-09-17 19:44:38.705 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:44:38.705 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:44:38.705 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.4237ms
+2024-09-17 19:44:38.711 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:44:38.711 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:44:38.711 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:44:38.711 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:44:38.712 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:44:38.712 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:44:38.713 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.4954ms
+2024-09-17 19:44:38.713 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:44:38.713 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.0706ms
+2024-09-17 19:44:38.713 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:44:38.714 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:44:38.714 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:44:38.714 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:44:38.715 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:44:38.715 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:44:38.716 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.6579ms
+2024-09-17 19:44:38.716 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:44:38.716 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.3018ms
+2024-09-17 19:50:17.555 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:50:17.555 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:17.555 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.5156ms
+2024-09-17 19:50:17.562 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:50:17.562 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:17.562 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:17.562 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:50:17.564 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:50:17.564 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:50:17.564 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.8461ms
+2024-09-17 19:50:17.564 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:17.565 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.4898ms
+2024-09-17 19:50:17.565 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:50:17.566 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:17.566 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:17.566 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:50:17.567 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:50:17.568 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:50:17.568 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.7778ms
+2024-09-17 19:50:17.568 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:17.568 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.7331ms
+2024-09-17 19:50:45.728 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:50:45.728 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:45.728 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.3395ms
+2024-09-17 19:50:45.731 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:50:45.731 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:50:45.731 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:45.731 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:45.731 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:45.731 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.368ms
+2024-09-17 19:50:45.731 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:50:45.732 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:50:45.733 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:50:45.733 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.568ms
+2024-09-17 19:50:45.733 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:45.733 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.2429ms
+2024-09-17 19:50:45.735 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:50:45.735 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:45.735 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:45.735 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:50:45.736 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:50:45.736 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:50:45.736 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.3258ms
+2024-09-17 19:50:45.736 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:45.736 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.8632ms
+2024-09-17 19:50:53.654 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:50:53.655 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:53.655 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.5041ms
+2024-09-17 19:50:53.657 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:50:53.657 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:53.657 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:50:53.657 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.3611ms
+2024-09-17 19:50:53.658 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:53.658 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:53.658 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:50:53.659 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:50:53.659 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:50:53.659 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.4599ms
+2024-09-17 19:50:53.659 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:53.659 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.987ms
+2024-09-17 19:50:53.662 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:50:53.663 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:50:53.663 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:53.663 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:50:53.664 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:50:53.664 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:50:53.664 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.4385ms
+2024-09-17 19:50:53.664 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:50:53.664 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.0554ms
+2024-09-17 19:53:02.468 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:53:02.468 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:53:02.468 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.3546ms
+2024-09-17 19:53:02.475 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:53:02.476 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:53:02.476 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:02.476 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:53:02.477 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:53:02.477 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:53:02.477 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.4765ms
+2024-09-17 19:53:02.477 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:02.478 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.2513ms
+2024-09-17 19:53:02.478 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:53:02.478 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:53:02.478 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:02.478 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:53:02.479 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:53:02.479 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:53:02.480 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.3298ms
+2024-09-17 19:53:02.480 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:02.480 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.8413ms
+2024-09-17 19:53:40.593 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:53:40.594 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:53:40.594 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.477ms
+2024-09-17 19:53:40.599 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:53:40.599 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:53:40.600 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:40.600 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:53:40.600 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:53:40.601 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:53:40.601 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.1025ms
+2024-09-17 19:53:40.601 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:40.601 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.7235ms
+2024-09-17 19:53:40.601 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:53:40.601 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:53:40.601 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:40.602 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:53:40.603 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:53:40.603 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:53:40.603 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.2285ms
+2024-09-17 19:53:40.603 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:40.603 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.2476ms
+2024-09-17 19:53:54.505 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:53:54.505 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:53:54.506 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.6434ms
+2024-09-17 19:53:54.515 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:53:54.516 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:53:54.516 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:54.516 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:53:54.518 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:53:54.518 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:53:54.518 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 2.3425ms
+2024-09-17 19:53:54.518 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:54.519 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 3.4766ms
+2024-09-17 19:53:54.519 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:53:54.519 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:53:54.519 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:54.519 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:53:54.520 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:53:54.521 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:53:54.521 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.6831ms
+2024-09-17 19:53:54.521 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:53:54.521 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.2739ms
+2024-09-17 19:54:03.153 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:54:03.154 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:54:03.154 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.6992ms
+2024-09-17 19:54:03.160 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:54:03.160 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:54:03.160 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:54:03.160 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:54:03.161 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:54:03.161 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:54:03.161 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 0.9968ms
+2024-09-17 19:54:03.161 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:54:03.162 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.5107ms
+2024-09-17 19:54:03.162 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:54:03.162 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:54:03.162 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:54:03.162 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:54:03.163 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:54:03.163 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:54:03.163 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.0659ms
+2024-09-17 19:54:03.163 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:54:03.163 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.5199ms
+2024-09-17 19:54:42.444 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:54:42.444 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:54:42.444 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.4135ms
+2024-09-17 19:54:42.450 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:54:42.450 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:54:42.450 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:54:42.450 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:54:42.451 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:54:42.451 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:54:42.451 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.4355ms
+2024-09-17 19:54:42.451 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:54:42.452 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.8682ms
+2024-09-17 19:54:42.452 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:54:42.452 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:54:42.452 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:54:42.452 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:54:42.453 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:54:42.453 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:54:42.453 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.2345ms
+2024-09-17 19:54:42.453 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:54:42.453 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.6477ms
+2024-09-17 19:57:08.524 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:57:08.524 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:57:08.524 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.2681ms
+2024-09-17 19:57:08.527 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:57:08.527 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:57:08.527 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:57:08.527 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:57:08.527 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.579ms
+2024-09-17 19:57:08.527 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:57:08.527 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:57:08.528 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:57:08.529 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:57:08.529 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.4547ms
+2024-09-17 19:57:08.529 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:57:08.529 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.9031ms
+2024-09-17 19:57:08.530 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:57:08.530 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:57:08.530 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:57:08.530 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:57:08.531 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:57:08.531 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:57:08.532 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.1074ms
+2024-09-17 19:57:08.532 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:57:08.532 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.5721ms
+2024-09-17 19:58:02.405 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:58:02.405 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:58:02.405 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:02.405 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:02.406 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.2424ms
+2024-09-17 19:58:02.406 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.321ms
+2024-09-17 19:58:02.410 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:02.411 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:02.411 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:02.411 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:02.412 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:02.412 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:02.413 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.6017ms
+2024-09-17 19:58:02.413 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:02.413 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.3262ms
+2024-09-17 19:58:02.413 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:02.413 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:02.413 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:02.414 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:02.415 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:02.415 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:02.415 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.558ms
+2024-09-17 19:58:02.415 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:02.415 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.0861ms
+2024-09-17 19:58:02.416 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:02.416 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:02.416 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:02.416 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:02.418 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:02.418 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:02.418 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.5989ms
+2024-09-17 19:58:02.418 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:02.418 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.3396ms
+2024-09-17 19:58:02.419 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:02.419 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:02.419 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:02.419 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:02.420 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:02.420 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:02.421 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.6092ms
+2024-09-17 19:58:02.421 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:02.421 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.1247ms
+2024-09-17 19:58:19.568 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:58:19.568 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:58:19.568 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:19.568 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:19.568 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.3162ms
+2024-09-17 19:58:19.568 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.3203ms
+2024-09-17 19:58:19.571 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:19.571 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:19.572 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:19.572 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:19.573 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:19.573 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:19.573 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.3742ms
+2024-09-17 19:58:19.573 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:19.573 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.887ms
+2024-09-17 19:58:19.573 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:19.574 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:19.574 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:19.574 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:19.575 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:19.575 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:19.575 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.5566ms
+2024-09-17 19:58:19.575 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:19.575 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.0314ms
+2024-09-17 19:58:22.124 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:22.125 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:22.125 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:22.125 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:22.126 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:22.126 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:22.126 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.1795ms
+2024-09-17 19:58:22.126 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:22.126 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.8638ms
+2024-09-17 19:58:22.132 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:22.133 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:22.133 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:22.133 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:22.133 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:22.133 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:22.134 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 0.8539ms
+2024-09-17 19:58:22.134 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:22.134 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.2105ms
+2024-09-17 19:58:35.910 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 19:58:35.910 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:35.910 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.382ms
+2024-09-17 19:58:35.915 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:35.915 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:35.915 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:35.915 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:35.916 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:35.917 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:35.917 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.2812ms
+2024-09-17 19:58:35.917 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:35.917 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.9313ms
+2024-09-17 19:58:35.959 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 19:58:35.960 +02:00 [INF] CORS policy execution successful.
+2024-09-17 19:58:35.960 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:35.960 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 19:58:35.960 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 19:58:35.961 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 19:58:35.961 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.1822ms
+2024-09-17 19:58:35.961 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 19:58:35.961 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.648ms
+2024-09-17 20:00:14.083 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 20:00:14.083 +02:00 [INF] CORS policy execution successful.
+2024-09-17 20:00:14.083 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.4765ms
+2024-09-17 20:00:14.086 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 20:00:14.087 +02:00 [INF] CORS policy execution successful.
+2024-09-17 20:00:14.087 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:14.087 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 20:00:14.088 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 20:00:14.088 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 20:00:14.088 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.5722ms
+2024-09-17 20:00:14.089 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:14.089 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.1389ms
+2024-09-17 20:00:14.115 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 20:00:14.115 +02:00 [INF] CORS policy execution successful.
+2024-09-17 20:00:14.115 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:14.116 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 20:00:14.116 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 20:00:14.117 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 20:00:14.117 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.3546ms
+2024-09-17 20:00:14.117 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:14.117 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.9959ms
+2024-09-17 20:00:23.803 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 20:00:23.804 +02:00 [INF] CORS policy execution successful.
+2024-09-17 20:00:23.804 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.323ms
+2024-09-17 20:00:23.808 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 20:00:23.808 +02:00 [INF] CORS policy execution successful.
+2024-09-17 20:00:23.809 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:23.809 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 20:00:23.810 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 20:00:23.810 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 20:00:23.810 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.242ms
+2024-09-17 20:00:23.810 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:23.810 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.2634ms
+2024-09-17 20:00:23.847 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 20:00:23.848 +02:00 [INF] CORS policy execution successful.
+2024-09-17 20:00:23.848 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:23.849 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 20:00:23.849 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 20:00:23.850 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 20:00:23.850 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.0724ms
+2024-09-17 20:00:23.850 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:23.850 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.3636ms
+2024-09-17 20:00:44.953 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-17 20:00:44.953 +02:00 [INF] CORS policy execution successful.
+2024-09-17 20:00:44.953 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.2745ms
+2024-09-17 20:00:44.957 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 20:00:44.958 +02:00 [INF] CORS policy execution successful.
+2024-09-17 20:00:44.958 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:44.958 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 20:00:44.958 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 20:00:44.959 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 20:00:44.959 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.0999ms
+2024-09-17 20:00:44.959 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:44.959 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.6973ms
+2024-09-17 20:00:44.971 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-17 20:00:44.972 +02:00 [INF] CORS policy execution successful.
+2024-09-17 20:00:44.972 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:44.972 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-17 20:00:44.972 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-17 20:00:44.973 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-17 20:00:44.973 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 0.9335ms
+2024-09-17 20:00:44.973 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-17 20:00:44.973 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.35ms

@@ -1,0 +1,1441 @@
+2024-09-18 12:54:38.032 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-09-18 12:54:38.470 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 12:54:38.475 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 12:54:38.481 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-18 12:54:38.490 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-09-18 12:54:38.599 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2024-09-18 12:54:38.690 +02:00 [INF] Now listening on: http://localhost:5193
+2024-09-18 12:54:38.691 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-18 12:54:38.692 +02:00 [INF] Hosting environment: Development
+2024-09-18 12:54:38.692 +02:00 [INF] Content root path: /home/quiescent/Documents/webapp-social/SocialMediaApi
+2024-09-18 12:56:12.652 +02:00 [INF] Application is shutting down...
+2024-09-18 12:56:35.157 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-09-18 12:56:35.574 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 12:56:35.578 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 12:56:35.584 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-18 12:56:35.593 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-09-18 12:56:35.705 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2024-09-18 12:56:35.782 +02:00 [INF] Now listening on: http://localhost:5193
+2024-09-18 12:56:35.783 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-18 12:56:35.783 +02:00 [INF] Hosting environment: Development
+2024-09-18 12:56:35.783 +02:00 [INF] Content root path: /home/quiescent/Documents/webapp-social/SocialMediaApi
+2024-09-18 12:57:08.106 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 12:57:08.169 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 63.837ms
+2024-09-18 12:57:08.197 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui.css - null null
+2024-09-18 12:57:08.210 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 12:57:08.210 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui-standalone-preset.js - null null
+2024-09-18 12:57:08.211 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-18 12:57:08.211 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.3978ms
+2024-09-18 12:57:08.212 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui.css - 200 143943 text/css 15.1403ms
+2024-09-18 12:57:08.212 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui-bundle.js - null null
+2024-09-18 12:57:08.212 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-18 12:57:08.212 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 2.5004ms
+2024-09-18 12:57:08.215 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-18 12:57:08.215 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 3.0252ms
+2024-09-18 12:57:08.216 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 12:57:08.217 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2257ms
+2024-09-18 12:57:08.218 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui-standalone-preset.js - null null
+2024-09-18 12:57:08.219 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-18 12:57:08.219 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 0.9415ms
+2024-09-18 12:57:08.221 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui-bundle.js - null null
+2024-09-18 12:57:08.223 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-18 12:57:08.223 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 1.9112ms
+2024-09-18 12:57:08.422 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-18 12:57:08.491 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 69.3932ms
+2024-09-18 12:57:17.082 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json-patch+json 101
+2024-09-18 12:57:17.084 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-09-18 12:57:17.092 +02:00 [INF] CORS policy execution failed.
+2024-09-18 12:57:17.092 +02:00 [INF] Request origin http://localhost:5193 does not have permission to access the resource.
+2024-09-18 12:57:17.093 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:17.104 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 12:57:17.157 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 12:57:17.178 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 71.14ms
+2024-09-18 12:57:17.178 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:17.179 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 177 application/json; charset=utf-8 97.0218ms
+2024-09-18 12:57:42.973 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json-patch+json 108
+2024-09-18 12:57:42.975 +02:00 [INF] CORS policy execution failed.
+2024-09-18 12:57:42.975 +02:00 [INF] Request origin http://localhost:5193 does not have permission to access the resource.
+2024-09-18 12:57:42.975 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:42.976 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 12:57:42.986 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 12:57:42.986 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 10.2596ms
+2024-09-18 12:57:42.986 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:42.986 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 58 application/json; charset=utf-8 13.0858ms
+2024-09-18 12:57:46.345 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json-patch+json 111
+2024-09-18 12:57:46.347 +02:00 [INF] CORS policy execution failed.
+2024-09-18 12:57:46.347 +02:00 [INF] Request origin http://localhost:5193 does not have permission to access the resource.
+2024-09-18 12:57:46.347 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:46.348 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 12:57:46.348 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 12:57:46.349 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.8612ms
+2024-09-18 12:57:46.349 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:46.349 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 58 application/json; charset=utf-8 3.7844ms
+2024-09-18 12:57:47.870 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json-patch+json 114
+2024-09-18 12:57:47.870 +02:00 [INF] CORS policy execution failed.
+2024-09-18 12:57:47.870 +02:00 [INF] Request origin http://localhost:5193 does not have permission to access the resource.
+2024-09-18 12:57:47.870 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:47.870 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 12:57:48.009 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."Name", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-09-18 12:57:48.056 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 12:57:48.057 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 186.2402ms
+2024-09-18 12:57:48.057 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:48.058 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 44 application/json; charset=utf-8 188.5492ms
+2024-09-18 12:57:54.377 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json-patch+json 120
+2024-09-18 12:57:54.377 +02:00 [INF] CORS policy execution failed.
+2024-09-18 12:57:54.379 +02:00 [INF] Request origin http://localhost:5193 does not have permission to access the resource.
+2024-09-18 12:57:54.379 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:54.379 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 12:57:54.491 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."Name", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-09-18 12:57:54.555 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = Int32), @p2='?' (Size = 36), @p3='?' (Size = 16), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 8), @p8='?' (Size = 16), @p9='?' (Size = 10), @p10='?' (Size = 84), @p11='?', @p12='?' (DbType = Boolean), @p13='?' (Size = 32), @p14='?' (DbType = Boolean), @p15='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-09-18 12:57:54.559 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-09-18 12:57:54.563 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 184.3805ms
+2024-09-18 12:57:54.563 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 12:57:54.564 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 200 42 application/json; charset=utf-8 186.6175ms
+2024-09-18 13:05:17.539 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-18 13:05:17.540 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:05:17.541 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 1.3672ms
+2024-09-18 13:05:17.544 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-18 13:05:17.545 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:05:17.545 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:05:17.548 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-18 13:05:17.598 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-18 13:05:17.612 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-18 13:05:17.618 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 70.3268ms
+2024-09-18 13:05:17.618 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:05:17.619 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 74.0473ms
+2024-09-18 13:05:17.619 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-18 13:05:17.619 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:05:17.619 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:05:17.619 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-18 13:05:17.620 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-18 13:05:17.621 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-18 13:05:17.621 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.7931ms
+2024-09-18 13:05:17.621 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:05:17.621 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.2362ms
+2024-09-18 13:05:23.107 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/auth/register - null null
+2024-09-18 13:05:23.108 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:05:23.109 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/auth/register - 204 null null 1.3399ms
+2024-09-18 13:05:23.118 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/auth/register - application/json 66
+2024-09-18 13:05:23.118 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:05:23.118 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:05:23.119 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:05:23.123 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:05:23.157 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 37.9529ms
+2024-09-18 13:05:23.157 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:05:23.157 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/auth/register - 400 357 application/problem+json; charset=utf-8 39.3061ms
+2024-09-18 13:07:53.680 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:07:53.680 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:07:53.680 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.9042ms
+2024-09-18 13:07:53.689 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 66
+2024-09-18 13:07:53.689 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:07:53.689 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:07:53.690 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:07:53.692 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:07:53.692 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 2.6473ms
+2024-09-18 13:07:53.693 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:07:53.693 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 4.313ms
+2024-09-18 13:08:03.002 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:08:03.003 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:08:03.004 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 1.0998ms
+2024-09-18 13:08:03.012 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 66
+2024-09-18 13:08:03.012 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:08:03.013 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:08:03.013 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:08:03.015 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:08:03.015 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 2.414ms
+2024-09-18 13:08:03.016 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:08:03.016 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.7636ms
+2024-09-18 13:09:47.038 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-18 13:09:47.038 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:09:47.038 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.5069ms
+2024-09-18 13:09:47.039 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-18 13:09:47.039 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:09:47.039 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.3234ms
+2024-09-18 13:09:47.041 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-18 13:09:47.041 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:09:47.041 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:09:47.041 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-18 13:09:47.043 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-18 13:09:47.043 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-18 13:09:47.043 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 2.2781ms
+2024-09-18 13:09:47.044 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:09:47.044 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.8728ms
+2024-09-18 13:09:47.044 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-18 13:09:47.044 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:09:47.044 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:09:47.044 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-18 13:09:47.045 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-18 13:09:47.045 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-18 13:09:47.045 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.1284ms
+2024-09-18 13:09:47.045 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:09:47.045 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.6013ms
+2024-09-18 13:12:08.777 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-18 13:12:08.777 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:12:08.777 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.3784ms
+2024-09-18 13:12:08.777 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-18 13:12:08.778 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:12:08.778 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.3655ms
+2024-09-18 13:12:08.780 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-18 13:12:08.780 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:12:08.781 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:12:08.781 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-18 13:12:08.782 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-18 13:12:08.782 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-18 13:12:08.783 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.856ms
+2024-09-18 13:12:08.783 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:12:08.783 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.6734ms
+2024-09-18 13:12:08.783 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-18 13:12:08.783 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:12:08.784 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:12:08.784 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-18 13:12:08.785 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-18 13:12:08.785 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-18 13:12:08.785 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.5398ms
+2024-09-18 13:12:08.785 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:12:08.786 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 2.2906ms
+2024-09-18 13:13:17.935 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:13:17.936 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:13:17.937 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 1.684ms
+2024-09-18 13:13:17.946 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:13:17.947 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:13:17.948 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:13:17.948 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:13:17.950 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:13:17.951 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 2.7115ms
+2024-09-18 13:13:17.951 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:13:17.951 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 4.9606ms
+2024-09-18 13:18:04.366 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:18:04.367 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:18:04.367 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.925ms
+2024-09-18 13:18:04.375 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:18:04.376 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:18:04.376 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:18:04.376 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:18:04.378 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:18:04.379 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 2.3581ms
+2024-09-18 13:18:04.379 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:18:04.379 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.8197ms
+2024-09-18 13:18:42.059 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:18:42.059 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:18:42.060 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.5745ms
+2024-09-18 13:18:42.063 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:18:42.063 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:18:42.063 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:18:42.063 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:18:42.064 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:18:42.064 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.7427ms
+2024-09-18 13:18:42.064 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:18:42.064 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.4242ms
+2024-09-18 13:19:07.375 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:19:07.375 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:19:07.376 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.7773ms
+2024-09-18 13:19:07.378 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:19:07.378 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:19:07.378 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:07.378 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:19:07.379 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:19:07.379 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.6101ms
+2024-09-18 13:19:07.379 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:07.379 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.0856ms
+2024-09-18 13:19:16.952 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:19:16.952 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:19:16.952 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.6615ms
+2024-09-18 13:19:16.955 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 66
+2024-09-18 13:19:16.955 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:19:16.955 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:16.955 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:19:16.956 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:19:16.956 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.709ms
+2024-09-18 13:19:16.956 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:16.956 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.3838ms
+2024-09-18 13:19:30.596 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json-patch+json 120
+2024-09-18 13:19:30.597 +02:00 [INF] CORS policy execution failed.
+2024-09-18 13:19:30.597 +02:00 [INF] Request origin http://localhost:5193 does not have permission to access the resource.
+2024-09-18 13:19:30.597 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:30.597 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:19:30.668 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."Name", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-09-18 13:19:30.668 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 13:19:30.668 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 71.5791ms
+2024-09-18 13:19:30.669 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:30.669 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 48 application/json; charset=utf-8 72.2787ms
+2024-09-18 13:19:52.278 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json-patch+json 120
+2024-09-18 13:19:52.279 +02:00 [INF] CORS policy execution failed.
+2024-09-18 13:19:52.279 +02:00 [INF] Request origin http://localhost:5193 does not have permission to access the resource.
+2024-09-18 13:19:52.279 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:52.279 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:19:52.347 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."Name", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-09-18 13:19:52.348 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 13:19:52.348 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 68.8264ms
+2024-09-18 13:19:52.348 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:52.348 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 48 application/json; charset=utf-8 69.488ms
+2024-09-18 13:19:58.082 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json-patch+json 93
+2024-09-18 13:19:58.082 +02:00 [INF] CORS policy execution failed.
+2024-09-18 13:19:58.082 +02:00 [INF] Request origin http://localhost:5193 does not have permission to access the resource.
+2024-09-18 13:19:58.082 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:58.082 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:19:58.083 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:19:58.083 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.8839ms
+2024-09-18 13:19:58.083 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:19:58.083 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 345 application/problem+json; charset=utf-8 1.4715ms
+2024-09-18 13:20:24.809 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:20:24.809 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:20:24.810 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.8224ms
+2024-09-18 13:20:24.818 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 66
+2024-09-18 13:20:24.818 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:20:24.818 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:20:24.819 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:20:24.820 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:20:24.821 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 2.0598ms
+2024-09-18 13:20:24.821 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:20:24.821 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.2958ms
+2024-09-18 13:21:38.880 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:21:38.880 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:21:38.881 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.8557ms
+2024-09-18 13:21:38.890 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 66
+2024-09-18 13:21:38.890 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:21:38.891 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:21:38.891 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:21:38.893 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:21:38.893 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 2.1967ms
+2024-09-18 13:21:38.893 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:21:38.894 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.6814ms
+2024-09-18 13:21:56.795 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:21:56.795 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:21:56.796 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 1.2557ms
+2024-09-18 13:21:56.804 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 69
+2024-09-18 13:21:56.805 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:21:56.805 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:21:56.805 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:21:56.807 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:21:56.808 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 2.0582ms
+2024-09-18 13:21:56.808 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:21:56.808 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.3952ms
+2024-09-18 13:23:52.215 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:23:52.215 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:23:52.215 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.4833ms
+2024-09-18 13:23:52.218 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 69
+2024-09-18 13:23:52.218 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:23:52.218 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:23:52.219 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:23:52.219 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:23:52.219 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.7265ms
+2024-09-18 13:23:52.219 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:23:52.219 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.2814ms
+2024-09-18 13:25:09.427 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:25:09.428 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:25:09.428 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 1.3618ms
+2024-09-18 13:25:09.449 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 67
+2024-09-18 13:25:09.449 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:25:09.449 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:25:09.450 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:25:09.451 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:25:09.451 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.5626ms
+2024-09-18 13:25:09.451 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:25:09.451 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 2.9021ms
+2024-09-18 13:25:09.670 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 67
+2024-09-18 13:25:09.670 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:25:09.670 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:25:09.670 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:25:09.671 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:25:09.671 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.56ms
+2024-09-18 13:25:09.671 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:25:09.671 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.0804ms
+2024-09-18 13:26:05.383 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:26:05.383 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:26:05.384 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.984ms
+2024-09-18 13:26:05.401 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 66
+2024-09-18 13:26:05.402 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:26:05.402 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:26:05.402 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:26:05.403 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:26:05.403 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.1628ms
+2024-09-18 13:26:05.403 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:26:05.403 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 2.0188ms
+2024-09-18 13:26:24.419 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:26:24.420 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:26:24.420 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.7332ms
+2024-09-18 13:26:24.428 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 66
+2024-09-18 13:26:24.428 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:26:24.429 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:26:24.429 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:26:24.430 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:26:24.431 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.7829ms
+2024-09-18 13:26:24.431 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:26:24.431 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.1839ms
+2024-09-18 13:26:47.548 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:26:47.548 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:26:47.548 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.4208ms
+2024-09-18 13:26:47.551 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 71
+2024-09-18 13:26:47.551 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:26:47.551 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:26:47.551 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:26:47.552 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:26:47.552 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.7033ms
+2024-09-18 13:26:47.552 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:26:47.552 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 262 application/problem+json; charset=utf-8 1.2313ms
+2024-09-18 13:27:20.142 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:27:20.142 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:27:20.142 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.273ms
+2024-09-18 13:27:20.148 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 80
+2024-09-18 13:27:20.148 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:27:20.148 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:27:20.148 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:27:20.149 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 13:27:20.149 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.7712ms
+2024-09-18 13:27:20.149 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:27:20.149 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 62 application/json; charset=utf-8 1.3558ms
+2024-09-18 13:27:27.108 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:27:27.108 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:27:27.108 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.3041ms
+2024-09-18 13:27:27.111 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 81
+2024-09-18 13:27:27.111 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:27:27.111 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:27:27.111 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:27:27.193 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."Name", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-09-18 13:27:27.198 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (DbType = Int32), @p2='?' (Size = 36), @p3='?' (Size = 13), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 5), @p8='?' (Size = 13), @p9='?' (Size = 4), @p10='?' (Size = 84), @p11='?', @p12='?' (DbType = Boolean), @p13='?' (Size = 32), @p14='?' (DbType = Boolean), @p15='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+2024-09-18 13:27:27.199 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-09-18 13:27:27.199 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 87.9094ms
+2024-09-18 13:27:27.199 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:27:27.199 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 200 42 application/json; charset=utf-8 88.3661ms
+2024-09-18 13:30:15.149 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:30:15.149 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:15.149 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.242ms
+2024-09-18 13:30:15.151 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 50
+2024-09-18 13:30:15.151 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:15.151 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:30:15.151 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:30:15.152 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:30:15.152 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.5132ms
+2024-09-18 13:30:15.152 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:30:15.152 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 508 application/problem+json; charset=utf-8 0.8543ms
+2024-09-18 13:30:24.074 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:30:24.075 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:24.075 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.6873ms
+2024-09-18 13:30:24.084 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 50
+2024-09-18 13:30:24.084 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:24.084 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:30:24.084 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:30:24.086 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:30:24.086 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.5097ms
+2024-09-18 13:30:24.086 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:30:24.086 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 508 application/problem+json; charset=utf-8 2.6065ms
+2024-09-18 13:30:32.682 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:30:32.683 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:32.684 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 1.2537ms
+2024-09-18 13:30:32.692 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 50
+2024-09-18 13:30:32.692 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:32.692 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:30:32.692 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:30:32.693 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:30:32.694 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.3323ms
+2024-09-18 13:30:32.694 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:30:32.694 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 508 application/problem+json; charset=utf-8 2.5236ms
+2024-09-18 13:30:37.539 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-18 13:30:37.539 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:37.539 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/post - null null
+2024-09-18 13:30:37.539 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.3022ms
+2024-09-18 13:30:37.540 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:37.540 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/post - 204 null null 0.12ms
+2024-09-18 13:30:37.543 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-18 13:30:37.543 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:37.543 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:30:37.543 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-18 13:30:37.544 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-18 13:30:37.544 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-18 13:30:37.544 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.4568ms
+2024-09-18 13:30:37.544 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:30:37.544 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.845ms
+2024-09-18 13:30:37.545 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/api/post - application/json null
+2024-09-18 13:30:37.545 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:30:37.545 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:30:37.545 +02:00 [INF] Route matched with {action = "GetAllPosts", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPosts() on controller SocialMediaApi.Controllers.PostController (SocialMediaApi).
+2024-09-18 13:30:37.546 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Created", "p"."ImageUrl", "p"."Likes", "p"."Title", "p"."UserId", "c"."Id", "c"."Content", "c"."Created", "c"."PostId", "c"."UserId"
+FROM "Posts" AS "p"
+LEFT JOIN "Comments" AS "c" ON "p"."Id" = "c"."PostId"
+ORDER BY "p"."Id"
+2024-09-18 13:30:37.546 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SocialMediaApi.Models.Post, SocialMediaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-18 13:30:37.546 +02:00 [INF] Executed action SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi) in 1.1695ms
+2024-09-18 13:30:37.546 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.PostController.GetAllPosts (SocialMediaApi)'
+2024-09-18 13:30:37.546 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/api/post - 200 202 application/json; charset=utf-8 1.5476ms
+2024-09-18 13:31:46.044 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:31:46.044 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:31:46.044 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2484ms
+2024-09-18 13:31:46.047 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:31:46.047 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:31:46.047 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:31:46.047 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:31:46.048 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:31:46.048 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.8222ms
+2024-09-18 13:31:46.048 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:31:46.049 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.5411ms
+2024-09-18 13:31:52.624 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:31:52.624 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:31:52.625 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 1.0959ms
+2024-09-18 13:31:52.634 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:31:52.634 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:31:52.635 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:31:52.635 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:31:52.636 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:31:52.637 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.8433ms
+2024-09-18 13:31:52.637 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:31:52.637 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.4149ms
+2024-09-18 13:31:52.816 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:31:52.816 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:31:52.817 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:31:52.817 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:31:52.818 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:31:52.818 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.3972ms
+2024-09-18 13:31:52.818 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:31:52.819 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 2.5171ms
+2024-09-18 13:32:35.958 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:32:35.958 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:32:35.958 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.3805ms
+2024-09-18 13:32:35.961 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:32:35.962 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:32:35.962 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:32:35.962 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:32:35.962 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:32:35.962 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.5611ms
+2024-09-18 13:32:35.962 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:32:35.962 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.9219ms
+2024-09-18 13:32:44.148 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:32:44.149 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:32:44.149 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.5799ms
+2024-09-18 13:32:44.157 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:32:44.157 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:32:44.158 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:32:44.158 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:32:44.160 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:32:44.160 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 2.0899ms
+2024-09-18 13:32:44.160 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:32:44.161 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.4932ms
+2024-09-18 13:33:03.381 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:33:03.381 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:33:03.381 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.5647ms
+2024-09-18 13:33:03.388 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:33:03.389 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:33:03.389 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:33:03.389 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:33:03.390 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:33:03.391 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.9272ms
+2024-09-18 13:33:03.391 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:33:03.392 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.1422ms
+2024-09-18 13:33:39.448 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:33:39.448 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:33:39.448 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2199ms
+2024-09-18 13:33:39.451 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:33:39.451 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:33:39.451 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:33:39.451 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:33:39.452 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:33:39.452 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.3665ms
+2024-09-18 13:33:39.452 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:33:39.452 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.6663ms
+2024-09-18 13:34:56.730 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:34:56.731 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:34:56.731 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.6064ms
+2024-09-18 13:34:56.741 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:34:56.741 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:34:56.742 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:34:56.742 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:34:56.743 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:34:56.744 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.8265ms
+2024-09-18 13:34:56.744 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:34:56.744 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.0983ms
+2024-09-18 13:35:47.116 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:35:47.116 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:35:47.116 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2094ms
+2024-09-18 13:35:47.118 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:35:47.118 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:35:47.118 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:35:47.118 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:35:47.119 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:35:47.119 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.6675ms
+2024-09-18 13:35:47.119 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:35:47.119 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.9944ms
+2024-09-18 13:35:51.208 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:35:51.208 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:35:51.208 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:35:51.208 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:35:51.208 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:35:51.209 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.6384ms
+2024-09-18 13:35:51.209 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:35:51.209 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.0607ms
+2024-09-18 13:36:56.037 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:36:56.037 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:36:56.037 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2001ms
+2024-09-18 13:36:56.039 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:36:56.039 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:36:56.039 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:36:56.039 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:36:56.040 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:36:56.040 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.6174ms
+2024-09-18 13:36:56.040 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:36:56.040 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.9219ms
+2024-09-18 13:37:56.566 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:37:56.566 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:37:56.566 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2094ms
+2024-09-18 13:37:56.568 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:37:56.568 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:37:56.569 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:37:56.569 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:37:56.569 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:37:56.569 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.6765ms
+2024-09-18 13:37:56.569 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:37:56.569 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.0751ms
+2024-09-18 13:38:03.735 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:38:03.735 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:38:03.735 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.1945ms
+2024-09-18 13:38:03.737 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:38:03.737 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:38:03.737 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:38:03.737 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:38:03.737 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:38:03.738 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.677ms
+2024-09-18 13:38:03.738 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:38:03.738 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.0379ms
+2024-09-18 13:40:17.441 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:40:17.442 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:40:17.442 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2202ms
+2024-09-18 13:40:17.444 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:40:17.444 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:40:17.444 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:40:17.444 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:40:17.445 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:40:17.445 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.4067ms
+2024-09-18 13:40:17.445 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:40:17.445 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.7323ms
+2024-09-18 13:41:26.638 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:41:26.639 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:41:26.639 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.5325ms
+2024-09-18 13:41:26.649 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:41:26.649 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:41:26.650 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:41:26.650 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:41:26.651 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:41:26.651 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.0701ms
+2024-09-18 13:41:26.651 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:41:26.651 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 2.5501ms
+2024-09-18 13:41:44.403 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:41:44.403 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:41:44.403 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.4566ms
+2024-09-18 13:41:44.406 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:41:44.406 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:41:44.406 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:41:44.406 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:41:44.406 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:41:44.406 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.386ms
+2024-09-18 13:41:44.407 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:41:44.407 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.7827ms
+2024-09-18 13:42:26.137 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:42:26.137 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:42:26.137 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.1861ms
+2024-09-18 13:42:26.139 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:42:26.139 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:42:26.139 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:42:26.139 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:42:26.140 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:42:26.140 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.3796ms
+2024-09-18 13:42:26.140 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:42:26.140 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.7724ms
+2024-09-18 13:42:42.798 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:42:42.798 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:42:42.798 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.5338ms
+2024-09-18 13:42:42.807 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:42:42.807 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:42:42.807 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:42:42.808 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:42:42.809 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:42:42.809 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.2788ms
+2024-09-18 13:42:42.809 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:42:42.809 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 2.5797ms
+2024-09-18 13:42:54.622 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:42:54.622 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:42:54.622 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.3005ms
+2024-09-18 13:42:54.625 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:42:54.625 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:42:54.625 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:42:54.625 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:42:54.625 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:42:54.626 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.5922ms
+2024-09-18 13:42:54.626 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:42:54.626 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.0237ms
+2024-09-18 13:44:49.781 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:44:49.782 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:44:49.782 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.1923ms
+2024-09-18 13:44:49.784 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:44:49.784 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:44:49.784 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:44:49.784 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:44:49.784 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:44:49.784 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.3838ms
+2024-09-18 13:44:49.784 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:44:49.784 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.724ms
+2024-09-18 13:49:30.075 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:49:30.075 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:49:30.075 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2434ms
+2024-09-18 13:49:30.078 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:49:30.078 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:49:30.078 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:49:30.078 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:49:30.078 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:49:30.078 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.424ms
+2024-09-18 13:49:30.078 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:49:30.078 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.8065ms
+2024-09-18 13:49:38.175 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:49:38.175 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:49:38.175 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2375ms
+2024-09-18 13:49:38.177 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:49:38.177 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:49:38.178 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:49:38.178 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:49:38.178 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:49:38.178 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.5662ms
+2024-09-18 13:49:38.178 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:49:38.178 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.1137ms
+2024-09-18 13:50:14.622 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:50:14.622 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:50:14.622 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2651ms
+2024-09-18 13:50:14.624 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:50:14.624 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:50:14.625 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:50:14.625 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:50:14.625 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:50:14.625 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.6878ms
+2024-09-18 13:50:14.625 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:50:14.625 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 1.169ms
+2024-09-18 13:50:18.297 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 68
+2024-09-18 13:50:18.297 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:50:18.297 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:50:18.297 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:50:18.298 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:50:18.298 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.7843ms
+2024-09-18 13:50:18.298 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:50:18.298 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 262 application/problem+json; charset=utf-8 1.5267ms
+2024-09-18 13:50:26.857 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:50:26.857 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:50:26.857 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.5701ms
+2024-09-18 13:50:26.866 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:50:26.867 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:50:26.867 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:50:26.867 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:50:26.869 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:50:26.869 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 1.4561ms
+2024-09-18 13:50:26.869 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:50:26.869 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 3.1669ms
+2024-09-18 13:52:59.546 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:52:59.546 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:52:59.546 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.1956ms
+2024-09-18 13:52:59.548 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 65
+2024-09-18 13:52:59.548 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:52:59.548 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:52:59.548 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:52:59.549 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:52:59.549 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.3381ms
+2024-09-18 13:52:59.549 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:52:59.549 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 357 application/problem+json; charset=utf-8 0.6146ms
+2024-09-18 13:53:04.024 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 74
+2024-09-18 13:53:04.024 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:53:04.024 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:53:04.024 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:53:04.024 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:53:04.025 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.6754ms
+2024-09-18 13:53:04.025 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:53:04.025 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 298 application/problem+json; charset=utf-8 1.0657ms
+2024-09-18 13:53:12.099 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:53:12.100 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:53:12.100 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.2956ms
+2024-09-18 13:53:12.102 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 77
+2024-09-18 13:53:12.102 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:53:12.102 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:53:12.102 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:53:12.103 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 13:53:12.103 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.4807ms
+2024-09-18 13:53:12.103 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:53:12.103 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 181 application/json; charset=utf-8 0.7776ms
+2024-09-18 13:57:58.506 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-09-18 13:57:58.973 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 13:57:58.977 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 13:57:58.983 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-18 13:57:58.992 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-09-18 13:57:59.097 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2024-09-18 13:57:59.175 +02:00 [INF] Now listening on: http://localhost:5193
+2024-09-18 13:57:59.177 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-18 13:57:59.177 +02:00 [INF] Hosting environment: Development
+2024-09-18 13:57:59.177 +02:00 [INF] Content root path: /home/quiescent/Documents/webapp-social/SocialMediaApi
+2024-09-18 13:58:11.897 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 13:58:11.914 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 13:58:11.961 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 47.166ms
+2024-09-18 13:58:11.961 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 64.9498ms
+2024-09-18 13:58:12.038 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 13:58:12.039 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.1356ms
+2024-09-18 13:58:12.218 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-18 13:58:12.286 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.7811ms
+2024-09-18 13:58:12.883 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 13:58:12.883 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.4372ms
+2024-09-18 13:58:22.097 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 13:58:22.103 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 5.6912ms
+2024-09-18 13:58:22.136 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 13:58:22.136 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2255ms
+2024-09-18 13:58:22.140 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 13:58:22.140 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2734ms
+2024-09-18 13:58:22.212 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-18 13:58:22.218 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.3624ms
+2024-09-18 13:58:28.027 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:58:28.029 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-09-18 13:58:28.033 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:58:28.034 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 7.1995ms
+2024-09-18 13:58:28.037 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 77
+2024-09-18 13:58:28.039 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:58:28.040 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:58:28.050 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:58:28.098 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:58:28.127 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 74.0613ms
+2024-09-18 13:58:28.127 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:58:28.128 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 398 application/problem+json; charset=utf-8 90.7719ms
+2024-09-18 13:59:25.504 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-09-18 13:59:25.983 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 13:59:25.988 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 13:59:25.995 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-18 13:59:26.005 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-09-18 13:59:26.124 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2024-09-18 13:59:26.203 +02:00 [INF] Now listening on: http://localhost:5193
+2024-09-18 13:59:26.205 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-18 13:59:26.205 +02:00 [INF] Hosting environment: Development
+2024-09-18 13:59:26.205 +02:00 [INF] Content root path: /home/quiescent/Documents/webapp-social/SocialMediaApi
+2024-09-18 13:59:28.310 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:59:28.337 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-09-18 13:59:28.344 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:59:28.347 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 38.7405ms
+2024-09-18 13:59:28.351 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 77
+2024-09-18 13:59:28.354 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:59:28.355 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:59:28.366 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:59:28.438 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:59:28.471 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 102.2893ms
+2024-09-18 13:59:28.471 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:59:28.473 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 333 application/problem+json; charset=utf-8 121.1126ms
+2024-09-18 13:59:41.797 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 13:59:41.835 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 37.9255ms
+2024-09-18 13:59:41.890 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 13:59:41.891 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.3594ms
+2024-09-18 13:59:41.959 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-18 13:59:42.034 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.0308ms
+2024-09-18 13:59:42.725 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 13:59:42.725 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.4139ms
+2024-09-18 13:59:43.366 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 13:59:43.369 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:59:43.369 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 3.0997ms
+2024-09-18 13:59:43.373 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 77
+2024-09-18 13:59:43.374 +02:00 [INF] CORS policy execution successful.
+2024-09-18 13:59:43.374 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:59:43.380 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 13:59:43.392 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 13:59:43.393 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 12.7226ms
+2024-09-18 13:59:43.393 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 13:59:43.393 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 333 application/problem+json; charset=utf-8 20.8611ms
+2024-09-18 14:01:00.062 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-09-18 14:01:00.556 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 14:01:00.560 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 14:01:00.567 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-18 14:01:00.576 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-09-18 14:01:00.689 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2024-09-18 14:01:00.768 +02:00 [INF] Now listening on: http://localhost:5193
+2024-09-18 14:01:00.769 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-18 14:01:00.769 +02:00 [INF] Hosting environment: Development
+2024-09-18 14:01:00.769 +02:00 [INF] Content root path: /home/quiescent/Documents/webapp-social/SocialMediaApi
+2024-09-18 14:01:08.271 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 14:01:08.337 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 66.804ms
+2024-09-18 14:01:08.367 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 14:01:08.369 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.0388ms
+2024-09-18 14:01:08.374 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 14:01:08.375 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2758ms
+2024-09-18 14:01:08.448 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-18 14:01:08.519 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.3277ms
+2024-09-18 14:01:34.182 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 14:01:34.187 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 5.4019ms
+2024-09-18 14:01:34.218 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 14:01:34.219 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1895ms
+2024-09-18 14:01:34.222 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 14:01:34.222 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2206ms
+2024-09-18 14:01:34.283 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-18 14:01:34.291 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.2694ms
+2024-09-18 14:01:56.846 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 14:01:56.851 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 5.3734ms
+2024-09-18 14:01:56.882 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 14:01:56.882 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2356ms
+2024-09-18 14:01:56.886 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 14:01:56.886 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.1803ms
+2024-09-18 14:01:56.954 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-18 14:01:56.959 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.022ms
+2024-09-18 14:07:37.044 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:07:37.046 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-09-18 14:07:37.051 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:07:37.052 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 8.0715ms
+2024-09-18 14:07:37.055 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 84
+2024-09-18 14:07:37.058 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:07:37.059 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:07:37.064 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:07:37.065 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:07:37.072 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 16.5525ms
+2024-09-18 14:07:41.398 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 84
+2024-09-18 14:07:41.409 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:07:41.409 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:07:41.421 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:07:41.422 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:07:41.424 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 26.456ms
+2024-09-18 14:08:44.244 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:08:44.245 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:08:44.245 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.5457ms
+2024-09-18 14:08:44.249 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 77
+2024-09-18 14:08:44.249 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:08:44.250 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:08:44.253 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:08:44.253 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:08:44.254 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 4.6212ms
+2024-09-18 14:08:50.469 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:08:50.469 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:08:50.469 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.4492ms
+2024-09-18 14:08:50.471 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 78
+2024-09-18 14:08:50.472 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:08:50.472 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:08:50.474 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:08:50.475 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:08:50.475 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 3.7187ms
+2024-09-18 14:13:45.673 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 14:13:45.676 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 3.9153ms
+2024-09-18 14:13:45.760 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 14:13:45.761 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2431ms
+2024-09-18 14:13:45.899 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-18 14:13:45.903 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.5728ms
+2024-09-18 14:13:50.835 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:13:50.836 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:13:50.836 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 1.1115ms
+2024-09-18 14:13:50.845 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 78
+2024-09-18 14:13:50.849 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:13:50.849 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:13:50.857 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:13:50.858 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:13:50.860 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 14.4231ms
+2024-09-18 14:14:50.154 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:14:50.155 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:14:50.155 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.8759ms
+2024-09-18 14:14:50.169 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:14:50.170 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:14:50.170 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:14:50.179 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:14:50.180 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:14:50.182 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 12.4289ms
+2024-09-18 14:15:12.553 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:15:12.553 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:15:12.554 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.3778ms
+2024-09-18 14:15:12.556 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:15:12.556 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:15:12.556 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:15:12.559 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:15:12.560 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:15:12.560 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 4.1078ms
+2024-09-18 14:16:24.187 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/index.html - null null
+2024-09-18 14:16:24.191 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/index.html - 200 null text/html;charset=utf-8 4.0024ms
+2024-09-18 14:16:24.276 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-18 14:16:24.276 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2168ms
+2024-09-18 14:16:24.385 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - null null
+2024-09-18 14:16:24.388 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5193/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.2022ms
+2024-09-18 14:16:25.484 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:16:25.485 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:16:25.485 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 1.1133ms
+2024-09-18 14:16:25.490 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:16:25.492 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:16:25.492 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:16:25.497 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:16:25.497 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:16:25.498 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 7.9175ms
+2024-09-18 14:16:26.236 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:16:26.236 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:16:26.236 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:16:26.238 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:16:26.238 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:16:26.239 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 2.8614ms
+2024-09-18 14:16:26.553 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:16:26.553 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:16:26.554 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:16:26.565 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:16:26.566 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:16:26.567 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 14.514ms
+2024-09-18 14:16:26.921 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:16:26.922 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:16:26.922 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:16:26.930 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:16:26.931 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:16:26.932 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 11.0197ms
+2024-09-18 14:17:15.350 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:17:15.350 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:17:15.351 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.9774ms
+2024-09-18 14:17:15.358 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:17:15.358 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:17:15.358 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:17:15.363 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:17:15.363 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:17:15.364 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 5.8785ms
+2024-09-18 14:17:16.018 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:17:16.019 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:17:16.019 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:17:16.028 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:17:16.029 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:17:16.031 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 13.0281ms
+2024-09-18 14:17:16.165 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:17:16.166 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:17:16.166 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:17:16.172 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:17:16.173 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'SocialMediaApi.Controllers.AuthController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-18 14:17:16.174 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 500 null text/plain; charset=utf-8 8.7801ms
+2024-09-18 14:17:18.203 +02:00 [INF] Application is shutting down...
+2024-09-18 14:17:34.805 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-09-18 14:17:35.224 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 14:17:35.228 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 14:17:35.234 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-18 14:17:35.243 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-09-18 14:17:35.348 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2024-09-18 14:17:35.426 +02:00 [INF] Now listening on: http://localhost:5193
+2024-09-18 14:17:35.428 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-18 14:17:35.428 +02:00 [INF] Hosting environment: Development
+2024-09-18 14:17:35.428 +02:00 [INF] Content root path: /home/quiescent/Documents/webapp-social/SocialMediaApi
+2024-09-18 14:17:39.274 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:17:39.294 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-09-18 14:17:39.299 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:17:39.302 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 29.4034ms
+2024-09-18 14:17:39.306 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:17:39.309 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:17:39.310 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:17:39.321 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 14:17:39.399 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 14:17:39.449 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 123.6943ms
+2024-09-18 14:17:39.449 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:17:39.451 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 262 application/problem+json; charset=utf-8 144.5891ms
+2024-09-18 14:18:01.102 +02:00 [INF] User profile is available. Using '/home/quiescent/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-09-18 14:18:01.530 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 14:18:01.534 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-09-18 14:18:01.540 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-09-18 14:18:01.549 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-09-18 14:18:01.655 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Posts" AS "p")
+2024-09-18 14:18:01.728 +02:00 [INF] Now listening on: http://localhost:5193
+2024-09-18 14:18:01.730 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-18 14:18:01.730 +02:00 [INF] Hosting environment: Development
+2024-09-18 14:18:01.730 +02:00 [INF] Content root path: /home/quiescent/Documents/webapp-social/SocialMediaApi
+2024-09-18 14:18:02.647 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:18:02.670 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-09-18 14:18:02.678 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:18:02.680 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 34.1565ms
+2024-09-18 14:18:02.685 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 72
+2024-09-18 14:18:02.688 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:18:02.689 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:18:02.700 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 14:18:02.773 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 14:18:02.805 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 102.5614ms
+2024-09-18 14:18:02.805 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:18:02.806 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 262 application/problem+json; charset=utf-8 121.6945ms
+2024-09-18 14:18:10.214 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/login - null null
+2024-09-18 14:18:10.225 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:18:10.226 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/login - 204 null null 12.18ms
+2024-09-18 14:18:10.236 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/login - application/json 43
+2024-09-18 14:18:10.238 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:18:10.238 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi)'
+2024-09-18 14:18:10.247 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SocialMediaApi.Models.LoginDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 14:18:10.350 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 13)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."Name", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-09-18 14:18:10.354 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 14:18:10.355 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi) in 108.0623ms
+2024-09-18 14:18:10.355 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi)'
+2024-09-18 14:18:10.357 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/login - 400 31 application/json; charset=utf-8 120.353ms
+2024-09-18 14:18:26.436 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/login - null null
+2024-09-18 14:18:26.436 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:18:26.436 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/login - 204 null null 0.5279ms
+2024-09-18 14:18:26.438 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/login - application/json 43
+2024-09-18 14:18:26.439 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:18:26.439 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi)'
+2024-09-18 14:18:26.439 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SocialMediaApi.Models.LoginDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 14:18:26.487 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 13)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."Name", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-09-18 14:18:26.487 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 14:18:26.488 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi) in 48.48ms
+2024-09-18 14:18:26.488 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi)'
+2024-09-18 14:18:26.488 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/login - 400 31 application/json; charset=utf-8 49.3357ms
+2024-09-18 14:19:51.469 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/login - null null
+2024-09-18 14:19:51.470 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:19:51.471 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/login - 204 null null 1.5988ms
+2024-09-18 14:19:51.478 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/login - application/json 43
+2024-09-18 14:19:51.478 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:19:51.478 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi)'
+2024-09-18 14:19:51.478 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SocialMediaApi.Models.LoginDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 14:19:51.481 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 13)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."Name", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-09-18 14:19:51.482 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 14:19:51.482 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi) in 3.5867ms
+2024-09-18 14:19:51.482 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi)'
+2024-09-18 14:19:51.482 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/login - 400 31 application/json; charset=utf-8 4.6807ms
+2024-09-18 14:20:04.799 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/login - null null
+2024-09-18 14:20:04.800 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:20:04.800 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/login - 204 null null 0.4386ms
+2024-09-18 14:20:04.802 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/login - application/json 43
+2024-09-18 14:20:04.803 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:20:04.803 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi)'
+2024-09-18 14:20:04.803 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SocialMediaApi.Models.LoginDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 14:20:04.804 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 13)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."Name", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2024-09-18 14:20:04.804 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+2024-09-18 14:20:04.805 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi) in 1.7702ms
+2024-09-18 14:20:04.805 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Login (SocialMediaApi)'
+2024-09-18 14:20:04.805 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/login - 400 31 application/json; charset=utf-8 2.4553ms
+2024-09-18 14:20:18.022 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:20:18.023 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:20:18.023 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 0.5524ms
+2024-09-18 14:20:18.026 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 63
+2024-09-18 14:20:18.026 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:20:18.026 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:20:18.026 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 14:20:18.027 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 14:20:18.027 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 0.9677ms
+2024-09-18 14:20:18.027 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:20:18.027 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 418 application/problem+json; charset=utf-8 1.737ms
+2024-09-18 14:20:29.434 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - null null
+2024-09-18 14:20:29.435 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:20:29.435 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5193/api/Auth/register - 204 null null 1.3091ms
+2024-09-18 14:20:29.444 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5193/api/Auth/register - application/json 76
+2024-09-18 14:20:29.445 +02:00 [INF] CORS policy execution successful.
+2024-09-18 14:20:29.445 +02:00 [INF] Executing endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:20:29.445 +02:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SocialMediaApi.Models.RegisterDto) on controller SocialMediaApi.Controllers.AuthController (SocialMediaApi).
+2024-09-18 14:20:29.448 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-18 14:20:29.448 +02:00 [INF] Executed action SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi) in 2.6346ms
+2024-09-18 14:20:29.448 +02:00 [INF] Executed endpoint 'SocialMediaApi.Controllers.AuthController.Register (SocialMediaApi)'
+2024-09-18 14:20:29.449 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5193/api/Auth/register - 400 395 application/problem+json; charset=utf-8 4.2354ms

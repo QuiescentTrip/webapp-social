@@ -1,15 +1,13 @@
 const API_BASE_URL = "http://localhost:5193/api";
 import type {
   UserData,
-  SuccessResponse,
   ErrorResponse,
   Post,
+  LoginCredentials,
 } from "~/types/post";
 
-export const register = async (
-  userData: UserData,
-): Promise<SuccessResponse> => {
-  const response = await fetch(`${API_BASE_URL}/auth/register`, {
+export const register = async (userData: UserData): Promise<Response> => {
+  const response = await fetch(`${API_BASE_URL}/Auth/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -17,12 +15,21 @@ export const register = async (
     body: JSON.stringify(userData),
   });
 
-  if (!response.ok) {
-    const errorData = (await response.json()) as ErrorResponse;
-    throw new Error(errorData.message || "Registration failed");
-  }
+  return response;
+};
 
-  return response.json() as Promise<SuccessResponse>;
+export const login = async (
+  credentials: LoginCredentials,
+): Promise<Response> => {
+  const response = await fetch(`${API_BASE_URL}/Auth/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  });
+
+  return response;
 };
 
 export const getPost = async (postId: number): Promise<Post> => {

@@ -16,6 +16,8 @@ namespace SocialMediaApi.Models
 
         [Required]
         [MinLength(6)]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).+$",
+            ErrorMessage = "Passwords must have at least one lowercase, one uppercase, and one non alphanumeric character.")]
         public required string Password { get; set; }
     }
 }

@@ -3,72 +3,109 @@ import Footer from "~/components/footer";
 import Navbar from "~/components/navbar";
 import { Button } from "~/components/ui/button"
 import { useState } from "react";
+import { login } from "~/utils/api";
+import { useRouter } from 'next/router';
+import { useToast } from "~/hooks/use-toast";
+import { Toaster } from "~/components/ui/toaster";
+
+type ErrorResponse = {
+    errors: Record<string, string[]>;
+    status: number;
+    title: string;
+    traceId: string;
+    type: string;
+};
 
 export default function Login() {
+    const router = useRouter();
+    const { toast } = useToast();
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+    });
 
-	// formdata som skal sendes til backend
-	const [formData, setFormData] = useState({
-		email: '',
-		name: '',
-		username: '',
-		password: '',
-		repassword: '',
-	});
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { id, value } = event.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [id]: value,
+        }));
+    };
 
-	// Lagrer verdiene fra input feltene i formData
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const { id, value } = event.target;
-		setFormData((prevData) => ({
-		...prevData,
-		[id]: value,
-		}));
-	};
+    const sendForm = async (event: React.FormEvent) => {
+        event.preventDefault();
 
-	// Her kan vi sende Formen til backend
-	const sendForm = (event: React.FormEvent) => {
+        login({
+            email: formData.email,
+            password: formData.password,
+        })
+        .then(async (response: Response) => {
+            if (!response.ok) {
+                try {
+                    const errorData: ErrorResponse = await response.json();
+                    console.log(errorData);
+                    const firstError = Object.entries(errorData.errors)[0];
+                    if (firstError) {
+                        const [field, message] = firstError;
+                        toast({
+                            variant: "destructive",
+                            title: `Error in ${field}`,
+                            description: message,
+                        });
+                    }
+                } catch(error) {
+                    toast({
+                        variant: "destructive",
+                        title: "Login failed",
+                        description: "Wrong username or password",
+                    });
+                }
+            } else {
+                toast({
+                    title: "Login successful",
+                    description: "You are now logged in",
+                });
+                return router.push('/');
+            }
+        })
+        .catch((error) => {
+            console.error(error);
+            toast({
+                variant: "destructive",
+                title: "Login failed",
+                description: error instanceof Error ? error.message : 'An unknown error occurred',
+            });
+        });
+    };
 
-		//Stopper reloading av siden
-		event.preventDefault();
+    return (
+        <>
+            <Head>
+                <title>Login - Social Media</title>
+                <meta name="description" content="Login to Social Media" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-	}
-
-	return (
-    <>
-      <Head>
-        <title>Social Media</title>
-        <meta name="description" content="Social Media" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className="flex flex-col min-h-screen">
-
-        <main className="flex-grow">
-
-			<Navbar />
-
-			<div className="flex flex-col gap-10 mt-24 pb-16">
-
-				<div className="flex flex-col items-center justify-center">
-
-					<div className="w-full max-w-md p-8 rounded-lg shadow-2xl border-2 border-secondary dark:border-primary dark:bg-secondary dark:border">
-
-						<h2 className="text-2xl font-semibold text-center text-gray-700 dark:text-white">Login</h2>
-
-							<LoginForm formData={{email: formData.email, password: formData.password}} onChange={handleChange} sendForm={sendForm}/>
-
-					</div>
-				</div>
-			</div>
-        </main>
-
-        <Footer />
-
-      </div>
-
-    </>
-  );
+            <div className="flex flex-col min-h-screen">
+                <main className="flex-grow">
+                    <Navbar />
+                    <div className="flex flex-col gap-10 mt-24 pb-16">
+                        <div className="flex flex-col items-center justify-center">
+                            <div className="w-full max-w-md p-8 rounded-lg shadow-2xl border-2 border-secondary dark:border-primary dark:bg-secondary dark:border">
+                                <h2 className="text-2xl font-semibold text-center text-gray-700 dark:text-white">Login</h2>
+                                <LoginForm formData={formData} onChange={handleChange} sendForm={sendForm}/>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <Footer />
+            </div>
+            <Toaster />
+        </>
+    );
 }
 
+// The TextInput component remains the same
 interface TextInput {
 	id: string;
 	type: string;
