@@ -37,7 +37,8 @@ namespace SocialMediaApi.Controllers
 
             if (result.Succeeded)
             {
-                return Ok(new { message = "User registered successfully" });
+                await _signInManager.SignInAsync(user, isPersistent: false);
+                return Ok(new { message = "User registered and logged in successfully", userId = user.Id });
             }
 
             foreach (var error in result.Errors)
@@ -55,14 +56,20 @@ namespace SocialMediaApi.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                Console.WriteLine($"User not found for email: {model.Email}");
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return BadRequest(ModelState);
+            }
+            var result = await _signInManager.PasswordSignInAsync(user, model.Password, isPersistent: false, lockoutOnFailure: false);
 
             if (result.Succeeded)
             {
-                var user = await _userManager.FindByEmailAsync(model.Email);
                 return Ok(new { message = "User logged in successfully", userId = user.Id });
             }
-
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             return BadRequest(ModelState);
         }
