@@ -42,7 +42,7 @@ public static class DBInit
                 ImageUrl = "https://picsum.photos/1000/1000",
                 Likes = 0,
                 Created = DateTime.UtcNow,
-                UserId = user.Id
+                User = user
             };
 
             context.Posts.Add(post);

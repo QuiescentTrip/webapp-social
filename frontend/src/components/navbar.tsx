@@ -6,6 +6,7 @@ import { useAuth } from "~/contexts/AuthContext";
 
 export default function Component(): JSX.Element {
   const { user, logout } = useAuth();
+  console.log(user);
   return (
     <nav className="flex flex-row items-center justify-between p-4">
       <div className="flex flex-row items-center justify-center gap-4">
@@ -34,7 +35,7 @@ export default function Component(): JSX.Element {
         ) : (
           <>
             <span className="text-l flex items-center justify-center text-center">
-              {user.userName}
+              {user.username}
             </span>
             <Button onClick={() => logout()}>Logout</Button>
           </>

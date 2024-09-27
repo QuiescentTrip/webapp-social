@@ -25,7 +25,15 @@ namespace SocialMediaApi.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new ValidationProblemDetails(ModelState));
+            }
+
+            // Check if email is already in use
+            var existingUser = await _userManager.FindByEmailAsync(model.Email);
+            if (existingUser != null)
+            {
+                ModelState.AddModelError("Email", "Email is already in use");
+                return BadRequest(new ValidationProblemDetails(ModelState));
             }
 
             var user = new ApplicationUser
@@ -39,7 +47,7 @@ namespace SocialMediaApi.Controllers
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                return Ok(new { userName = user.UserName, email = user.Email });
+                return Ok(new { username = user.UserName, email = user.Email });
             }
 
             foreach (var error in result.Errors)
@@ -47,7 +55,7 @@ namespace SocialMediaApi.Controllers
                 ModelState.AddModelError(string.Empty, error.Description);
             }
 
-            return BadRequest(ModelState);
+            return BadRequest(new ValidationProblemDetails(ModelState));
         }
 
         [HttpPost("login")]
@@ -55,18 +63,25 @@ namespace SocialMediaApi.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest(new ValidationProblemDetails(ModelState));
             }
 
-            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError("Email", "Invalid email or password");
+                return BadRequest(new ValidationProblemDetails(ModelState));
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, isPersistent: false, lockoutOnFailure: false);
 
             if (result.Succeeded)
             {
-                var user = await _userManager.FindByEmailAsync(model.Email);
-                return Ok(new { userName = user.UserName, email = user.Email });
+                return Ok(new { username = user.UserName, email = user.Email });
             }
 
-            return Unauthorized("Invalid email or password");
+            ModelState.AddModelError("Password", "Invalid email or password");
+            return BadRequest(new ValidationProblemDetails(ModelState));
         }
 
         [HttpPost("logout")]
@@ -76,6 +91,7 @@ namespace SocialMediaApi.Controllers
             return Ok(new { message = "User logged out successfully" });
         }
 
+        // Authorize checks the token given in the header by identity and gets the user info from userManager
         [Authorize]
         [HttpGet("user")]
         public async Task<IActionResult> GetUserInfo()
@@ -86,7 +102,7 @@ namespace SocialMediaApi.Controllers
                 return NotFound("User not found");
             }
 
-            return Ok(new { userName = user.UserName, email = user.Email });
+            return Ok(new { username = user.UserName, email = user.Email });
         }
     }
 }

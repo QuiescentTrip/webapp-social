@@ -9,6 +9,8 @@ import { useAuth } from "~/contexts/AuthContext";
 interface ComponentProps {
   likes: number;
   imageUrl: string;
+  created: string;
+  title: string;
 }
 
 interface CommentData {
@@ -42,6 +44,8 @@ const exampleComments: CommentData[] = [
 export default function Component({
   likes,
   imageUrl,
+  created,
+  title,
 }: ComponentProps): JSX.Element {
   const [commentText, setCommentText] = useState<string>("");
 
@@ -69,9 +73,14 @@ export default function Component({
             </Avatar>
             <div>
               <div className="font-medium">Acme Inc</div>
-              <div className="text-sm text-muted-foreground">2 hours ago</div>
+              <div className="text-sm text-muted-foreground">
+                {new Date(created).toLocaleString()}
+              </div>
             </div>
           </div>
+        </div>
+        <div className="mb-4">
+          <h2 className="text-l">{title}</h2>
         </div>
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">

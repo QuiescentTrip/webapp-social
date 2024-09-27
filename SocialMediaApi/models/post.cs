@@ -10,8 +10,7 @@ namespace SocialMediaApi.Models
         public required string ImageUrl { get; set; }
         public int Likes { get; set; }
         public DateTime Created { get; set; }
-        public string? UserId { get; set; }
-        public ApplicationUser? User { get; set; }
+        public required ApplicationUser User { get; set; }
         public List<Comment> Comments { get; set; } = new List<Comment>();
     }
 }

@@ -1,18 +1,3 @@
-export interface UserData {
-  email: string;
-  name: string;
-  username: string;
-  password: string;
-}
-
-export interface ErrorResponse {
-  message: string;
-}
-
-export interface SuccessResponse {
-  message: string;
-}
-
 export interface Post {
   id: number;
   title: string;
@@ -21,16 +6,4 @@ export interface Post {
   created: string;
   userId: string;
   comments: Comment[];
-}
-
-export interface Comment {
-  id: number;
-  content: string;
-  postId: number;
-  created: string;
-  userId: string;
-}
-export interface LoginCredentials {
-  email: string;
-  password: string;
 }
