@@ -1,35 +1,70 @@
 const API_BASE_URL = "http://localhost:5193/api";
-import type {
-  UserData,
-  ErrorResponse,
-  Post,
-  LoginCredentials,
-} from "~/types/post";
 
-export const register = async (userData: UserData): Promise<Response> => {
-  const response = await fetch(`${API_BASE_URL}/Auth/register`, {
+export type UserInfo = {
+  userName: string;
+  email: string;
+};
+
+export type LoginCredentials = {
+  email: string;
+  password: string;
+};
+
+export type RegisterData = {
+  email: string;
+  username: string;
+  password: string;
+};
+
+export type Post = {
+  id: number;
+  // Add other properties of Post as needed
+};
+
+export type ErrorResponse = {
+  message: string;
+  // Add other properties of ErrorResponse as needed
+};
+
+export const register = async (userData: RegisterData): Promise<Response> => {
+  return fetch(`${API_BASE_URL}/Auth/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(userData),
+    credentials: "include",
   });
-
-  return response;
 };
 
 export const login = async (
   credentials: LoginCredentials,
 ): Promise<Response> => {
-  const response = await fetch(`${API_BASE_URL}/Auth/login`, {
+  return fetch(`${API_BASE_URL}/Auth/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(credentials),
+    credentials: "include",
   });
+};
 
-  return response;
+export const logout = async (): Promise<Response> => {
+  return fetch(`${API_BASE_URL}/Auth/logout`, {
+    method: "POST",
+    credentials: "include",
+  });
+};
+
+export const getUserInfo = async (): Promise<UserInfo> => {
+  const response = await fetch(`${API_BASE_URL}/Auth/user`, {
+    credentials: "include",
+  });
+  if (!response.ok) {
+    throw new Error("Failed to fetch user info");
+  }
+  return response.json() as Promise<UserInfo>;
 };
 
 export const getPost = async (postId: number): Promise<Post> => {

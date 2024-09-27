@@ -7,6 +7,7 @@ using Serilog;
 using Serilog.Events;
 using SocialMediaApi.DAL;
 using SocialMediaApi.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,15 +24,19 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("ItemDbContextConnection")));
 
 // Configure Identity
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>{
-    options.User.RequireUniqueEmail = true;
-    options.Password.RequireNonAlphanumeric = false;
-    options.Password.RequireUppercase = false;
-    options.Password.RequireLowercase = false;
-    options.Password.RequiredLength = 6;
-})
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
+
+// Configure cookie authentication
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromDays(30);
+    options.LoginPath = "/api/Auth/login";
+    options.LogoutPath = "/api/Auth/logout";
+    options.SlidingExpiration = true;
+});
 
 // Register repository
 builder.Services.AddScoped<IPostRepository, PostRepository>();
@@ -50,12 +55,15 @@ builder.Logging.AddSerilog(Log.Logger);
 // Add CORS services
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend", policy =>
-    {
-        policy.WithOrigins("http://localhost:3000")
-               .AllowAnyMethod()
-               .AllowAnyHeader();
-    });
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder
+                .WithOrigins("http://localhost:3000") // Your frontend URL
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials();
+        });
 });
 
 var app = builder.Build();
@@ -68,9 +76,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowSpecificOrigin");
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowFrontend");
 app.MapControllers();
 
 app.Run();

@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using SocialMediaApi.Models;
 using System.Threading.Tasks;
+using System;
 
 namespace SocialMediaApi.Controllers
 {
@@ -29,8 +31,7 @@ namespace SocialMediaApi.Controllers
             var user = new ApplicationUser
             {
                 UserName = model.Username,
-                Email = model.Email,
-                Name = model.Name
+                Email = model.Email
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
@@ -38,7 +39,7 @@ namespace SocialMediaApi.Controllers
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                return Ok(new { message = "User registered and logged in successfully", userId = user.Id });
+                return Ok(new { userName = user.UserName, email = user.Email });
             }
 
             foreach (var error in result.Errors)
@@ -57,21 +58,35 @@ namespace SocialMediaApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = await _userManager.FindByEmailAsync(model.Email);
-            if (user == null)
-            {
-                Console.WriteLine($"User not found for email: {model.Email}");
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                return BadRequest(ModelState);
-            }
-            var result = await _signInManager.PasswordSignInAsync(user, model.Password, isPersistent: false, lockoutOnFailure: false);
+            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
 
             if (result.Succeeded)
             {
-                return Ok(new { message = "User logged in successfully", userId = user.Id });
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                return Ok(new { userName = user.UserName, email = user.Email });
             }
-            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-            return BadRequest(ModelState);
+
+            return Unauthorized("Invalid email or password");
+        }
+
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return Ok(new { message = "User logged out successfully" });
+        }
+
+        [Authorize]
+        [HttpGet("user")]
+        public async Task<IActionResult> GetUserInfo()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            return Ok(new { userName = user.UserName, email = user.Email });
         }
     }
 }
