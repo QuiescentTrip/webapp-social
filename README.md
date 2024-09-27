@@ -1,6 +1,12 @@
 # Sosial media Webapp
 Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bilder og kommentere på andres bilder.
 
+## Known bugs
+
+- Register kan gi feil, men dette er fordi backend ikke gir full output for feil.
+- Du kan bare logge inn med brukeren du har opprettet om usernavnet ditt er det samme som emailen din. (Takk PasswordSignInAsync)
+- Navbar rerender ikke på signin.
+
 ## How to run
 
 **If you have gum installed you can use the `run.sh` script.**
