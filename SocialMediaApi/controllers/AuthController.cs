@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using SocialMediaApi.Models;
 using System.Threading.Tasks;
 using System;
+using SocialMediaApi.Repositories;
 
 namespace SocialMediaApi.Controllers
 {
@@ -11,13 +12,11 @@ namespace SocialMediaApi.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly IAuthRepository _authRepository;
 
-        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AuthController(IAuthRepository authRepository)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
+            _authRepository = authRepository;
         }
 
         [HttpPost("register")]
@@ -29,7 +28,7 @@ namespace SocialMediaApi.Controllers
             }
 
             // Check if email is already in use
-            var existingUser = await _userManager.FindByEmailAsync(model.Email);
+            var existingUser = await _authRepository.FindUserByEmailAsync(model.Email);
             if (existingUser != null)
             {
                 ModelState.AddModelError("Email", "Email is already in use");
@@ -39,14 +38,15 @@ namespace SocialMediaApi.Controllers
             var user = new ApplicationUser
             {
                 UserName = model.Username,
-                Email = model.Email
+                Email = model.Email,
+                Name = model.Name
             };
 
-            var result = await _userManager.CreateAsync(user, model.Password);
+            var result = await _authRepository.CreateUserAsync(user, model.Password);
 
             if (result.Succeeded)
             {
-                await _signInManager.SignInAsync(user, isPersistent: false);
+                await _authRepository.SignInAsync(user, isPersistent: false);
                 return Ok(new { username = user.UserName, email = user.Email });
             }
 
@@ -66,14 +66,14 @@ namespace SocialMediaApi.Controllers
                 return BadRequest(new ValidationProblemDetails(ModelState));
             }
 
-            var user = await _userManager.FindByEmailAsync(model.Email);
+            var user = await _authRepository.FindUserByEmailAsync(model.Email);
             if (user == null)
             {
                 ModelState.AddModelError("Email", "Invalid email or password");
                 return BadRequest(new ValidationProblemDetails(ModelState));
             }
 
-            var result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, isPersistent: false, lockoutOnFailure: false);
+            var result = await _authRepository.PasswordSignInAsync(user.UserName, model.Password, isPersistent: false, lockoutOnFailure: false);
 
             if (result.Succeeded)
             {
@@ -87,7 +87,7 @@ namespace SocialMediaApi.Controllers
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
-            await _signInManager.SignOutAsync();
+            await _authRepository.SignOutAsync();
             return Ok(new { message = "User logged out successfully" });
         }
 
@@ -96,7 +96,7 @@ namespace SocialMediaApi.Controllers
         [HttpGet("user")]
         public async Task<IActionResult> GetUserInfo()
         {
-            var user = await _userManager.GetUserAsync(User);
+            var user = await _authRepository.GetUserAsync(User);
             if (user == null)
             {
                 return NotFound("User not found");

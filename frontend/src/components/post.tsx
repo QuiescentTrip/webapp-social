@@ -3,54 +3,62 @@ import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 import { Button } from "./ui/button";
 import Comment from "./ui/comment";
 import React, { useState } from "react";
-import { type SVGProps } from "react";
 import { useAuth } from "~/contexts/AuthContext";
+import { likePost, unlikePost } from "~/utils/postapi";
+import { createComment } from "~/utils/commentapi";
+import type { Comment as CommentType } from "~/types/comment";
+import { HeartIcon, MessageCircleIcon } from "~/components/ui/icons";
+import { useToast } from "~/hooks/use-toast";
 
 interface ComponentProps {
+  id: number; // Add this line
   likes: number;
   imageUrl: string;
   created: string;
   title: string;
-}
-
-interface CommentData {
-  avatarSrc: string;
-  avatarFallback: string;
   name: string;
-  content: string;
+  comments: CommentType[];
 }
-
-const exampleComments: CommentData[] = [
-  {
-    avatarSrc: "https://picsum.photos/250/250",
-    avatarFallback: "AC",
-    name: "john",
-    content: "Wow, this photo is absolutely stunning! 😍✨",
-  },
-  {
-    avatarSrc: "https://picsum.photos/250/250",
-    avatarFallback: "AC",
-    name: "amelia",
-    content: "This post just made my day! 😃👍",
-  },
-  {
-    avatarSrc: "https://picsum.photos/250/250",
-    avatarFallback: "AC",
-    name: "jane",
-    content: "This is a beautiful photo! 🌸🌟",
-  },
-];
 
 export default function Component({
-  likes,
+  id,
+  likes: initialLikes,
   imageUrl,
   created,
   title,
+  name,
+  comments,
 }: ComponentProps): JSX.Element {
   const [commentText, setCommentText] = useState<string>("");
+  const [isLiked, setIsLiked] = useState<boolean>(false);
+  const [likesCount, setLikesCount] = useState<number>(initialLikes);
 
   const { user } = useAuth();
   const loggedin = !!user;
+  const { toast } = useToast();
+  const handleLikeClick = async () => {
+    if (!loggedin) {
+      toast({
+        title: "Not logged in",
+        description: "Please log in to like posts.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      if (!isLiked) {
+        await likePost(id);
+        setLikesCount((prev) => prev + 1);
+      } else {
+        await unlikePost(id);
+        setLikesCount((prev) => prev - 1);
+      }
+      setIsLiked(!isLiked);
+    } catch (error) {
+      console.error("Error updating like:", error);
+    }
+  };
 
   return (
     <div className="mx-auto w-full max-w-[80%] rounded-xl outline outline-1 outline-gray-300 lg:max-w-[60%] 2xl:max-w-[40%]">
@@ -69,10 +77,10 @@ export default function Component({
           <div className="flex items-center gap-2">
             <Avatar>
               <AvatarImage src="/placeholder-user.jpg" alt="@shadcn" />
-              <AvatarFallback>AC</AvatarFallback>
+              <AvatarFallback>{name.slice(0, 2)}</AvatarFallback>
             </Avatar>
             <div>
-              <div className="font-medium">Acme Inc</div>
+              <div className="font-medium">{name}</div> {/* Change this line */}
               <div className="text-sm text-muted-foreground">
                 {new Date(created).toLocaleString()}
               </div>
@@ -85,8 +93,14 @@ export default function Component({
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon">
-                <HeartIcon className="h-4 w-4" />
+              <Button
+                variant={isLiked ? "default" : "ghost"}
+                size="icon"
+                onClick={handleLikeClick}
+              >
+                <HeartIcon
+                  className={`h-4 w-4 ${isLiked ? "fill-current" : ""}`}
+                />
                 <span className="sr-only">Like</span>
               </Button>
               <Button variant="ghost" size="icon">
@@ -95,21 +109,53 @@ export default function Component({
               </Button>
             </div>
             <div className="text-sm font-medium">
-              <span className="text-primary">{likes}</span>{" "}
-              {likes === 1 ? "like" : "likes"}
+              <span className="text-primary">{likesCount}</span>{" "}
+              {likesCount === 1 ? "like" : "likes"}
             </div>
           </div>
           {loggedin && (
             <CommentInput
               commentText={commentText}
               setCommentText={setCommentText}
+              id={id}
             />
           )}
         </div>
         <div className="mt-4 space-y-2">
-          {exampleComments.map((comment, index) => (
-            <Comment key={index} {...comment} />
-          ))}
+          {comments.length > 0 ? (
+            <>
+              {/* This sorts comments by created date,
+              and then slices the first 3 comments
+              Fuck this shit
+              */}
+              {[...comments]
+                .sort(
+                  (a, b) =>
+                    new Date(b.created).getTime() -
+                    new Date(a.created).getTime(),
+                )
+                .slice(0, 3)
+                .map((comment, index) => (
+                  <Comment
+                    key={index}
+                    content={comment.content}
+                    name={comment.user.name}
+                    avatarSrc={""}
+                    avatarFallback={comment.user.name.slice(0, 2)}
+                  />
+                ))}
+              {comments.length > 3 && (
+                <p className="text-center text-sm text-muted-foreground">
+                  {comments.length - 3} more{" "}
+                  {comments.length - 3 === 1 ? "comment" : "comments"}!
+                </p>
+              )}
+            </>
+          ) : (
+            <p className="text-sm text-muted-foreground">
+              Be the first to comment!
+            </p>
+          )}
         </div>
       </div>
     </div>
@@ -119,10 +165,20 @@ export default function Component({
 function CommentInput({
   commentText,
   setCommentText,
+  id,
 }: {
   commentText: string;
   setCommentText: (text: string) => void;
+  id: number;
 }): JSX.Element {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (commentText.trim()) {
+      await createComment({ content: commentText, postId: id });
+      setCommentText("");
+    }
+  };
+
   return (
     <div className="flex rounded-md focus-within:ring-2 focus-within:ring-primary focus-within:ring-opacity-50">
       <input
@@ -135,49 +191,11 @@ function CommentInput({
         className="flex-grow rounded-l-md border px-2 py-1 focus:outline-none"
       />
       <button
-        type="submit"
+        onClick={handleSubmit}
         className="rounded-r-md bg-primary px-4 py-1 text-white focus:outline-none dark:text-black"
       >
         Post
       </button>
     </div>
-  );
-}
-
-function HeartIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-    </svg>
-  );
-}
-
-function MessageCircleIcon(props: SVGProps<SVGSVGElement>): JSX.Element {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-    </svg>
   );
 }

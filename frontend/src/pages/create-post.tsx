@@ -15,6 +15,8 @@ import { toast } from "~/hooks/use-toast";
 import Image from "next/image";
 import Layout from "./layout";
 import { useRouter } from "next/router";
+import { createPost } from "~/utils/postapi";
+
 export default function CreatePost() {
   const router = useRouter();
   const [title, setTitle] = useState("");
@@ -37,21 +39,24 @@ export default function CreatePost() {
         description: "Please provide both a title and an image.",
         variant: "destructive",
       });
-      return; // Exit the function if title or image is missing
+      return;
     }
 
-    // Here you would typically send the data to your backend
-    // For now, we'll just show a success message
-    toast({
-      title: "Post Created",
-      description: "Your post has been successfully created!",
-    });
-
-    await router.push("/");
-    // Reset form
-    setTitle("");
-    setImage(null);
-    setPreviewUrl(null);
+    try {
+      const newPost = await createPost({ title, image });
+      toast({
+        title: "Post Created",
+        description: "Your post has been successfully created!",
+      });
+      await router.push("/");
+    } catch (error) {
+      console.error(error);
+      toast({
+        variant: "destructive",
+        title: "Post creation failed",
+        description: "An unexpected error occurred",
+      });
+    }
   };
 
   return (
@@ -86,12 +91,12 @@ export default function CreatePost() {
             {previewUrl && (
               <div className="mt-4">
                 <Label>Image Preview</Label>
-                <div className="relative mt-2 h-48 w-full overflow-hidden rounded-md">
+                <div className="relative mt-2 h-full w-full overflow-hidden rounded-md">
                   <Image
+                    width={400}
+                    height={400}
                     src={previewUrl}
                     alt="Preview"
-                    layout="fill"
-                    objectFit="cover"
                   />
                 </div>
               </div>

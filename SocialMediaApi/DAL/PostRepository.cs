@@ -18,7 +18,10 @@ namespace SocialMediaApi.DAL
         {
             try
             {
-                return await _context.Posts.Include(p => p.Comments).ToListAsync();
+                return await _context.Posts
+                    .Include(p => p.Comments)
+                    .Include(p => p.User)
+                    .ToListAsync();
             }
             catch (Exception e)
             {
@@ -86,6 +89,54 @@ namespace SocialMediaApi.DAL
             catch (Exception e)
             {
                 _logger.LogError($"Error in DeletePost: {e.Message}");
+                return false;
+            }
+        }
+
+        // TODO: Fix so it checks if the user has already liked the post
+        // TODO: Create Like model
+        public async Task<bool> LikePost(int postId)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                var post = await _context.Posts.FindAsync(postId);
+                if (post == null)
+                    return false;
+
+                post.Likes++;
+
+                await _context.SaveChangesAsync();
+                await transaction.CommitAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                await transaction.RollbackAsync();
+                _logger.LogError($"Error in LikePost: {e.Message}");
+                return false;
+            }
+        }
+        //todo: same thing here
+        public async Task<bool> UnlikePost(int postId)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                var post = await _context.Posts.FindAsync(postId);
+                if (post == null)
+                    return false;
+
+                post.Likes--;
+
+                await _context.SaveChangesAsync();
+                await transaction.CommitAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                await transaction.RollbackAsync();
+                _logger.LogError($"Error in LikePost: {e.Message}");
                 return false;
             }
         }

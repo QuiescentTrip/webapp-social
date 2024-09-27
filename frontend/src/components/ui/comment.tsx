@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "./avatar";
 import Link from "next/link";
 
@@ -9,7 +9,12 @@ interface CommentProps {
   content: string;
 }
 
-const Comment: React.FC<CommentProps> = ({ avatarSrc, avatarFallback, name, content }) => {
+const Comment: React.FC<CommentProps> = ({
+  avatarSrc,
+  avatarFallback,
+  name,
+  content,
+}) => {
   return (
     <div className="flex items-center gap-2">
       <Avatar>
@@ -17,7 +22,7 @@ const Comment: React.FC<CommentProps> = ({ avatarSrc, avatarFallback, name, cont
         <AvatarFallback>{avatarFallback}</AvatarFallback>
       </Avatar>
       <div>
-        <Link href="#" className="font-medium" prefetch={false}>
+        <Link href="#" className="mr-2 font-medium" prefetch={false}>
           {name}
         </Link>
         {content}

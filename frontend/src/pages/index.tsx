@@ -12,12 +12,16 @@ import {
 import { getAllPosts } from "~/utils/postapi";
 import type { Post as PostType } from "~/types/post";
 import Layout from "./layout";
+import { UPLOAD_BASE_URL } from "~/utils/api";
 
 export default function Home() {
   const [page, setPage] = useState<number>(1);
   const [posts, setPosts] = useState<PostType[]>([]);
+
   useEffect(() => {
-    getAllPosts().then(setPosts).catch(console.error);
+    getAllPosts()
+      .then((fetchedPosts: PostType[]) => setPosts(fetchedPosts))
+      .catch((error: Error) => console.error(error));
   }, []);
 
   console.log(posts);
@@ -27,10 +31,9 @@ export default function Home() {
         {posts.map((post, index) => (
           <div key={post.id}>
             <Post
-              likes={post.likes}
-              imageUrl={post.imageUrl}
-              created={post.created}
-              title={post.title}
+              {...post}
+              imageUrl={`${UPLOAD_BASE_URL}/${post.imageUrl}`}
+              name={post.user.name}
             />
             {index < posts.length - 1 && (
               <hr className="mx-auto w-[50%] border-gray-300" />

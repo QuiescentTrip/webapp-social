@@ -80,7 +80,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
           title: "Registration successful",
           description: "You are now registered and logged in",
         });
-        window.location.reload();
+        await router.push("/");
       } else {
         const errorData = (await response.json()) as { message?: string };
         toast({

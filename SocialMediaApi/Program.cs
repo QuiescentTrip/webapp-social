@@ -8,6 +8,7 @@ using Serilog.Events;
 using SocialMediaApi.DAL;
 using SocialMediaApi.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using SocialMediaApi.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,6 +41,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 // Register repository
 builder.Services.AddScoped<IPostRepository, PostRepository>();
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
@@ -75,6 +77,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseCors("AllowSpecificOrigin");
 app.UseAuthentication();

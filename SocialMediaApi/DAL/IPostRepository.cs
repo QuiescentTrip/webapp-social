@@ -9,5 +9,7 @@ namespace SocialMediaApi.DAL
         Task<bool> CreatePost(Post post);
         Task<bool> UpdatePost(Post post);
         Task<bool> DeletePost(int id);
+        Task<bool> LikePost(int postId);
+        Task<bool> UnlikePost(int postId);
     }
 }

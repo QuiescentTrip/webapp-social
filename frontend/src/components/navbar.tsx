@@ -6,7 +6,6 @@ import { useAuth } from "~/contexts/AuthContext";
 
 export default function Component(): JSX.Element {
   const { user, logout } = useAuth();
-  console.log(user);
   return (
     <nav className="flex flex-row items-center justify-between p-4">
       <div className="flex flex-row items-center justify-center gap-4">
