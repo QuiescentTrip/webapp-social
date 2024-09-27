@@ -10,8 +10,8 @@ Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bil
 ## MVP todo:
 - [x] Create homepage
   - [ ] Integrer homepage med backend   
-- [ ] Register
-- [ ] Login
+- [x] Register
+- [x] Login
 - [ ] Fileupload # Kan gjøres med uploadthing
 - [ ] Comment
 
