@@ -118,6 +118,7 @@ export default function Component({
               commentText={commentText}
               setCommentText={setCommentText}
               id={id}
+              comments={comments}
             />
           )}
         </div>
@@ -166,16 +167,25 @@ function CommentInput({
   commentText,
   setCommentText,
   id,
+  comments,
 }: {
   commentText: string;
   setCommentText: (text: string) => void;
   id: number;
+  comments: CommentType[];
 }): JSX.Element {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (commentText.trim()) {
-      await createComment({ content: commentText, postId: id });
-      setCommentText("");
+      const newComment = await createComment({
+        content: commentText,
+        postId: id,
+      });
+      if (newComment) {
+        // Assuming you have a function to add the new comment to the existing comments
+        comments.push(newComment);
+        setCommentText(""); // Clear the input field
+      }
     }
   };
 

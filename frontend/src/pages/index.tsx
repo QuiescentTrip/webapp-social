@@ -36,31 +36,33 @@ export default function Home() {
               name={post.user.name}
             />
             {index < posts.length - 1 && (
-              <hr className="mx-auto w-[50%] border-gray-300" />
+              <hr className="mx-auto mt-10 border-gray-300 lg:w-[50%]" />
             )}
           </div>
         ))}
-        <Pagination>
-          <PaginationContent>
-            {page !== 1 && (
+        {posts.length >= 5 && (
+          <Pagination>
+            <PaginationContent>
+              {page !== 1 && (
+                <PaginationItem>
+                  <PaginationPrevious
+                    href="#"
+                    onClick={() => setPage(page - 1)}
+                  />
+                </PaginationItem>
+              )}
               <PaginationItem>
-                <PaginationPrevious
-                  href="#"
-                  onClick={() => setPage(page - 1)}
-                />
+                <PaginationLink href="#">{page}</PaginationLink>
               </PaginationItem>
-            )}
-            <PaginationItem>
-              <PaginationLink href="#">{page}</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationEllipsis />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationNext href="#" onClick={() => setPage(page + 1)} />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext href="#" onClick={() => setPage(page + 1)} />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        )}
       </div>
     </Layout>
   );
