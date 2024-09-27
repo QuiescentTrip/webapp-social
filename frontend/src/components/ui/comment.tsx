@@ -16,7 +16,7 @@ const Comment: React.FC<CommentProps> = ({
   content,
 }) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="z-20 flex items-center gap-2">
       <Avatar>
         <AvatarImage src={avatarSrc} alt={name} />
         <AvatarFallback>{avatarFallback}</AvatarFallback>

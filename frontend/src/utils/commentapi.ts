@@ -1,6 +1,6 @@
 import type { Comment, CommentData } from "../types/comment";
 import type { ErrorResponse } from "../types/ErrorResponse";
-import { API_BASE_URL } from "./api";
+import { API_BASE_URL } from "~/lib/constants";
 
 export const getComments = async (postId: number): Promise<Comment[]> => {
   const response = await fetch(`${API_BASE_URL}/comment?postId=${postId}`, {

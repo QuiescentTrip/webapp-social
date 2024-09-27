@@ -97,37 +97,5 @@ namespace SocialMediaApi.Controllers
             var posts = await _postRepository.GetAllPosts();
             return Ok(posts);
         }
-
-        [Authorize]
-        [HttpPost("{id}/like")]
-        public async Task<IActionResult> LikePost(int id)
-        {
-            var result = await _postRepository.LikePost(id);
-
-            if (result)
-            {
-                return Ok(new { message = "Post liked successfully" });
-            }
-            else
-            {
-                return NotFound(new { message = "Post not found or already liked" });
-            }
-        }
-
-        [Authorize]
-        [HttpPost("{id}/unlike")]
-        public async Task<IActionResult> UnlikePost(int id)
-        {
-            var result = await _postRepository.UnlikePost(id);
-
-            if (result)
-            {
-                return Ok(new { message = "Post unliked successfully" });
-            }
-            else
-            {
-                return NotFound(new { message = "Post not found or not liked" });
-            }
-        }
     }
 }

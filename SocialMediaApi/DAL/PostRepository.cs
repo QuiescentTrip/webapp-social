@@ -21,6 +21,8 @@ namespace SocialMediaApi.DAL
                 return await _context.Posts
                     .Include(p => p.Comments)
                     .Include(p => p.User)
+                    .Include(p => p.Likes)
+                        .ThenInclude(l => l.User)
                     .ToListAsync();
             }
             catch (Exception e)
@@ -53,8 +55,8 @@ namespace SocialMediaApi.DAL
             }
             catch (Exception e)
             {
-                Console.WriteLine($"{e}");
                 _logger.LogError($"Error in CreatePost: {e.Message}");
+                _logger.LogError($"Inner exception: {e.InnerException?.Message}");
                 return false;
             }
         }
@@ -104,7 +106,7 @@ namespace SocialMediaApi.DAL
                 if (post == null)
                     return false;
 
-                post.Likes++;
+                post.LikesCount++;
 
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
@@ -127,7 +129,7 @@ namespace SocialMediaApi.DAL
                 if (post == null)
                     return false;
 
-                post.Likes--;
+                post.LikesCount--;
 
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();

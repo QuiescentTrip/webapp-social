@@ -1,4 +1,4 @@
-import { API_BASE_URL } from "./api";
+import { API_BASE_URL } from "~/lib/constants";
 import type { RegisterData, LoginCredentials, UserInfo } from "../types/user";
 
 export const register = async (userData: RegisterData): Promise<Response> => {

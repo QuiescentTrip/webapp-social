@@ -3,6 +3,7 @@ using SocialMediaApi.Models;
 using SocialMediaApi.DAL;
 using Microsoft.Data.Sqlite;
 using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
 
 public static class DBInit
 {
@@ -16,36 +17,66 @@ public static class DBInit
 
             context.Database.Migrate();
 
-            SeedExamplePost(context, userManager).Wait();
+            SeedUsers(userManager).Wait();
+            SeedPosts(context, userManager).Wait();
         }
     }
 
-    private static async Task SeedExamplePost(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+    private static async Task SeedUsers(UserManager<ApplicationUser> userManager)
+    {
+        string[] userEmails = { "john@example.com", "jane@example.com", "bob@example.com" };
+
+        foreach (var email in userEmails)
+        {
+            if (await userManager.FindByEmailAsync(email) == null)
+            {
+                var user = new ApplicationUser
+                {
+                    UserName = email.Split('@')[0],
+                    Email = email,
+                    Name = email.Split('@')[0].ToUpperInvariant()
+                };
+                await userManager.CreateAsync(user, "Password123!");
+            }
+        }
+    }
+
+    private static async Task SeedPosts(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
     {
         if (!context.Posts.Any())
         {
-            var user = await userManager.FindByEmailAsync("example@example.com");
+            var users = await userManager.Users.ToListAsync();
+            var random = new Random();
 
-            if (user == null)
+            var posts = new List<Post>
             {
-                user = new ApplicationUser
+                new Post
                 {
-                    UserName = "example",
-                    Email = "example@example.com"
-                };
-                await userManager.CreateAsync(user, "ExamplePassword123!");
-            }
-
-            var post = new Post
-            {
-                Title = "Example Post",
-                ImageUrl = "https://picsum.photos/1000/1000",
-                Likes = 0,
-                Created = DateTime.UtcNow,
-                User = user
+                    Title = "My First Post",
+                    ImageUrl = "/uploads/poost.webp",
+                    LikesCount = random.Next(0, 100),
+                    Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
+                    User = users[random.Next(users.Count)]
+                },
+                new Post
+                {
+                    Title = "Beautiful Sunset",
+                    ImageUrl = "/uploads/sunset.webp",
+                    LikesCount = random.Next(0, 100),
+                    Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
+                    User = users[random.Next(users.Count)]
+                },
+                new Post
+                {
+                    Title = "My Pet Cat",
+                    ImageUrl = "/uploads/cat.webp",
+                    LikesCount = random.Next(0, 100),
+                    Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
+                    User = users[random.Next(users.Count)]
+                }
             };
 
-            context.Posts.Add(post);
+            context.Posts.AddRange(posts);
             await context.SaveChangesAsync();
         }
     }

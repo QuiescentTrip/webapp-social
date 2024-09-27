@@ -3,47 +3,59 @@ import Post from "~/components/post";
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
+  PaginationEllipsis,
 } from "~/components/ui/pagination";
 import { getAllPosts } from "~/utils/postapi";
 import type { Post as PostType } from "~/types/post";
 import Layout from "./layout";
-import { UPLOAD_BASE_URL } from "~/utils/api";
+import { UPLOAD_BASE_URL } from "~/lib/constants";
+import { MAX_POST_PER_PAGE, MAX_PAGINATION_PAGE } from "~/lib/constants";
 
 export default function Home() {
   const [page, setPage] = useState<number>(1);
   const [posts, setPosts] = useState<PostType[]>([]);
-
+  const [totalPages, setTotalPages] = useState<number>(1);
   useEffect(() => {
     getAllPosts()
-      .then((fetchedPosts: PostType[]) => setPosts(fetchedPosts))
+      .then((fetchedPosts: PostType[]) => {
+        const sortedPosts = fetchedPosts.sort(
+          (a, b) =>
+            new Date(b.created).getTime() - new Date(a.created).getTime(),
+        );
+        setPosts(sortedPosts);
+        setTotalPages(Math.ceil(sortedPosts.length / MAX_POST_PER_PAGE));
+      })
       .catch((error: Error) => console.error(error));
   }, []);
+  const startIndex = (page - 1) * MAX_POST_PER_PAGE;
+  const endIndex = startIndex + MAX_POST_PER_PAGE;
+  const currentPagePosts = posts.slice(startIndex, endIndex);
 
-  console.log(posts);
   return (
     <Layout title="Social Media" description="Social Media">
       <div className="flex flex-col gap-10">
-        {posts.map((post, index) => (
+        {currentPagePosts.map((post) => (
           <div key={post.id}>
             <Post
-              {...post}
+              id={post.id}
+              title={post.title}
               imageUrl={`${UPLOAD_BASE_URL}/${post.imageUrl}`}
+              likes={post.likes}
+              likesCount={post.likesCount}
+              created={post.created}
               name={post.user.name}
+              comments={post.comments}
             />
-            {index < posts.length - 1 && (
-              <hr className="mx-auto mt-10 border-gray-300 lg:w-[50%]" />
-            )}
           </div>
         ))}
-        {posts.length >= 5 && (
+        {totalPages > 1 && (
           <Pagination>
             <PaginationContent>
-              {page !== 1 && (
+              {page > 1 && (
                 <PaginationItem>
                   <PaginationPrevious
                     href="#"
@@ -51,15 +63,47 @@ export default function Home() {
                   />
                 </PaginationItem>
               )}
-              <PaginationItem>
-                <PaginationLink href="#">{page}</PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
+              {page > MAX_PAGINATION_PAGE / 2 + 1 && (
+                <PaginationItem>
+                  <PaginationLink href="#" onClick={() => setPage(1)}>
+                    1
+                  </PaginationLink>
+                </PaginationItem>
+              )}
+              {page > MAX_PAGINATION_PAGE / 2 + 2 && <PaginationEllipsis />}
+              {[...Array.from({ length: MAX_PAGINATION_PAGE })].map((_, i) => {
+                const pageNumber =
+                  page - Math.floor(MAX_PAGINATION_PAGE / 2) + i;
+                if (pageNumber > 0 && pageNumber <= totalPages) {
+                  return (
+                    <PaginationItem key={pageNumber}>
+                      <PaginationLink
+                        href="#"
+                        onClick={() => setPage(pageNumber)}
+                        isActive={pageNumber === page}
+                      >
+                        {pageNumber}
+                      </PaginationLink>
+                    </PaginationItem>
+                  );
+                }
+                return null;
+              })}
+              {page < totalPages - MAX_PAGINATION_PAGE / 2 - 1 && (
                 <PaginationEllipsis />
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationNext href="#" onClick={() => setPage(page + 1)} />
-              </PaginationItem>
+              )}
+              {page < totalPages - MAX_PAGINATION_PAGE / 2 && (
+                <PaginationItem>
+                  <PaginationLink href="#" onClick={() => setPage(totalPages)}>
+                    {totalPages}
+                  </PaginationLink>
+                </PaginationItem>
+              )}
+              {page < totalPages && (
+                <PaginationItem>
+                  <PaginationNext href="#" onClick={() => setPage(page + 1)} />
+                </PaginationItem>
+              )}
             </PaginationContent>
           </Pagination>
         )}
