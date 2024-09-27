@@ -2,10 +2,16 @@
 Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bilder og kommentere på andres bilder.
 
 ## How to run
+
+**If you have gum installed you can use the `run.sh` script.**
+
+If not:
 - Først clone
 - Front end kjøres med `(cd .\frontend\) npm run dev`
 - Backend kjøres med `(cd .\SocialMediaApi\) dotnet watch run` - tilgang til swagger
 - Må ha sql serveren oppe.
+
+
 
 ## MVP todo:
 - [x] Create homepage
