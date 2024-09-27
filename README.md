@@ -3,9 +3,9 @@ Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bil
 
 ## Known bugs
 
-- Register kan gi feil, men dette er fordi backend ikke gir full output for feil.
-- Du kan bare logge inn med brukeren du har opprettet om usernavnet ditt er det samme som emailen din. (Takk PasswordSignInAsync)
-- Navbar rerender ikke på signin.
+- ~~Register kan gi feil, men dette er fordi backend ikke gir full output for feil.~~
+- ~~Du kan bare logge inn med brukeren du har opprettet om usernavnet ditt er det samme som emailen din. (Takk PasswordSignInAsync)~~
+- ~~Navbar rerender ikke på signin.~~
 
 ## How to run
 
@@ -24,6 +24,7 @@ If not:
   - [ ] Integrer homepage med backend   
 - [x] Register
 - [x] Login
+- [ ] Create post
 - [ ] Fileupload # Kan gjøres med uploadthing
 - [ ] Comment
 
