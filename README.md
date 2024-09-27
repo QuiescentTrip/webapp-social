@@ -3,6 +3,7 @@ Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bil
 
 ## Known bugs
 
+- Likes blir ikke beholdt mellom sessions.
 - ~~Register kan gi feil, men dette er fordi backend ikke gir full output for feil.~~
 - ~~Du kan bare logge inn med brukeren du har opprettet om usernavnet ditt er det samme som emailen din. (Takk PasswordSignInAsync)~~
 - ~~Navbar rerender ikke på signin.~~
@@ -21,12 +22,17 @@ If not:
 
 ## MVP todo:
 - [x] Create homepage
-  - [ ] Integrer homepage med backend   
+  - [x] Integrer homepage med backend   
 - [x] Register
 - [x] Login
-- [ ] Create post
-- [ ] Fileupload # Kan gjøres med uploadthing
-- [ ] Comment
+- [x] Create post
+- [x] Fileupload. ~~Kan gjøres med uploadthing~~ data streames til wwwroot der det blir lagret
+- [x] Comment
+- [ ] Updated likes
+- [ ] All comments popup
+- [ ] Auto reload on comment
+- [ ] **ROLES**! Viktig, admin role for delete.
+- [ ] Faen må vi ha edit også?
 
 ### Todos extras:
 - [ ] Profile
