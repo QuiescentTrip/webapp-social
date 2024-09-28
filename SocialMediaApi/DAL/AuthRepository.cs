@@ -17,7 +17,8 @@ namespace SocialMediaApi.Repositories
 
         public async Task<ApplicationUser> FindUserByEmailAsync(string email)
         {
-            return await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.FindByEmailAsync(email);
+            return user ?? throw new Exception("User not found");
         }
 
         public async Task<IdentityResult> CreateUserAsync(ApplicationUser user, string password)
@@ -42,7 +43,8 @@ namespace SocialMediaApi.Repositories
 
         public async Task<ApplicationUser> GetUserAsync(System.Security.Claims.ClaimsPrincipal user)
         {
-            return await _userManager.GetUserAsync(user);
+            var userData = await _userManager.GetUserAsync(user);
+            return userData ?? throw new Exception("User not found");
         }
     }
 }

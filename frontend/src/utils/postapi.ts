@@ -55,3 +55,36 @@ export const createPost = async (postData: PostData): Promise<Post> => {
 
   return response.json() as Promise<Post>;
 };
+
+export const deletePost = async (postId: number): Promise<void> => {
+  const response = await fetch(`${API_BASE_URL}/post/${postId}`, {
+    method: "DELETE",
+    credentials: "include",
+  });
+
+  if (!response.ok) {
+    const errorData = (await response.json()) as ErrorResponse;
+    throw new Error(errorData.message || "Failed to delete post");
+  }
+};
+
+export const updatePost = async (
+  postId: number,
+  title: string,
+): Promise<Post> => {
+  const response = await fetch(`${API_BASE_URL}/post/${postId}`, {
+    method: "PUT",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ title }),
+  });
+
+  if (!response.ok) {
+    const errorData = (await response.json()) as ErrorResponse;
+    throw new Error(errorData.message || "Failed to update post");
+  }
+
+  return response.json() as Promise<Post>;
+};

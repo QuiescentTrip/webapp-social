@@ -31,6 +31,7 @@ export default function Home() {
       })
       .catch((error: Error) => console.error(error));
   }, []);
+  console.log(posts);
   const startIndex = (page - 1) * MAX_POST_PER_PAGE;
   const endIndex = startIndex + MAX_POST_PER_PAGE;
   const currentPagePosts = posts.slice(startIndex, endIndex);
@@ -47,7 +48,7 @@ export default function Home() {
               likes={post.likes}
               likesCount={post.likesCount}
               created={post.created}
-              name={post.user.name}
+              creator={post.user}
               comments={post.comments}
             />
           </div>

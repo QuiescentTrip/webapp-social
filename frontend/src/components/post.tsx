@@ -13,12 +13,14 @@ import { ShowComments } from "./ui/showComments";
 import { CommentInput } from "./ui/commentInput";
 import { Dialog, DialogTrigger } from "./ui/dialog";
 import type { Like } from "~/types/like";
+import { MoreOptions } from "./more-options";
+import type { UserInfo } from "~/types/user";
 interface ComponentProps {
-  id: number; // Change this to an array of user IDs who liked the post
+  id: number;
   imageUrl: string;
   created: string;
   title: string;
-  name: string;
+  creator: UserInfo;
   comments: CommentType[];
   likesCount: number;
   likes: Like[];
@@ -30,7 +32,7 @@ export default function Component({
   imageUrl,
   created,
   title,
-  name,
+  creator,
   comments,
   likesCount: initialLikesCount,
 }: ComponentProps): JSX.Element {
@@ -69,6 +71,7 @@ export default function Component({
   return (
     <Dialog>
       <div className="mx-auto w-full max-w-[80%] rounded-xl outline outline-1 outline-gray-300 lg:max-w-[60%] 2xl:max-w-[40%]">
+        {/* Post Image */}
         <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
           <img
             src={imageUrl}
@@ -79,28 +82,33 @@ export default function Component({
             style={{ aspectRatio: "600/400", objectFit: "cover" }}
           />
         </div>
+
+        {/* Post Content */}
         <div className="rounded-b-lg bg-card p-4">
           <div className="mb-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Avatar>
                 <AvatarImage alt="@shadcn" />
-                <AvatarFallback>{name.slice(0, 2)}</AvatarFallback>
+                <AvatarFallback>{creator.name.slice(0, 2)}</AvatarFallback>
               </Avatar>
               <div>
-                <div className="font-medium">{name}</div>{" "}
-                {/* Change this line */}
+                <div className="font-medium">{creator.name}</div>{" "}
+                {/* Post Date */}
                 <div className="text-sm text-muted-foreground">
                   {new Date(created).toLocaleString()}
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Post Title */}
           <div className="mb-4">
             <h2 className="text-l">{title}</h2>
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
+                {/* Like Button */}
                 <Button
                   variant={isLiked ? "default" : "ghost"}
                   size="icon"
@@ -111,12 +119,26 @@ export default function Component({
                   />
                   <span className="sr-only">Like</span>
                 </Button>
+
+                {/* View Comments Button With DialogTrigger for the ShowComments component */}
                 <DialogTrigger asChild>
                   <Button variant="ghost" size="icon">
                     <MessageCircleIcon className="h-4 w-4" />
                     <span className="sr-only">View Comments</span>
                   </Button>
                 </DialogTrigger>
+
+                <ShowComments
+                  comments={comments}
+                  loggedin={!!user}
+                  commentText={commentText}
+                  setCommentText={setCommentText}
+                  id={id}
+                />
+
+                {/* More Options for post if user is the creator */}
+                {user && user.username === creator.name && <MoreOptions />}
+
                 <ShowComments
                   comments={comments}
                   loggedin={!!user}
@@ -125,11 +147,15 @@ export default function Component({
                   id={id}
                 />
               </div>
+
+              {/* Likes Count */}
               <div className="text-sm font-medium">
                 <span className="text-primary">{likesCount}</span>{" "}
                 {likesCount === 1 ? "like" : "likes"}
               </div>
             </div>
+
+            {/* Comment Input */}
             {!!user && (
               <CommentInput
                 commentText={commentText}
@@ -139,29 +165,38 @@ export default function Component({
               />
             )}
           </div>
+
+          {/* Comments */}
           <div className="mt-4 space-y-2">
             {comments.length > 0 ? (
               <>
                 {/* This sorts comments by created date,
               and then slices the first 3 comments
-              Fuck this shit
-              */}
+              Fuck this shit */}
                 {[...comments]
+                  //Sorts by newest
                   .sort(
                     (a, b) =>
                       new Date(b.created).getTime() -
                       new Date(a.created).getTime(),
                   )
+
+                  //Slices the first 3 comments
                   .slice(0, MAX_COMMENT_PER_POST)
+
+                  //Maps the comments to the Comment component
                   .map((comment, index) => (
                     <Comment
                       key={index}
                       content={comment.content}
                       name={comment.user.name}
+                      //TODO: Add profile pictures. Now it's just the first two letters of the username
                       avatarSrc={""}
                       avatarFallback={comment.user.name.slice(0, 2)}
                     />
                   ))}
+
+                {/* Show More Comments Button */}
                 {comments.length > 3 && (
                   <DialogTrigger asChild>
                     <p className="cursor-pointer text-center text-sm text-muted-foreground hover:underline">

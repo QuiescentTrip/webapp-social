@@ -97,5 +97,76 @@ namespace SocialMediaApi.Controllers
             var posts = await _postRepository.GetAllPosts();
             return Ok(posts);
         }
+
+        [Authorize]
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var post = await _postRepository.GetPostById(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+
+            if (post.User.Id != user.Id)
+            {
+                return Forbid();
+            }
+
+            var result = await _postRepository.DeletePost(id);
+            if (result)
+            {
+                return NoContent();
+            }
+            else
+            {
+                return StatusCode(500, "An error occurred while deleting the post");
+            }
+        }
+
+        [Authorize]
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdatePost(int id, [FromBody] PostUpdateDto postDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var existingPost = await _postRepository.GetPostById(id);
+            if (existingPost == null)
+            {
+                return NotFound();
+            }
+
+            if (existingPost.User.Id != user.Id)
+            {
+                return Forbid();
+            }
+
+            existingPost.Title = postDto.Title;
+
+            var result = await _postRepository.UpdatePost(existingPost);
+            if (result)
+            {
+                return Ok(existingPost);
+            }
+            else
+            {
+                return StatusCode(500, "An error occurred while updating the post");
+            }
+        }
     }
 }

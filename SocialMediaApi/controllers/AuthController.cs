@@ -66,22 +66,30 @@ namespace SocialMediaApi.Controllers
                 return BadRequest(new ValidationProblemDetails(ModelState));
             }
 
-            var user = await _authRepository.FindUserByEmailAsync(model.Email);
-            if (user == null)
+            try
+            {
+                var user = await _authRepository.FindUserByEmailAsync(model.Email);
+                if (user == null || user.UserName == null)
+                {
+                    ModelState.AddModelError("Email", "Invalid email or password");
+                    return BadRequest(new ValidationProblemDetails(ModelState));
+                }
+
+                var result = await _authRepository.PasswordSignInAsync(user.UserName, model.Password, isPersistent: false, lockoutOnFailure: false);
+
+                if (result.Succeeded)
+                {
+                    return Ok(new { username = user.UserName, email = user.Email });
+                }
+
+                ModelState.AddModelError("Password", "Invalid email or password");
+                return BadRequest(new ValidationProblemDetails(ModelState));
+            }
+            catch (Exception)
             {
                 ModelState.AddModelError("Email", "Invalid email or password");
                 return BadRequest(new ValidationProblemDetails(ModelState));
             }
-
-            var result = await _authRepository.PasswordSignInAsync(user.UserName, model.Password, isPersistent: false, lockoutOnFailure: false);
-
-            if (result.Succeeded)
-            {
-                return Ok(new { username = user.UserName, email = user.Email });
-            }
-
-            ModelState.AddModelError("Password", "Invalid email or password");
-            return BadRequest(new ValidationProblemDetails(ModelState));
         }
 
         [HttpPost("logout")]

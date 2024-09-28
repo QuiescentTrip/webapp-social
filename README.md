@@ -11,7 +11,7 @@ Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bil
 First you have to migrate the database.
 
 ```bash
-dotnet ef migrations add dbinit
+dotnet ef migrations add DBinit
 dotnet ef database update
 ```
 

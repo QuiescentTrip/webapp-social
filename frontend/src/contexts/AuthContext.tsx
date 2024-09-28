@@ -1,6 +1,8 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import type { ReactNode } from "react";
 import type { UserInfo, RegisterData, LoginCredentials } from "~/types/user";
+import type { ErrorResponse, LoginErrorResponse } from "~/types/ErrorResponse";
+
 import {
   getUserInfo,
   login as apiLogin,
@@ -63,12 +65,24 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         });
         await router.push("/");
       } else {
-        const errorData = (await response.json()) as { message?: string };
-        toast({
-          variant: "destructive",
-          title: "Login failed",
-          description: errorData.message ?? "An error occurred",
-        });
+        const errorData = (await response.json()) as LoginErrorResponse;
+        if (errorData.errors) {
+          Object.entries(errorData.errors).forEach(([key, messages]) => {
+            messages.forEach((message) => {
+              toast({
+                variant: "destructive",
+                title: `${key} Error`,
+                description: message,
+              });
+            });
+          });
+        } else {
+          toast({
+            variant: "destructive",
+            title: "Login failed",
+            description: errorData.title ?? "An error occurred",
+          });
+        }
       }
     } catch (error) {
       console.error(error);
@@ -92,11 +106,15 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         });
         await router.push("/");
       } else {
-        const errorData = (await response.json()) as { message?: string };
-        toast({
-          variant: "destructive",
-          title: "Registration failed",
-          description: errorData.message ?? "An error occurred",
+        const errorData = (await response.json()) as LoginErrorResponse;
+        Object.entries(errorData.errors).forEach(([key, messages]) => {
+          messages.forEach((message) => {
+            toast({
+              variant: "destructive",
+              title: `${key} Error`,
+              description: message,
+            });
+          });
         });
       }
     } catch (error) {

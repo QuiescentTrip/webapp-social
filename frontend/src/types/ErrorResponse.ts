@@ -6,3 +6,9 @@ export type ErrorResponse = {
   traceId: string;
   type: string;
 };
+
+export type LoginErrorResponse = {
+  errors: Record<string, string[]>;
+  title: string;
+  status: number;
+};
