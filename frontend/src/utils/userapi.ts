@@ -32,10 +32,13 @@ export const logout = async (): Promise<Response> => {
   });
 };
 
-export const getUserInfo = async (): Promise<UserInfo> => {
+export const getUserInfo = async (): Promise<UserInfo | null> => {
   const response = await fetch(`${API_BASE_URL}/Auth/user`, {
     credentials: "include",
   });
+  if (response.status === 401) {
+    return null; // User is not authenticated
+  }
   if (!response.ok) {
     throw new Error("Failed to fetch user info");
   }

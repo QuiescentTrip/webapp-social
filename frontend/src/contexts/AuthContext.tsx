@@ -34,7 +34,17 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         const userData = await getUserInfo();
         setUser(userData);
       } catch (error) {
-        console.error("Failed to fetch user info:", error);
+        // Check if the error is due to unauthorized access
+        if (
+          error instanceof Error &&
+          error.message.toLowerCase().includes("unauthorized")
+        ) {
+          // User is not logged in, so we'll just set the user to null
+          setUser(null);
+        } else {
+          // Log other types of errors
+          console.error("Failed to fetch user info:", error);
+        }
       }
     };
 

@@ -56,7 +56,7 @@ public static class DBInit
                     ImageUrl = "/uploads/poost.webp",
                     LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
-                    User = users[random.Next(users.Count)]
+                    User = users[random.Next(users.Count)],
                 },
                 new Post
                 {
@@ -64,7 +64,7 @@ public static class DBInit
                     ImageUrl = "/uploads/sunset.webp",
                     LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
-                    User = users[random.Next(users.Count)]
+                    User = users[random.Next(users.Count)],
                 },
                 new Post
                 {
@@ -72,11 +72,33 @@ public static class DBInit
                     ImageUrl = "/uploads/cat.webp",
                     LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
-                    User = users[random.Next(users.Count)]
+                    User = users[random.Next(users.Count)],
                 }
             };
 
             context.Posts.AddRange(posts);
+            await context.SaveChangesAsync();
+
+            // Add comments to the posts
+            posts[0].Comments = new List<Comment>
+            {
+                new Comment { Post = posts[0], Content = "Welcome to the community!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[0], Content = "Great first post!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+            };
+
+            posts[1].Comments = new List<Comment>
+            {
+                new Comment { Post = posts[1], Content = "Stunning view!", User = users[0], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[1], Content = "Where was this taken?", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[1], Content = "I wish I was there!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+            };
+
+            posts[2].Comments = new List<Comment>
+            {
+                new Comment { Post = posts[2], Content = "So cute!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[2], Content = "What's its name?", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+            };
+
             await context.SaveChangesAsync();
         }
     }
