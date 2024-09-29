@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Identity;
 using SocialMediaApi.Models;
+using SocialMediaApi.Repositories;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace SocialMediaApi.Repositories
+namespace SocialMediaApi.DAL
 {
     public class AuthRepository : IAuthRepository
     {
@@ -40,7 +42,7 @@ namespace SocialMediaApi.Repositories
             await _signInManager.SignOutAsync();
         }
 
-        public async Task<ApplicationUser?> GetUserAsync(System.Security.Claims.ClaimsPrincipal user)
+        public async Task<ApplicationUser?> GetUserAsync(ClaimsPrincipal user)
         {
             return await _userManager.GetUserAsync(user);
         }

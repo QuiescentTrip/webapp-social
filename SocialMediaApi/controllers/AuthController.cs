@@ -98,7 +98,6 @@ namespace SocialMediaApi.Controllers
             await _authRepository.SignOutAsync();
             return Ok(new { message = "User logged out successfully" });
         }
-
         // Authorize checks the token given in the header by identity and gets the user info from userManager
         [Authorize]
         [HttpGet("user")]
@@ -107,7 +106,7 @@ namespace SocialMediaApi.Controllers
             var user = await _authRepository.GetUserAsync(User);
             if (user == null)
             {
-                return
+                return NoContent();
             }
 
             return Ok(new { username = user.UserName, email = user.Email });
