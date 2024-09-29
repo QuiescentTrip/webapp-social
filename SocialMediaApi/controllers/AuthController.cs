@@ -107,7 +107,7 @@ namespace SocialMediaApi.Controllers
             var user = await _authRepository.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound("User not found");
+                return
             }
 
             return Ok(new { username = user.UserName, email = user.Email });
