@@ -20,6 +20,7 @@ namespace SocialMediaApi.DAL
             {
                 return await _context.Posts
                     .Include(p => p.Comments)
+                        .ThenInclude(c => c.User)
                     .Include(p => p.User)
                     .Include(p => p.Likes)
                         .ThenInclude(l => l.User)
