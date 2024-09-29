@@ -8,23 +8,34 @@ Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bil
 
 ## How to run
 
-First you have to migrate the database.
+**If on linux or mac:**
+
+1. Install `gum`
+2. Run `run.sh`
+
+**For windows:**
+
+1. Migrate the database
 
 ```bash
+cd .\SocialMediaApi\
 dotnet ef migrations add DBinit
 dotnet ef database update
 ```
 
-Then you can run the frontend and backend.
+2. install and run on frontend
 
-**If you have gum installed you can use the `run.sh` script.**
+```powershell
+cd .\frontend\; npm install; npm run dev
+```
 
-If not:
+3. Run the backend
 
-- Først clone
-- Front end kjøres med `(cd .\frontend\) npm run dev`
-- Backend kjøres med `(cd .\SocialMediaApi\) dotnet watch run` - tilgang til swagger
-- Må ha sql serveren oppe.
+```bash
+cd .\SocialMediaApi\; dotnet watch run
+```
+
+4. `localhost:3000` for frontend
 
 ## MVP todo:
 
@@ -38,12 +49,14 @@ If not:
 - [x] Updated likes
 - [x] All comments popup
 - [x] Auto reload on comment
-- [ ] **ROLES**! Viktig, admin role for delete.
-- [ ] Faen må vi ha edit også?
+- [ ] Delete post
+- [ ] Edit post
+- [ ] Admin role
 
 ### Todos extras:
 
 - [ ] Profile
+- [ ] Profile picture
 
 ## Ressurser:
 
