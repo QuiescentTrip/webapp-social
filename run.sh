@@ -17,6 +17,14 @@ check_and_install_npm() {
     fi
 }
 
+# Function to check and run database migrations if needed
+check_and_run_migrations() {
+    if [ ! -f "./SocialMediaApi/socialmedia.db" ]; then
+        echo "Database file not found. Running migrations..."
+        (cd SocialMediaApi && dotnet ef migrations add DBinit && dotnet ef database update)
+    fi
+}
+
 # Function to run commands in a new tmux pane
 run_command() {
     tmux split-window -h
@@ -35,10 +43,12 @@ case $CHOICE in
         tmux send-keys "cd frontend && npm run dev" C-m
         ;;
     "Backend")
+        check_and_run_migrations
         tmux send-keys "cd SocialMediaApi && dotnet watch run" C-m
         ;;
     "Both (Recommended)")
         check_and_install_npm
+        check_and_run_migrations
         tmux send-keys "cd frontend && npm run dev" C-m
         run_command "cd SocialMediaApi && dotnet watch run"
         ;;
