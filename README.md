@@ -52,6 +52,7 @@ cd .\SocialMediaApi\; dotnet watch run
 - [ ] Delete post
 - [ ] Edit post
 - [ ] Admin role
+- [ ] Tests
 
 ### Todos extras:
 
