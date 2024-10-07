@@ -1,0 +1,6 @@
+**/bin/
+**/obj/
+**/wwwroot/
+**/Migrations/
+**/Logs/
+**/socialmedia.db
