@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMediaApi", "SocialMediaApi\SocialMediaApi.csproj", "{91506EFB-CDF3-41C1-AEB8-19E6654915CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaApi.Tests", "SocialMediaApi.Tests\SocialMediaApi.Tests.csproj", "{E4958C16-61A4-4C4D-B550-705B27C90296}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{91506EFB-CDF3-41C1-AEB8-19E6654915CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91506EFB-CDF3-41C1-AEB8-19E6654915CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91506EFB-CDF3-41C1-AEB8-19E6654915CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4958C16-61A4-4C4D-B550-705B27C90296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4958C16-61A4-4C4D-B550-705B27C90296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4958C16-61A4-4C4D-B550-705B27C90296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4958C16-61A4-4C4D-B550-705B27C90296}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
