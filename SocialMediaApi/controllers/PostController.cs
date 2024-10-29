@@ -95,7 +95,42 @@ namespace SocialMediaApi.Controllers
         public async Task<IActionResult> GetAllPosts()
         {
             var posts = await _postRepository.GetAllPosts();
-            return Ok(posts);
+            return Ok(posts.Select(post => new PostDto
+            {
+                Id = post.Id,
+                Title = post.Title,
+                ImageUrl = post.ImageUrl,
+                Created = post.Created,
+                User = new UserDto
+                {
+                    Username = post.User.UserName ?? string.Empty,
+                    Email = post.User.Email ?? string.Empty,
+                    Name = post.User.Name
+                },
+                LikesCount = post.Likes.Count,
+                Likes = post.Likes.Select(l => new LikeDto
+                {
+                    Id = l.Id,
+                    User = new UserDto
+                    {
+                        Username = l.User.UserName ?? string.Empty,
+                        Email = l.User.Email ?? string.Empty,
+                        Name = l.User.Name
+                    }
+                }).ToList(),
+                Comments = post.Comments.Select(c => new CommentDto
+                {
+                    Id = c.Id,
+                    Content = c.Content,
+                    Created = c.Created,
+                    User = new UserDto
+                    {
+                        Username = c.User.UserName ?? string.Empty,
+                        Email = c.User.Email ?? string.Empty,
+                        Name = c.User.Name
+                    }
+                }).ToList()
+            }));
         }
 
         [Authorize]

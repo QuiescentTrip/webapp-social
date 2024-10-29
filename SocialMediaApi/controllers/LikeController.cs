@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using SocialMediaApi.Models;
 using SocialMediaApi.DAL;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 
 namespace SocialMediaApi.Controllers
@@ -12,12 +11,12 @@ namespace SocialMediaApi.Controllers
     [Authorize]
     public class LikeController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ILikeRepository _likeRepository;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public LikeController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public LikeController(ILikeRepository likeRepository, UserManager<ApplicationUser> userManager)
         {
-            _context = context;
+            _likeRepository = likeRepository;
             _userManager = userManager;
         }
 
@@ -30,32 +29,20 @@ namespace SocialMediaApi.Controllers
                 return Unauthorized();
             }
 
-            var post = await _context.Posts.FindAsync(postId);
-            if (post == null)
-            {
-                return NotFound("Post not found");
-            }
-
-            var existingLike = await _context.Likes
-                .FirstOrDefaultAsync(l => l.Post == post && l.User == user);
-
-            if (existingLike != null)
+            var hasLiked = await _likeRepository.HasUserLikedPost(postId, user.Id);
+            if (hasLiked)
             {
                 return BadRequest("You have already liked this post");
             }
 
-            var like = new Like
+            var result = await _likeRepository.AddLike(postId, user.Id);
+            if (!result)
             {
-                Post = post,
-                User = user
-            };
+                return NotFound("Post not found");
+            }
 
-            _context.Likes.Add(like);
-            post.LikesCount++;
-
-            await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Post liked successfully", likes = post.Likes });
+            var likes = await _likeRepository.GetLikesByPost(postId);
+            return Ok(new { message = "Post liked successfully", likes });
         }
 
         [HttpDelete("{postId}")]
@@ -67,26 +54,20 @@ namespace SocialMediaApi.Controllers
                 return Unauthorized();
             }
 
-            var post = await _context.Posts.FindAsync(postId);
-            if (post == null)
-            {
-                return NotFound("Post not found");
-            }
-
-            var existingLike = await _context.Likes
-                .FirstOrDefaultAsync(l => l.Post == post && l.User == user);
-
-            if (existingLike == null)
+            var hasLiked = await _likeRepository.HasUserLikedPost(postId, user.Id);
+            if (!hasLiked)
             {
                 return BadRequest("You haven't liked this post");
             }
 
-            _context.Likes.Remove(existingLike);
-            post.LikesCount--;
+            var result = await _likeRepository.RemoveLike(postId, user.Id);
+            if (!result)
+            {
+                return NotFound("Post not found");
+            }
 
-            await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Post unliked successfully", likes = post.Likes });
+            var likes = await _likeRepository.GetLikesByPost(postId);
+            return Ok(new { message = "Post unliked successfully", likes });
         }
     }
 }

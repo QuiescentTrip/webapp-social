@@ -53,7 +53,7 @@ export function CommentInput({
   };
 
   return (
-    <div className="flex rounded-md focus-within:ring-2 focus-within:ring-primary focus-within:ring-opacity-50">
+    <div className="flex flex-col gap-2 rounded-md focus-within:ring-2 focus-within:ring-primary focus-within:ring-opacity-50 sm:flex-row sm:gap-0">
       <input
         type="text"
         placeholder="Write a comment..."
@@ -61,11 +61,11 @@ export function CommentInput({
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setCommentText(e.target.value)
         }
-        className="flex-grow rounded-l-md border px-2 py-1 focus:outline-none"
+        className="flex-grow rounded-md border px-2 py-1 focus:outline-none sm:rounded-r-none"
       />
       <button
         onClick={handleSubmit}
-        className="rounded-r-md bg-primary px-4 py-1 text-white focus:outline-none dark:text-black"
+        className="rounded-md bg-primary px-4 py-1 text-white focus:outline-none dark:text-black sm:rounded-l-none"
       >
         Post
       </button>

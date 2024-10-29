@@ -157,12 +157,14 @@ export default function Component({
 
             {/* Comment Input */}
             {!!user && (
-              <CommentInput
-                commentText={commentText}
-                setCommentText={setCommentText}
-                id={id}
-                comments={comments}
-              />
+              <div>
+                <CommentInput
+                  commentText={commentText}
+                  setCommentText={setCommentText}
+                  id={id}
+                  comments={comments}
+                />
+              </div>
             )}
           </div>
 

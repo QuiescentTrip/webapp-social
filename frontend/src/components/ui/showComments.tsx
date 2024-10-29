@@ -24,14 +24,14 @@ export const ShowComments = ({
 }) => {
   return (
     <>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="max-h-[80vh] w-[90vw] max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Comments</DialogTitle>
           <DialogDescription>
             View and add comments for this post.
           </DialogDescription>
         </DialogHeader>
-        <div className="flex h-[400px] flex-col gap-2">
+        <div className="flex min-h-[300px] flex-col gap-2">
           <ScrollArea className="w-full flex-grow gap-4 rounded-md border p-4">
             <div className="flex flex-col gap-2">
               {comments.length > 0 ? (
@@ -56,7 +56,7 @@ export const ShowComments = ({
             </div>
           </ScrollArea>
           {loggedin && (
-            <div className="z-10 mt-4">
+            <div className="z-10 mt-2">
               <CommentInput
                 commentText={commentText}
                 setCommentText={setCommentText}

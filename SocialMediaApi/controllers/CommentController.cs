@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using SocialMediaApi.DAL;
 using SocialMediaApi.Models;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 
@@ -12,37 +10,40 @@ namespace SocialMediaApi.Controllers
     [ApiController]
     public class CommentController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ICommentRepository _commentRepository;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IPostRepository _postRepository;
 
-        public CommentController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public CommentController(
+            ICommentRepository commentRepository,
+            UserManager<ApplicationUser> userManager,
+            IPostRepository postRepository)
         {
-            _context = context;
+            _commentRepository = commentRepository;
             _userManager = userManager;
+            _postRepository = postRepository;
         }
 
-        // GET: api/Comment
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Comment>>> GetComments()
         {
-            return await _context.Comments.ToListAsync();
+            var comments = await _commentRepository.GetAllComments();
+            return Ok(comments);
         }
 
-        // GET: api/Comment/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Comment>> GetComment(int id)
         {
-            var comment = await _context.Comments.FindAsync(id);
+            var comment = await _commentRepository.GetCommentById(id);
 
             if (comment == null)
             {
                 return NotFound();
             }
 
-            return comment;
+            return Ok(comment);
         }
 
-        // POST: api/Comment
         [Authorize]
         [HttpPost]
         public async Task<ActionResult<Comment>> PostComment([FromBody] CommentCreateDto commentData)
@@ -58,7 +59,7 @@ namespace SocialMediaApi.Controllers
                 return Unauthorized();
             }
 
-            var post = await _context.Posts.FindAsync(commentData.PostId);
+            var post = await _postRepository.GetPostById(commentData.PostId);
             if (post == null)
             {
                 return NotFound("Post not found");
@@ -72,63 +73,13 @@ namespace SocialMediaApi.Controllers
                 Created = DateTime.UtcNow
             };
 
-            _context.Comments.Add(comment);
-            await _context.SaveChangesAsync();
+            var createdComment = await _commentRepository.CreateComment(comment);
+            if (createdComment == null)
+            {
+                return StatusCode(500, "Failed to create comment");
+            }
 
-            return CreatedAtAction("GetComment", new { id = comment.Id }, comment);
+            return CreatedAtAction(nameof(GetComment), new { id = createdComment.Id }, createdComment);
         }
-
-        /*
-        TODO: Implement this
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutComment(int id, Comment comment)
-        {
-            if (id != comment.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(comment).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CommentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }*/
-
-        /*
-        TODO: Implement this
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteComment(int id)
-        {
-            var comment = await _context.Comments.FindAsync(id);
-            if (comment == null)
-            {
-                return NotFound();
-            }
-
-            _context.Comments.Remove(comment);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool CommentExists(int id)
-        {
-            return _context.Comments.Any(e => e.Id == id);
-        }*/
     }
 }

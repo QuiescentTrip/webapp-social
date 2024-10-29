@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using SocialMediaApi.Models;
+
 using System.Threading.Tasks;
 using System;
 using SocialMediaApi.Repositories;
@@ -27,7 +28,6 @@ namespace SocialMediaApi.Controllers
                 return BadRequest(new ValidationProblemDetails(ModelState));
             }
 
-            // Check if email is already in use
             var existingUser = await _authRepository.FindUserByEmailAsync(model.Email);
             if (existingUser != null)
             {
@@ -47,7 +47,12 @@ namespace SocialMediaApi.Controllers
             if (result.Succeeded)
             {
                 await _authRepository.SignInAsync(user, isPersistent: false);
-                return Ok(new { username = user.UserName, email = user.Email });
+                return Ok(new UserDto
+                {
+                    Username = user.UserName ?? string.Empty,
+                    Email = user.Email ?? string.Empty,
+                    Name = user.Name
+                });
             }
 
             foreach (var error in result.Errors)

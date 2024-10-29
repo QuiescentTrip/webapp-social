@@ -42,6 +42,8 @@ builder.Services.ConfigureApplicationCookie(options =>
 // Register repository
 builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<ILikeRepository, LikeRepository>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
