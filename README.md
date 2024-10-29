@@ -4,7 +4,8 @@ Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bil
 
 ## Known bugs
 
-- Console errors. The backend tries to reauthorize the user on refresh. For some reason.
+- Console errors. The backend tries to reauthorize the user on refresh. (When unthenticated)
+- Maybe not bug- but front end fetches all posts and not in increments.
 
 ## How to run
 
@@ -61,7 +62,7 @@ cd .\SocialMediaApi\; dotnet watch run
 
 ## Ressurser:
 
-- ~~[Innstallere tailwind med aspnet](https://github.com/angeldev96/tailwind-aspdotnet/tree/master)~~ Bruker ikke aspnet til frontend
+- [Innstallere tailwind med aspnet](https://github.com/angeldev96/tailwind-aspdotnet/tree/master) ~~Bruker ikke aspnet til frontend~~ Skal visst ha aspnet frontend OGSÅ?
 - [chadcn components](https://ui.shadcn.com/docs/components/accordion)
 - [Likt prosjekt](https://github.com/teddysmithdev/FinShark)
 - [Likt prosjekt, men noen år gammel med dotnet 6?](https://github.com/CodAffection/React-CRUD-with-Asp.Net-Core-Web-API)
