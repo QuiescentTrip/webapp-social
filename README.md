@@ -50,10 +50,11 @@ cd .\SocialMediaApi\; dotnet watch run
 - [x] Updated likes
 - [x] All comments popup
 - [x] Auto reload on comment
-- [ ] Delete post
-- [ ] Edit post
-- [ ] Admin role
-- [ ] Tests
+- [x] Delete post
+- [x] Edit post
+- [x] Tests
+- [ ] Admin role'
+- [ ] Asp.net MVC frontent
 
 ### Todos extras:
 
