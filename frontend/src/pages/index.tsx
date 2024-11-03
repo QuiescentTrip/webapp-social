@@ -40,18 +40,17 @@ export default function Home() {
     <Layout title="Social Media" description="Social Media">
       <div className="flex flex-col gap-10">
         {currentPagePosts.map((post) => (
-          <div key={post.id}>
-            <Post
-              id={post.id}
-              title={post.title}
-              imageUrl={`${UPLOAD_BASE_URL}/${post.imageUrl}`}
-              likes={post.likes}
-              likesCount={post.likesCount}
-              created={post.created}
-              creator={post.user}
-              comments={post.comments}
-            />
-          </div>
+          <Post
+            key={post.id}
+            id={post.id}
+            title={post.title}
+            imageUrl={`${UPLOAD_BASE_URL}/${post.imageUrl}`}
+            likes={post.likes}
+            likesCount={post.likesCount}
+            created={post.created}
+            creator={post.user}
+            comments={post.comments}
+          />
         ))}
         {totalPages > 1 && (
           <Pagination>

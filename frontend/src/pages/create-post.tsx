@@ -43,7 +43,7 @@ export default function CreatePost() {
     }
 
     try {
-      const newPost = await createPost({ title, image });
+      await createPost({ title, image });
       toast({
         title: "Post Created",
         description: "Your post has been successfully created!",

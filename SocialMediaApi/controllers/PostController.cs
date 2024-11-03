@@ -95,6 +95,7 @@ namespace SocialMediaApi.Controllers
         public async Task<IActionResult> GetAllPosts()
         {
             var posts = await _postRepository.GetAllPosts();
+            // Er dette en repo eller en controller greie?
             return Ok(posts.Select(post => new PostDto
             {
                 Id = post.Id,

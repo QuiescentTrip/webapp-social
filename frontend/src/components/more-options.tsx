@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { deletePost } from "~/utils/postapi";
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -7,9 +8,19 @@ import {
   DropdownMenuItem,
 } from "./ui/dropdown-menu";
 import { EllipsisIcon } from "~/components/ui/icons";
+interface MoreOptionsProps {
+  id: number;
+  onDelete?: () => void;
+  onEdit?: () => void;
+}
 
-export function MoreOptions() {
+export function MoreOptions({ id, onDelete, onEdit }: MoreOptionsProps) {
   const [isMoreOptionsActive, setIsMoreOptionsActive] = useState(false);
+
+  const handleDelete = async () => {
+    await deletePost(id);
+    onDelete?.();
+  };
 
   return (
     <DropdownMenu onOpenChange={(open) => setIsMoreOptionsActive(open)}>
@@ -22,9 +33,8 @@ export function MoreOptions() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        {/* TODO: add edit and delete functionality */}
-        <DropdownMenuItem>Edit</DropdownMenuItem>
-        <DropdownMenuItem>Delete</DropdownMenuItem>
+        <DropdownMenuItem onClick={onEdit}>Edit</DropdownMenuItem>
+        <DropdownMenuItem onClick={handleDelete}>Delete</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
