@@ -13,5 +13,6 @@ namespace SocialMediaApi.Repositories
         Task<SignInResult> PasswordSignInAsync(string userName, string password, bool isPersistent, bool lockoutOnFailure);
         Task SignOutAsync();
         Task<ApplicationUser?> GetUserAsync(ClaimsPrincipal user);
+        Task<IList<string>> GetUserRolesAsync(ApplicationUser user);
     }
 }

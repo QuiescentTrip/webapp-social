@@ -5,6 +5,7 @@ export interface UserInfo {
   name: string;
   createdAt: string;
   updatedAt: string;
+  roles?: string[];
 }
 
 export interface RegisterData {

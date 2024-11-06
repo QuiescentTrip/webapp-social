@@ -19,6 +19,7 @@ export interface AuthContextType {
   register: (registerData: RegisterData) => Promise<void>;
   logout: () => Promise<void>;
   isLoggedIn: () => boolean;
+  isAdmin: () => boolean;
 }
 
 export const AuthContext = createContext<AuthContextType | null>(null);
@@ -64,6 +65,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
           description: "You are now logged in",
         });
         await router.push("/");
+        window.location.reload();
       } else {
         const errorData = (await response.json()) as LoginErrorResponse;
         if (errorData.errors) {
@@ -148,8 +150,21 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 
   const isLoggedIn = () => !!user;
 
+  const isAdmin = () => {
+    return user?.roles?.includes("Admin") ?? false;
+  };
+
   return (
-    <AuthContext.Provider value={{ user, login, register, logout, isLoggedIn }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        login,
+        register,
+        logout,
+        isLoggedIn,
+        isAdmin,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

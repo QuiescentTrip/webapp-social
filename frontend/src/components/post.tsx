@@ -36,10 +36,10 @@ export default function Component({
   created,
   title,
   creator,
-  comments,
+  comments: initialComments,
   likesCount: initialLikesCount,
 }: ComponentProps): JSX.Element {
-  const { user } = useAuth();
+  const { user, isAdmin } = useAuth();
   const [isLiked, setIsLiked] = useState<boolean>(
     user ? likes.some((like) => like.user.name === user.username) : false,
   );
@@ -49,6 +49,8 @@ export default function Component({
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const [editedTitle, setEditedTitle] = useState<string>(title);
   const { toast } = useToast();
+  const [comments, setComments] = useState<CommentType[]>(initialComments);
+
   const handleLikeClick = async () => {
     if (!user) {
       toast({
@@ -179,14 +181,18 @@ export default function Component({
                     id={id}
                   />
 
-                  {/* More Options for post if user is the creator */}
-                  {user && user.username === creator.username && (
-                    <MoreOptions
-                      id={id}
-                      onDelete={handleDelete}
-                      onEdit={handleEdit}
-                    />
-                  )}
+                  {/* More Options for post if user is the creator or is admin */}
+                  {console.log(isAdmin())}
+                  {user &&
+                    (user.username === creator.username || isAdmin()) && (
+                      <MoreOptions
+                        id={id}
+                        onDelete={handleDelete}
+                        onEdit={handleEdit}
+                        user={user}
+                        creator={creator}
+                      />
+                    )}
 
                   <ShowComments
                     comments={comments}
@@ -212,6 +218,7 @@ export default function Component({
                     setCommentText={setCommentText}
                     id={id}
                     comments={comments}
+                    setComments={setComments}
                   />
                 </div>
               )}
@@ -238,12 +245,18 @@ export default function Component({
                     //Maps the comments to the Comment component
                     .map((comment, index) => (
                       <Comment
-                        key={index}
+                        key={comment.id}
                         content={comment.content}
                         name={comment.user.name}
-                        //TODO: Add profile pictures. Now it's just the first two letters of the username
                         avatarSrc={""}
                         avatarFallback={comment.user.name.slice(0, 2)}
+                        commentId={comment.id}
+                        username={comment.user.username}
+                        onDelete={() => {
+                          setComments(
+                            comments.filter((c) => c.id !== comment.id),
+                          );
+                        }}
                       />
                     ))}
 

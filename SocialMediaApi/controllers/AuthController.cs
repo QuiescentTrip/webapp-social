@@ -114,7 +114,14 @@ namespace SocialMediaApi.Controllers
                 return NoContent();
             }
 
-            return Ok(new { username = user.UserName, email = user.Email });
+            var roles = await _authRepository.GetUserRolesAsync(user);
+
+            return Ok(new
+            {
+                username = user.UserName,
+                email = user.Email,
+                roles = roles
+            });
         }
     }
 }

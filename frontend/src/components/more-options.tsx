@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { deletePost } from "~/utils/postapi";
 import { Button } from "./ui/button";
+import { useAuth } from "~/contexts/AuthContext";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -12,9 +13,18 @@ interface MoreOptionsProps {
   id: number;
   onDelete?: () => void;
   onEdit?: () => void;
+  user: UserInfo;
+  creator: UserInfo;
 }
+import type { UserInfo } from "~/types/user";
 
-export function MoreOptions({ id, onDelete, onEdit }: MoreOptionsProps) {
+export function MoreOptions({
+  id,
+  onDelete,
+  onEdit,
+  user,
+  creator,
+}: MoreOptionsProps) {
   const [isMoreOptionsActive, setIsMoreOptionsActive] = useState(false);
 
   const handleDelete = async () => {
@@ -33,7 +43,9 @@ export function MoreOptions({ id, onDelete, onEdit }: MoreOptionsProps) {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem onClick={onEdit}>Edit</DropdownMenuItem>
+        {user && user.username === creator.username && (
+          <DropdownMenuItem onClick={onEdit}>Edit</DropdownMenuItem>
+        )}
         <DropdownMenuItem onClick={handleDelete}>Delete</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

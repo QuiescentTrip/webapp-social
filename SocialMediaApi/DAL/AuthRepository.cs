@@ -46,5 +46,10 @@ namespace SocialMediaApi.DAL
         {
             return await _userManager.GetUserAsync(user);
         }
+
+        public async Task<IList<string>> GetUserRolesAsync(ApplicationUser user)
+        {
+            return await _userManager.GetRolesAsync(user);
+        }
     }
 }

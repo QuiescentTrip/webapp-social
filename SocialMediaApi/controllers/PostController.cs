@@ -150,7 +150,8 @@ namespace SocialMediaApi.Controllers
                 return NotFound();
             }
 
-            if (post.User.Id != user.Id)
+            var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+            if (post.User.Id != user.Id && !isAdmin)
             {
                 return Forbid();
             }
