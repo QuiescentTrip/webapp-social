@@ -81,5 +81,38 @@ namespace SocialMediaApi.Controllers
 
             return CreatedAtAction(nameof(GetComment), new { id = createdComment.Id }, createdComment);
         }
+
+        [Authorize]
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteComment(int id)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var comment = await _commentRepository.GetCommentById(id);
+            if (comment == null)
+            {
+                return NotFound();
+            }
+
+			var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+            if (!isAdmin && comment.User.Id != user.Id)
+            {
+                return Forbid();
+            }
+
+            var result = await _commentRepository.DeleteComment(id);
+            if (result)
+            {
+                return NoContent();
+            }
+            else
+            {
+                return StatusCode(500, "An error occurred while deleting the comment");
+            }
+        }
     }
 }

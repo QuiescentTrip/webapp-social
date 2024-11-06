@@ -14,16 +14,41 @@ public static class DBInit
             var services = scope.ServiceProvider;
             var context = services.GetRequiredService<ApplicationDbContext>();
             var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+			var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 
             context.Database.Migrate();
 
+			SeedRoles(roleManager).Wait();
             SeedUsers(userManager).Wait();
             SeedPosts(context, userManager).Wait();
         }
     }
 
+	private static async Task SeedRoles(RoleManager<IdentityRole> roleManager)
+	{
+		if(!await roleManager.RoleExistsAsync("Admin"))
+		{
+			await roleManager.CreateAsync(new IdentityRole("Admin"));
+		}
+	}
+
     private static async Task SeedUsers(UserManager<ApplicationUser> userManager)
     {
+		
+		var adminEmail = "admin@admin.com";
+		
+		if(await userManager.FindByEmailAsync(adminEmail) == null)
+		{
+			var adminUser = new ApplicationUser
+			{
+				UserName = "admin",
+				Email = adminEmail,
+				Name = "Admin"
+			};
+			await userManager.CreateAsync(adminUser, "AdminPassword123!");
+			await userManager.AddToRoleAsync(adminUser, "Admin");
+		}
+
         string[] userEmails = { "john@example.com", "jane@example.com", "bob@example.com" };
 
         foreach (var email in userEmails)
