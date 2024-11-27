@@ -4,10 +4,8 @@ Vår eksamen i webapp der vi skal lage en nettside som brukeren kan opplaste bil
 
 ## Known bugs
 
-- Console errors. The backend tries to reauthorize the user on refresh. (When unthenticated)
-- When you post comment, it doesnt allow deleting before page refresh.
 - Maybe not bug- but front end fetches all posts and not in increments.
-
+  
 ## How to run
 
 **If on linux or mac:**
