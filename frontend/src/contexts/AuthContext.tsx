@@ -44,9 +44,6 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         ) {
           // User is not logged in, so we'll just set the user to null
           setUser(null);
-        } else {
-          // Log other types of errors
-          console.error("Failed to fetch user info:", error);
         }
       }
     };
@@ -86,8 +83,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
           });
         }
       }
-    } catch (error) {
-      console.error(error);
+    } catch {
       toast({
         variant: "destructive",
         title: "Login failed",
@@ -119,8 +115,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
           });
         });
       }
-    } catch (error) {
-      console.error(error);
+    } catch {
       toast({
         variant: "destructive",
         title: "Registration failed",
@@ -138,8 +133,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
         description: "You have been logged out",
       });
       await router.push("/");
-    } catch (error) {
-      console.error("Logout failed:", error);
+    } catch {
       toast({
         variant: "destructive",
         title: "Logout failed",

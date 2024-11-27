@@ -70,8 +70,12 @@ export default function Component({
         setLikesCount((prev) => prev - 1);
       }
       setIsLiked(!isLiked);
-    } catch (error) {
-      console.error("Error updating like:", error);
+    } catch {
+      toast({
+        title: "Error",
+        description: "Failed to like post",
+        variant: "destructive",
+      });
     }
   };
 
@@ -182,7 +186,6 @@ export default function Component({
                   />
 
                   {/* More Options for post if user is the creator or is admin */}
-                  {console.log(isAdmin())}
                   {user &&
                     (user.username === creator.username || isAdmin()) && (
                       <MoreOptions
@@ -243,7 +246,7 @@ export default function Component({
                     .slice(0, MAX_COMMENT_PER_POST)
 
                     //Maps the comments to the Comment component
-                    .map((comment, index) => (
+                    .map((comment, _) => (
                       <Comment
                         key={comment.id}
                         content={comment.content}

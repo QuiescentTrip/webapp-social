@@ -29,8 +29,7 @@ export default function Login() {
     try {
       await authLogin(formData);
       // The AuthContext now handles the success toast and navigation
-    } catch (error) {
-      console.error(error);
+    } catch {
       // The AuthContext now handles most error cases, but we'll keep this as a fallback
       toast({
         variant: "destructive",

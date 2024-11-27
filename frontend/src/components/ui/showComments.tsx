@@ -39,7 +39,7 @@ export const ShowComments = ({
             View and add comments for this post.
           </DialogDescription>
         </DialogHeader>
-        <div className="flex min-h-[300px] flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <ScrollArea className="w-full flex-grow gap-4 rounded-md border p-4">
             <div className="flex flex-col gap-2">
               {localComments.length > 0 ? (

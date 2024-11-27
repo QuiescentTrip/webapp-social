@@ -46,7 +46,7 @@ namespace SocialMediaApi.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<ActionResult<Comment>> PostComment([FromBody] CommentCreateDto commentData)
+        public async Task<ActionResult<CommentDto>> PostComment([FromBody] CommentCreateDto commentData)
         {
             if (!ModelState.IsValid)
             {
@@ -79,7 +79,20 @@ namespace SocialMediaApi.Controllers
                 return StatusCode(500, "Failed to create comment");
             }
 
-            return CreatedAtAction(nameof(GetComment), new { id = createdComment.Id }, createdComment);
+            var commentDto = new CommentDto
+            {
+                Id = createdComment.Id,
+                Content = createdComment.Content,
+                Created = createdComment.Created,
+                User = new UserDto
+                {
+                    Username = user.UserName ?? string.Empty,
+                    Email = user.Email ?? string.Empty,
+                    Name = user.Name
+                }
+            };
+
+            return CreatedAtAction(nameof(GetComment), new { id = createdComment.Id }, commentDto);
         }
 
         [Authorize]
@@ -98,7 +111,7 @@ namespace SocialMediaApi.Controllers
                 return NotFound();
             }
 
-			var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
+            var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
             if (!isAdmin && comment.User.Id != user.Id)
             {
                 return Forbid();

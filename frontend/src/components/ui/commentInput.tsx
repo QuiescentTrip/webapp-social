@@ -2,17 +2,20 @@ import { createComment } from "~/utils/commentapi";
 import type { Comment as CommentType } from "~/types/comment";
 import { useAuth } from "~/contexts/AuthContext";
 import { useToast } from "~/hooks/use-toast";
+import type { ErrorResponse } from "~/types/ErrorResponse";
 
 export function CommentInput({
   commentText,
   setCommentText,
   id,
   comments,
+  setComments,
 }: {
   commentText: string;
   setCommentText: (text: string) => void;
   id: number;
   comments: CommentType[];
+  setComments: React.Dispatch<React.SetStateAction<CommentType[]>>;
 }): JSX.Element {
   const { toast } = useToast();
   const { user } = useAuth();
@@ -29,24 +32,44 @@ export function CommentInput({
     }
     if (commentText.trim()) {
       try {
-        const newComment = await createComment({
+        const response = await createComment({
           content: commentText,
           postId: id,
         });
-        if (newComment) {
-          comments.push(newComment);
-          setCommentText(""); // Clear the input field
+
+        if (response.ok) {
+          const newComment = (await response.json()) as CommentType;
+          setComments([...comments, newComment]);
+          setCommentText("");
           toast({
             title: "Comment posted",
             description: "Your comment has been added successfully.",
           });
+        } else {
+          const errorData = (await response.json()) as ErrorResponse;
+          if (errorData.errors) {
+            Object.entries(errorData.errors).forEach(([key, messages]) => {
+              messages.forEach((message) => {
+                toast({
+                  variant: "destructive",
+                  title: `${key} Error`,
+                  description: message,
+                });
+              });
+            });
+          } else {
+            toast({
+              variant: "destructive",
+              title: "Comment failed",
+              description: errorData.title ?? "An error occurred",
+            });
+          }
         }
-      } catch (error) {
-        console.error("Error posting comment:", error);
+      } catch {
         toast({
-          title: "Error",
-          description: "Failed to post comment. Please try again.",
           variant: "destructive",
+          title: "Error",
+          description: "An unexpected error occurred",
         });
       }
     }

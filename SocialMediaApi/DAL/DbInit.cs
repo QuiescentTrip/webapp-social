@@ -98,6 +98,46 @@ public static class DBInit
                     LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
                     User = users[random.Next(users.Count)],
+                },
+                new Post
+                {
+                    Title = "Morning Coffee",
+                    ImageUrl = "/uploads/coffee.jpg",
+                    LikesCount = random.Next(0, 100),
+                    Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
+                    User = users[random.Next(users.Count)],
+                },
+                new Post
+                {
+                    Title = "City Lights",
+                    ImageUrl = "/uploads/cityskape.jpeg",
+                    LikesCount = random.Next(0, 100),
+                    Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
+                    User = users[random.Next(users.Count)],
+                },
+                new Post
+                {
+                    Title = "Weekend Hiking",
+                    ImageUrl = "/uploads/hiking.jpg",
+                    LikesCount = random.Next(0, 100),
+                    Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
+                    User = users[random.Next(users.Count)],
+                },
+                new Post
+                {
+                    Title = "My Garden Project",
+                    ImageUrl = "/uploads/garden.jpg",
+                    LikesCount = random.Next(0, 100),
+                    Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
+                    User = users[random.Next(users.Count)],
+                },
+                new Post
+                {
+                    Title = "Beach Sunset",
+                    ImageUrl = "/uploads/beach.jpg",
+                    LikesCount = random.Next(0, 100),
+                    Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
+                    User = users[random.Next(users.Count)],
                 }
             };
 
@@ -122,6 +162,30 @@ public static class DBInit
             {
                 new Comment { Post = posts[2], Content = "So cute!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
                 new Comment { Post = posts[2], Content = "What's its name?", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+            };
+
+            posts[3].Comments = new List<Comment>
+            {
+                new Comment { Post = posts[3], Content = "Great coffee!", User = users[0], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[3], Content = "I love the view!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+            };
+
+            posts[4].Comments = new List<Comment>
+            {
+                new Comment { Post = posts[4], Content = "Beautiful cityscape!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[4], Content = "I'm jealous of your hiking trips!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+            };
+
+            posts[5].Comments = new List<Comment>
+            {
+                new Comment { Post = posts[5], Content = "I love gardening!", User = users[0], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[5], Content = "Your garden project looks amazing!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+            };
+
+            posts[6].Comments = new List<Comment>
+            {
+                new Comment { Post = posts[6], Content = "I'm in love with the beach!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[6], Content = "I'm jealous of your garden project!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
             };
 
             await context.SaveChangesAsync();

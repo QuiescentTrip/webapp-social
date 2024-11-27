@@ -11,7 +11,7 @@ export default function Component(): JSX.Element {
       <div className="flex flex-row items-center justify-center gap-4">
         <div className="flex flex-row items-center justify-center gap-4">
           <Link href="/">
-            <h1 className="text-center">Social Media</h1>
+            <h1 className="text-center">SlowGram</h1>
           </Link>
         </div>
         {user && (

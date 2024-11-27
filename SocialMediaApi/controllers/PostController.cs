@@ -23,7 +23,6 @@ namespace SocialMediaApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreatePost([FromForm] PostCreateDto postDto)
         {
-            Console.WriteLine(postDto);
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

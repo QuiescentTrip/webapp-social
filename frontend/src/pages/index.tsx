@@ -14,11 +14,13 @@ import type { Post as PostType } from "~/types/post";
 import Layout from "./layout";
 import { UPLOAD_BASE_URL } from "~/lib/constants";
 import { MAX_POST_PER_PAGE, MAX_PAGINATION_PAGE } from "~/lib/constants";
+import { useToast } from "~/hooks/use-toast";
 
 export default function Home() {
   const [page, setPage] = useState<number>(1);
   const [posts, setPosts] = useState<PostType[]>([]);
   const [totalPages, setTotalPages] = useState<number>(1);
+  const { toast } = useToast();
   useEffect(() => {
     getAllPosts()
       .then((fetchedPosts: PostType[]) => {
@@ -29,9 +31,14 @@ export default function Home() {
         setPosts(sortedPosts);
         setTotalPages(Math.ceil(sortedPosts.length / MAX_POST_PER_PAGE));
       })
-      .catch((error: Error) => console.error(error));
-  }, []);
-  console.log(posts);
+      .catch(() => {
+        toast({
+          title: "Error",
+          description: "Failed to fetch posts",
+          variant: "destructive",
+        });
+      });
+  }, [toast]);
   const startIndex = (page - 1) * MAX_POST_PER_PAGE;
   const endIndex = startIndex + MAX_POST_PER_PAGE;
   const currentPagePosts = posts.slice(startIndex, endIndex);

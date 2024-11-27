@@ -34,8 +34,15 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.HttpOnly = true;
     options.ExpireTimeSpan = TimeSpan.FromDays(30);
-    options.LoginPath = "/api/Auth/login";
-    options.LogoutPath = "/api/Auth/logout";
+    options.Events = new CookieAuthenticationEvents
+    {
+        OnRedirectToLogin = context =>
+        {
+            // Don't redirect, just return 200 OK for unauthorized requests
+            context.Response.StatusCode = StatusCodes.Status200OK;
+            return Task.CompletedTask;
+        }
+    };
     options.SlidingExpiration = true;
 });
 

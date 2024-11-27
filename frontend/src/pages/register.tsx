@@ -47,8 +47,7 @@ export default function Register() {
         password: formData.password,
       });
       // AuthContext now handles success toast and navigation
-    } catch (error) {
-      console.error(error);
+    } catch {
       // AuthContext handles most error cases, but we'll keep this as a fallback
       toast({
         variant: "destructive",

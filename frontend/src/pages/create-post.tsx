@@ -49,8 +49,7 @@ export default function CreatePost() {
         description: "Your post has been successfully created!",
       });
       await router.push("/");
-    } catch (error) {
-      console.error(error);
+    } catch {
       toast({
         variant: "destructive",
         title: "Post creation failed",

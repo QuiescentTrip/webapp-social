@@ -20,8 +20,8 @@ export const getComments = async (postId: number): Promise<Comment[]> => {
 
 export const createComment = async (
   commentData: CommentData,
-): Promise<Comment> => {
-  const response = await fetch(`${API_BASE_URL}/comment`, {
+): Promise<Response> => {
+  return await fetch(`${API_BASE_URL}/comment`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -29,13 +29,6 @@ export const createComment = async (
     credentials: "include",
     body: JSON.stringify(commentData),
   });
-
-  if (!response.ok) {
-    const errorData = (await response.json()) as ErrorResponse;
-    throw new Error(errorData.message || "Failed to create comment");
-  }
-
-  return response.json() as Promise<Comment>;
 };
 
 export const updateComment = async (
