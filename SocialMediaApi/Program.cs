@@ -51,6 +51,7 @@ builder.Services.AddScoped<IPostRepository, PostRepository>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<ILikeRepository, LikeRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
 
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()

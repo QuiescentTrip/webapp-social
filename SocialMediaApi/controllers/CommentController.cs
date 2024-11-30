@@ -25,22 +25,20 @@ namespace SocialMediaApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Comment>>> GetComments()
+        public async Task<ActionResult<IEnumerable<CommentDto>>> GetComments()
         {
             var comments = await _commentRepository.GetAllComments();
             return Ok(comments);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Comment>> GetComment(int id)
+        public async Task<ActionResult<CommentDto>> GetComment(int id)
         {
             var comment = await _commentRepository.GetCommentById(id);
-
             if (comment == null)
             {
                 return NotFound();
             }
-
             return Ok(comment);
         }
 
@@ -88,7 +86,8 @@ namespace SocialMediaApi.Controllers
                 {
                     Username = user.UserName ?? string.Empty,
                     Email = user.Email ?? string.Empty,
-                    Name = user.Name
+                    Name = user.Name,
+                    ProfilePictureUrl = user.ProfilePictureUrl ?? string.Empty
                 }
             };
 
@@ -105,14 +104,10 @@ namespace SocialMediaApi.Controllers
                 return Unauthorized();
             }
 
-            var comment = await _commentRepository.GetCommentById(id);
-            if (comment == null)
-            {
-                return NotFound();
-            }
-
             var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
-            if (!isAdmin && comment.User.Id != user.Id)
+            var isOwner = await _commentRepository.IsCommentOwner(id, user.Id);
+
+            if (!isAdmin && !isOwner)
             {
                 return Forbid();
             }

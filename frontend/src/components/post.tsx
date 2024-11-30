@@ -8,7 +8,7 @@ import { likePost, unlikePost } from "~/utils/likeapi";
 import type { Comment as CommentType } from "~/types/comment";
 import { HeartIcon, MessageCircleIcon } from "~/components/ui/icons";
 import { useToast } from "~/hooks/use-toast";
-import { MAX_COMMENT_PER_POST } from "~/lib/constants";
+import { MAX_COMMENT_PER_POST, UPLOAD_BASE_URL } from "~/lib/constants";
 import { ShowComments } from "./ui/showComments";
 import { CommentInput } from "./ui/commentInput";
 import { Dialog, DialogTrigger } from "./ui/dialog";
@@ -50,7 +50,6 @@ export default function Component({
   const [editedTitle, setEditedTitle] = useState<string>(title);
   const { toast } = useToast();
   const [comments, setComments] = useState<CommentType[]>(initialComments);
-
   const handleLikeClick = async () => {
     if (!user) {
       toast({
@@ -100,7 +99,6 @@ export default function Component({
       });
     });
   };
-
   return (
     <div className={isDeleted ? "hidden" : ""}>
       <Dialog>
@@ -122,7 +120,9 @@ export default function Component({
             <div className="mb-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Avatar>
-                  <AvatarImage alt="@shadcn" />
+                  <AvatarImage
+                    src={`${UPLOAD_BASE_URL}/${creator.profilePictureUrl}`}
+                  />
                   <AvatarFallback>{creator.name.slice(0, 2)}</AvatarFallback>
                 </Avatar>
                 <div>
@@ -231,9 +231,6 @@ export default function Component({
             <div className="mt-4 space-y-2">
               {comments.length > 0 ? (
                 <>
-                  {/* This sorts comments by created date,
-              and then slices the first 3 comments
-              Fuck this shit */}
                   {[...comments]
                     //Sorts by newest
                     .sort(
@@ -251,7 +248,7 @@ export default function Component({
                         key={comment.id}
                         content={comment.content}
                         name={comment.user.name}
-                        avatarSrc={""}
+                        avatarSrc={`${UPLOAD_BASE_URL}${comment.user.profilePictureUrl}`}
                         avatarFallback={comment.user.name.slice(0, 2)}
                         commentId={comment.id}
                         username={comment.user.username}

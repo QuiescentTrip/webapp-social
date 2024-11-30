@@ -14,30 +14,60 @@ namespace SocialMediaApi.DAL
             _logger = logger;
         }
 
-        public async Task<IEnumerable<Comment>> GetAllComments()
+        public async Task<IEnumerable<CommentDto>> GetAllComments()
         {
             try
             {
-                return await _context.Comments
+                var comments = await _context.Comments
                     .Include(c => c.User)
                     .Include(c => c.Post)
                     .ToListAsync();
+
+                return comments.Select(c => new CommentDto
+                {
+                    Id = c.Id,
+                    Content = c.Content,
+                    Created = c.Created,
+                    User = new UserDto
+                    {
+                        Email = c.User.Email ?? "",
+                        Username = c.User.UserName ?? "",
+                        Name = c.User.Name,
+                        ProfilePictureUrl = c.User.ProfilePictureUrl
+                    }
+                });
             }
             catch (Exception e)
             {
                 _logger.LogError($"Error in GetAllComments: {e.Message}");
-                return Enumerable.Empty<Comment>();
+                return Enumerable.Empty<CommentDto>();
             }
         }
 
-        public async Task<Comment?> GetCommentById(int id)
+        public async Task<CommentDto?> GetCommentById(int id)
         {
             try
             {
-                return await _context.Comments
+                var comment = await _context.Comments
                     .Include(c => c.User)
                     .Include(c => c.Post)
                     .FirstOrDefaultAsync(c => c.Id == id);
+
+                if (comment == null) return null;
+
+                return new CommentDto
+                {
+                    Id = comment.Id,
+                    Content = comment.Content,
+                    Created = comment.Created,
+                    User = new UserDto
+                    {
+                        Email = comment.User.Email ?? "",
+                        Username = comment.User.UserName ?? "",
+                        Name = comment.User.Name,
+                        ProfilePictureUrl = comment.User.ProfilePictureUrl
+                    }
+                };
             }
             catch (Exception e)
             {
@@ -105,6 +135,28 @@ namespace SocialMediaApi.DAL
             catch (Exception e)
             {
                 _logger.LogError($"Error in CommentExists: {e.Message}");
+                return false;
+            }
+        }
+
+        public async Task<bool> IsCommentOwner(int commentId, string userId)
+        {
+            try
+            {
+                var comment = await _context.Comments
+                    .Include(c => c.User)
+                    .FirstOrDefaultAsync(c => c.Id == commentId);
+
+                if (comment == null)
+                {
+                    return false;
+                }
+
+                return comment.User.Id == userId;
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"Error in IsCommentOwner: {e.Message}");
                 return false;
             }
         }
