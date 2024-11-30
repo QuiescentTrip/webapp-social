@@ -70,7 +70,6 @@ public static class DBInit
                     ProfilePictureUrl = pfp
                 };
                 await userManager.CreateAsync(user, "patrick");
-                await userManager.CreateAsync(user, "patrick");
             }
         }
     }
