@@ -45,11 +45,11 @@ public static class DBInit
                 Email = adminEmail,
                 Name = "Admin"
             };
-            await userManager.CreateAsync(adminUser, "AdminPassword123!");
+            await userManager.CreateAsync(adminUser, "admin");
             await userManager.AddToRoleAsync(adminUser, "Admin");
         }
 
-        string[] userEmails = { "john@example.com", "jane@example.com", "bob@example.com" };
+        string[] userEmails = { "john@example.com", "patrick@patrick.com", "bob@example.com" };
 
         foreach (var email in userEmails)
         {
@@ -61,7 +61,7 @@ public static class DBInit
                     Email = email,
                     Name = email.Split('@')[0].ToUpperInvariant()
                 };
-                await userManager.CreateAsync(user, "Password123!");
+                await userManager.CreateAsync(user, "patrick");
             }
         }
     }
