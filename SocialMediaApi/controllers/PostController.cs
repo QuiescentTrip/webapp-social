@@ -105,7 +105,8 @@ namespace SocialMediaApi.Controllers
                 {
                     Username = post.User.UserName ?? string.Empty,
                     Email = post.User.Email ?? string.Empty,
-                    Name = post.User.Name
+                    Name = post.User.Name,
+                    ProfilePictureUrl = post.User.ProfilePictureUrl ?? string.Empty
                 },
                 LikesCount = post.Likes.Count,
                 Likes = post.Likes.Select(l => new LikeDto
@@ -115,7 +116,8 @@ namespace SocialMediaApi.Controllers
                     {
                         Username = l.User.UserName ?? string.Empty,
                         Email = l.User.Email ?? string.Empty,
-                        Name = l.User.Name
+                        Name = l.User.Name,
+                        ProfilePictureUrl = l.User.ProfilePictureUrl ?? string.Empty
                     }
                 }).ToList(),
                 Comments = post.Comments.Select(c => new CommentDto
@@ -127,7 +129,8 @@ namespace SocialMediaApi.Controllers
                     {
                         Username = c.User.UserName ?? string.Empty,
                         Email = c.User.Email ?? string.Empty,
-                        Name = c.User.Name
+                        Name = c.User.Name,
+                        ProfilePictureUrl = c.User.ProfilePictureUrl ?? string.Empty
                     }
                 }).ToList()
             }));

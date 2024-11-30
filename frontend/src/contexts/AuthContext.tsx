@@ -15,6 +15,7 @@ import { useToast } from "~/hooks/use-toast";
 
 export interface AuthContextType {
   user: UserInfo | null;
+  setUser: (user: UserInfo | null) => void;
   login: (loginCredentials: LoginCredentials) => Promise<void>;
   register: (registerData: RegisterData) => Promise<void>;
   logout: () => Promise<void>;
@@ -152,6 +153,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     <AuthContext.Provider
       value={{
         user,
+        setUser,
         login,
         register,
         logout,

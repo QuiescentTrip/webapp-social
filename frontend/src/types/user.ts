@@ -6,6 +6,7 @@ export interface UserInfo {
   createdAt: string;
   updatedAt: string;
   roles?: string[];
+  profilePictureUrl: string | null;
 }
 
 export interface RegisterData {

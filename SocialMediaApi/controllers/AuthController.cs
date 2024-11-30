@@ -49,9 +49,10 @@ namespace SocialMediaApi.Controllers
                 await _authRepository.SignInAsync(user, isPersistent: false);
                 return Ok(new UserDto
                 {
-                    Username = user.UserName ?? string.Empty,
-                    Email = user.Email ?? string.Empty,
-                    Name = user.Name
+                    Username = user.UserName,
+                    Email = user.Email,
+                    Name = user.Name,
+                    ProfilePictureUrl = user.ProfilePictureUrl ?? string.Empty
                 });
             }
 
@@ -120,7 +121,9 @@ namespace SocialMediaApi.Controllers
             {
                 username = user.UserName,
                 email = user.Email,
-                roles = roles
+                name = user.Name,
+                roles = roles,
+                profilePictureUrl = user.ProfilePictureUrl
             });
         }
     }

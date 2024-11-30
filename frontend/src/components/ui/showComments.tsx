@@ -9,6 +9,7 @@ import {
 } from "~/components/ui/dialog";
 import { CommentInput } from "~/components/ui/commentInput";
 import { useState, useEffect } from "react";
+import { UPLOAD_BASE_URL } from "~/lib/constants";
 
 export const ShowComments = ({
   comments,
@@ -48,7 +49,7 @@ export const ShowComments = ({
                     key={comment.id}
                     content={comment.content}
                     name={comment.user.name}
-                    avatarSrc={""}
+                    avatarSrc={`${UPLOAD_BASE_URL}${comment.user.profilePictureUrl}`}
                     avatarFallback={comment.user.name.slice(0, 2)}
                     commentId={comment.id}
                     username={comment.user.username}
