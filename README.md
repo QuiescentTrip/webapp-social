@@ -55,12 +55,11 @@ cd .\SocialMediaApi\; dotnet watch run
 - [x] Edit post
 - [x] Tests
 - [x] Admin role
-- [ ] Asp.net MVC frontent
 
 ### Todos extras:
 
-- [ ] Profile
-- [ ] Profile picture
+- [x] Profile
+- [x] Profile picture
 
 ## Ressurser:
 
