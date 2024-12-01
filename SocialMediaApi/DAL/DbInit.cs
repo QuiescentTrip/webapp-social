@@ -47,10 +47,10 @@ public static class DBInit
                 ProfilePictureUrl = "/uploads/profiles/admin.jpg"
             };
             await userManager.CreateAsync(adminUser, "admin");
-            await userManager.AddToRoleAsync(adminUser, "Admin");
+            await userManager.AddToRoleAsync(adminUser, "admin");
         }
 
-        string[] userEmails = { "john@example.com", "patrick@patrick.com", "bob@example.com" };
+        string[] userEmails = { "anna@example.com", "jane@example.com", "bob@example.com", "patrick@patrick.com" };
 
         foreach (var email in userEmails)
         {
@@ -69,6 +69,7 @@ public static class DBInit
                     Name = email.Split('@')[0],
                     ProfilePictureUrl = pfp
                 };
+                await userManager.CreateAsync(user, "patrick");
                 await userManager.CreateAsync(user, "patrick");
             }
         }
