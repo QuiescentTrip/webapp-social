@@ -98,9 +98,6 @@ namespace SocialMediaApi.DAL
                 return false;
             }
         }
-
-        // TODO: Fix so it checks if the user has already liked the post
-        // TODO: Create Like model
         public async Task<bool> LikePost(int postId)
         {
             using var transaction = await _context.Database.BeginTransactionAsync();

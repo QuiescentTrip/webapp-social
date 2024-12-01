@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import type { ReactNode } from "react";
 import type { UserInfo, RegisterData, LoginCredentials } from "~/types/user";
-import type { ErrorResponse, LoginErrorResponse } from "~/types/ErrorResponse";
+import type { LoginErrorResponse } from "~/types/ErrorResponse";
 
 import {
   getUserInfo,

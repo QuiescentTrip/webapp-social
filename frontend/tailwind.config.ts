@@ -56,6 +56,9 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
       },
+      screens: {
+        xxs: "360px",
+      },
     },
     keyframes: {
       rainbow: {

@@ -6,6 +6,7 @@ import TextInput from "~/components/ui/text-input";
 import Layout from "./layout";
 import { API_BASE_URL, UPLOAD_BASE_URL } from "~/lib/constants";
 import { Avatar, AvatarImage, AvatarFallback } from "~/components/ui/avatar";
+import type { UserInfo } from "~/types/user";
 
 export default function Profile() {
   const { user, setUser } = useAuth();
@@ -94,7 +95,7 @@ export default function Profile() {
       });
 
       if (response.ok) {
-        const updatedUser = await response.json();
+        const updatedUser = (await response.json()) as UserInfo;
         setUser(updatedUser);
         toast({
           title: "Profile Updated",
@@ -108,7 +109,7 @@ export default function Profile() {
           description: error.message ?? "Failed to update profile",
         });
       }
-    } catch (error) {
+    } catch {
       toast({
         variant: "destructive",
         title: "Update Failed",

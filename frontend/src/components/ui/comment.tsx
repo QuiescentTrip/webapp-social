@@ -37,7 +37,7 @@ const Comment: React.FC<CommentProps> = ({
         description: "Your comment has been deleted successfully.",
       });
       onDelete?.();
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "Failed to delete comment. Please try again.",
@@ -52,11 +52,11 @@ const Comment: React.FC<CommentProps> = ({
           <AvatarImage src={avatarSrc} alt={name} />
           <AvatarFallback>{avatarFallback}</AvatarFallback>
         </Avatar>
-        <div>
+        <div className="break-words">
           <Link href="#" className="mr-2 font-medium" prefetch={false}>
             {name}
           </Link>
-          {content}
+          <span className="break-all">{content}</span>
         </div>
       </div>
       {user && (user.username === username || isAdmin()) && (

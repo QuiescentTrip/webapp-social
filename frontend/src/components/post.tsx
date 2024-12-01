@@ -41,7 +41,7 @@ export default function Component({
 }: ComponentProps): JSX.Element {
   const { user, isAdmin } = useAuth();
   const [isLiked, setIsLiked] = useState<boolean>(
-    user ? likes.some((like) => like.user.name === user.username) : false,
+    user ? likes.some((like) => like.user.username === user.username) : false,
   );
   const [likesCount, setLikesCount] = useState<number>(initialLikesCount);
   const [commentText, setCommentText] = useState<string>("");
@@ -177,14 +177,6 @@ export default function Component({
                     </Button>
                   </DialogTrigger>
 
-                  <ShowComments
-                    comments={comments}
-                    loggedin={!!user}
-                    commentText={commentText}
-                    setCommentText={setCommentText}
-                    id={id}
-                  />
-
                   {/* More Options for post if user is the creator or is admin */}
                   {user &&
                     (user.username === creator.username || isAdmin()) && (
@@ -197,12 +189,14 @@ export default function Component({
                       />
                     )}
 
+                  {/* Single ShowComments component */}
                   <ShowComments
                     comments={comments}
                     loggedin={!!user}
                     commentText={commentText}
                     setCommentText={setCommentText}
                     id={id}
+                    setComments={setComments}
                   />
                 </div>
 
