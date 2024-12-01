@@ -43,7 +43,8 @@ public static class DBInit
             {
                 UserName = "admin",
                 Email = adminEmail,
-                Name = "Admin"
+                Name = "admin",
+                ProfilePictureUrl = "/uploads/profiles/admin.jpg"
             };
             await userManager.CreateAsync(adminUser, "admin");
             await userManager.AddToRoleAsync(adminUser, "Admin");
@@ -55,11 +56,18 @@ public static class DBInit
         {
             if (await userManager.FindByEmailAsync(email) == null)
             {
+                var pfp = "";
+                // to display user without profile picture
+                if (email != "bob@example.com")
+                {
+                    pfp = "/uploads/profiles/" + email.Split('@')[0] + ".jpg";
+                }
                 var user = new ApplicationUser
                 {
                     UserName = email.Split('@')[0],
                     Email = email,
-                    Name = email.Split('@')[0].ToUpperInvariant()
+                    Name = email.Split('@')[0],
+                    ProfilePictureUrl = pfp
                 };
                 await userManager.CreateAsync(user, "patrick");
             }
@@ -79,7 +87,6 @@ public static class DBInit
                 {
                     Title = "My First Post",
                     ImageUrl = "/uploads/poost.webp",
-                    LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
                     User = users[random.Next(users.Count)],
                 },
@@ -87,7 +94,6 @@ public static class DBInit
                 {
                     Title = "Beautiful Sunset",
                     ImageUrl = "/uploads/sunset.webp",
-                    LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
                     User = users[random.Next(users.Count)],
                 },
@@ -95,7 +101,6 @@ public static class DBInit
                 {
                     Title = "My Pet Cat",
                     ImageUrl = "/uploads/cat.webp",
-                    LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
                     User = users[random.Next(users.Count)],
                 },
@@ -103,7 +108,6 @@ public static class DBInit
                 {
                     Title = "Morning Coffee",
                     ImageUrl = "/uploads/coffee.jpg",
-                    LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
                     User = users[random.Next(users.Count)],
                 },
@@ -111,7 +115,6 @@ public static class DBInit
                 {
                     Title = "City Lights",
                     ImageUrl = "/uploads/cityskape.jpeg",
-                    LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
                     User = users[random.Next(users.Count)],
                 },
@@ -119,7 +122,6 @@ public static class DBInit
                 {
                     Title = "Weekend Hiking",
                     ImageUrl = "/uploads/hiking.jpg",
-                    LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
                     User = users[random.Next(users.Count)],
                 },
@@ -127,7 +129,6 @@ public static class DBInit
                 {
                     Title = "My Garden Project",
                     ImageUrl = "/uploads/garden.jpg",
-                    LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
                     User = users[random.Next(users.Count)],
                 },
@@ -135,7 +136,6 @@ public static class DBInit
                 {
                     Title = "Beach Sunset",
                     ImageUrl = "/uploads/beach.jpg",
-                    LikesCount = random.Next(0, 100),
                     Created = DateTime.UtcNow.AddDays(-random.Next(1, 30)),
                     User = users[random.Next(users.Count)],
                 }
@@ -148,44 +148,38 @@ public static class DBInit
             posts[0].Comments = new List<Comment>
             {
                 new Comment { Post = posts[0], Content = "Welcome to the community!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
-                new Comment { Post = posts[0], Content = "Great first post!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+                new Comment { Post = posts[0], Content = "Great first post!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
             };
 
             posts[1].Comments = new List<Comment>
             {
                 new Comment { Post = posts[1], Content = "Stunning view!", User = users[0], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
                 new Comment { Post = posts[1], Content = "Where was this taken?", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
-                new Comment { Post = posts[1], Content = "I wish I was there!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
-            };
-
-            posts[2].Comments = new List<Comment>
-            {
-                new Comment { Post = posts[2], Content = "So cute!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
-                new Comment { Post = posts[2], Content = "What's its name?", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+                new Comment { Post = posts[1], Content = "I wish I was there!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[1], Content = "The lighting is perfect!", User = users[3], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[1], Content = "This is amazing!", User = users[0], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
             };
 
             posts[3].Comments = new List<Comment>
             {
                 new Comment { Post = posts[3], Content = "Great coffee!", User = users[0], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
-                new Comment { Post = posts[3], Content = "I love the view!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
-            };
-
-            posts[4].Comments = new List<Comment>
-            {
-                new Comment { Post = posts[4], Content = "Beautiful cityscape!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
-                new Comment { Post = posts[4], Content = "I'm jealous of your hiking trips!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+                new Comment { Post = posts[3], Content = "I love the view!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[3], Content = "Perfect morning vibes!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[3], Content = "Which coffee shop is this?", User = users[3], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
             };
 
             posts[5].Comments = new List<Comment>
             {
                 new Comment { Post = posts[5], Content = "I love gardening!", User = users[0], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
-                new Comment { Post = posts[5], Content = "Your garden project looks amazing!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
+                new Comment { Post = posts[5], Content = "Your garden project looks amazing!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[5], Content = "What plants are you growing?", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[5], Content = "This is inspiring!", User = users[3], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
+                new Comment { Post = posts[5], Content = "Can't wait to see more updates!", User = users[0], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
             };
 
             posts[6].Comments = new List<Comment>
             {
                 new Comment { Post = posts[6], Content = "I'm in love with the beach!", User = users[1], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) },
-                new Comment { Post = posts[6], Content = "I'm jealous of your garden project!", User = users[2], Created = DateTime.UtcNow.AddDays(-random.Next(1, 5)) }
             };
 
             await context.SaveChangesAsync();

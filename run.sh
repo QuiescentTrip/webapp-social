@@ -35,7 +35,7 @@ run_command() {
 tmux new-session -d -s webapp_social
 
 # Use gum to choose which components to run
-CHOICE=$(gum choose --header "Do you want to run the frontend or backend?" --item.foreground 250 "Both (Recommended)" "Frontend" "Backend" "Unit Tests")
+CHOICE=$(gum choose --header "Do you want to run the frontend or backend?" --item.foreground 250 "Both (Recommended)" "Frontend" "Backend")
 
 case $CHOICE in
     "Frontend")
@@ -51,9 +51,6 @@ case $CHOICE in
         check_and_run_migrations
         tmux send-keys "cd frontend && npm run dev" C-m
         run_command "cd SocialMediaApi && dotnet watch run"
-        ;;
-    "Unit Tests")
-		tmux send-keys "dotnet test" C-m
         ;;
     *)
         echo "Invalid choice. Exiting."

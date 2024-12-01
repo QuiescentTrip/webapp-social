@@ -59,9 +59,13 @@ export default function Home() {
             comments={post.comments}
           />
         ))}
+        {/* Only show pagination if we have more than one page 
+        This part (pagination) covers a lot of edge cases which is why it's a bit complicated and perhaps over engineered.
+        */}
         {totalPages > 1 && (
           <Pagination>
             <PaginationContent>
+              {/* Show "Previous" button if we're not on the first page */}
               {page > 1 && (
                 <PaginationItem>
                   <PaginationPrevious
@@ -70,6 +74,8 @@ export default function Home() {
                   />
                 </PaginationItem>
               )}
+
+              {/* Show link to page 1 if we're far enough away from it */}
               {page > MAX_PAGINATION_PAGE / 2 + 1 && (
                 <PaginationItem>
                   <PaginationLink href="#" onClick={() => setPage(1)}>
@@ -77,7 +83,11 @@ export default function Home() {
                   </PaginationLink>
                 </PaginationItem>
               )}
+
+              {/* Show ellipsis if there are many pages between current page and page 1 */}
               {page > MAX_PAGINATION_PAGE / 2 + 2 && <PaginationEllipsis />}
+
+              {/* Generate the page numbers around current page */}
               {[...Array.from({ length: MAX_PAGINATION_PAGE })].map((_, i) => {
                 const pageNumber =
                   page - Math.floor(MAX_PAGINATION_PAGE / 2) + i;
@@ -96,9 +106,13 @@ export default function Home() {
                 }
                 return null;
               })}
+
+              {/* Show ellipsis if there are many pages between current page and last page */}
               {page < totalPages - MAX_PAGINATION_PAGE / 2 - 1 && (
                 <PaginationEllipsis />
               )}
+
+              {/* Show link to last page if we're far enough away from it */}
               {page < totalPages - MAX_PAGINATION_PAGE / 2 && (
                 <PaginationItem>
                   <PaginationLink href="#" onClick={() => setPage(totalPages)}>
@@ -106,6 +120,8 @@ export default function Home() {
                   </PaginationLink>
                 </PaginationItem>
               )}
+
+              {/* Show "Next" button if we're not on the last page */}
               {page < totalPages && (
                 <PaginationItem>
                   <PaginationNext href="#" onClick={() => setPage(page + 1)} />
