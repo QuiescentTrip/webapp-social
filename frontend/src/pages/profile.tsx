@@ -18,8 +18,6 @@ export default function Profile() {
     newPassword: "",
     profilePicture: null as File | null,
   });
-  console.log(user);
-  console.log(formData);
 
   const [previewUrl, setPreviewUrl] = useState<string | null>(
     user?.profilePictureUrl
