@@ -57,10 +57,10 @@ namespace SocialMediaApi.DAL
                 await _context.SaveChangesAsync();
                 return true;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                _logger.LogError($"Error in CreatePost: {e.Message}");
-                _logger.LogError($"Inner exception: {e.InnerException?.Message}");
+                _logger.LogError(ex, "Failed to create post. Title: {Title}, UserId: {UserId}",
+                    post.Title, post.User.Id);
                 return false;
             }
         }

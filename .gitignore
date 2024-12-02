@@ -4,3 +4,4 @@
 **/Migrations/
 **/Logs/
 **/socialmedia.db
+*.log

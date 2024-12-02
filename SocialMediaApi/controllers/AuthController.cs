@@ -6,6 +6,7 @@ using SocialMediaApi.Models;
 using System.Threading.Tasks;
 using System;
 using SocialMediaApi.Repositories;
+using Microsoft.Extensions.Logging;
 
 namespace SocialMediaApi.Controllers
 {
@@ -14,66 +15,75 @@ namespace SocialMediaApi.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthRepository _authRepository;
+        private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IAuthRepository authRepository)
+        public AuthController(IAuthRepository authRepository, ILogger<AuthController> logger)
         {
             _authRepository = authRepository;
+            _logger = logger;
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto model)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(new ValidationProblemDetails(ModelState));
-            }
-
-            var existingUser = await _authRepository.FindUserByEmailAsync(model.Email);
-            if (existingUser != null)
-            {
-                ModelState.AddModelError("Email", "Email is already in use");
-                return BadRequest(new ValidationProblemDetails(ModelState));
-            }
-
-            var user = new ApplicationUser
-            {
-                UserName = model.Username,
-                Email = model.Email,
-                Name = model.Name
-            };
-
-            var result = await _authRepository.CreateUserAsync(user, model.Password);
-
-            if (result.Succeeded)
-            {
-                await _authRepository.SignInAsync(user, isPersistent: false);
-                return Ok(new UserDto
+                if (!ModelState.IsValid)
                 {
-                    Username = user.UserName,
-                    Email = user.Email,
-                    Name = user.Name,
-                    ProfilePictureUrl = user.ProfilePictureUrl ?? string.Empty
-                });
-            }
+                    return BadRequest(new ValidationProblemDetails(ModelState));
+                }
 
-            foreach (var error in result.Errors)
+                var existingUser = await _authRepository.FindUserByEmailAsync(model.Email);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError("Email", "Email is already in use");
+                    return BadRequest(new ValidationProblemDetails(ModelState));
+                }
+
+                var user = new ApplicationUser
+                {
+                    UserName = model.Username,
+                    Email = model.Email,
+                    Name = model.Name
+                };
+
+                var result = await _authRepository.CreateUserAsync(user, model.Password);
+
+                if (result.Succeeded)
+                {
+                    await _authRepository.SignInAsync(user, isPersistent: false);
+                    return Ok(new UserDto
+                    {
+                        Username = user.UserName,
+                        Email = user.Email,
+                        Name = user.Name,
+                        ProfilePictureUrl = user.ProfilePictureUrl ?? string.Empty
+                    });
+                }
+
+                _logger.LogError("Failed to register user {Email}. Errors: {Errors}",
+                    model.Email,
+                    string.Join(", ", result.Errors.Select(e => e.Description)));
+
+                return BadRequest(new ValidationProblemDetails(ModelState));
+            }
+            catch (Exception ex)
             {
-                ModelState.AddModelError(string.Empty, error.Description);
+                _logger.LogError(ex, "Unexpected error during user registration for {Email}", model.Email);
+                return StatusCode(500, "An unexpected error occurred during registration");
             }
-
-            return BadRequest(new ValidationProblemDetails(ModelState));
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto model)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(new ValidationProblemDetails(ModelState));
-            }
-
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(new ValidationProblemDetails(ModelState));
+                }
+
                 var user = await _authRepository.FindUserByEmailAsync(model.Email);
                 if (user == null || user.UserName == null)
                 {
@@ -91,10 +101,10 @@ namespace SocialMediaApi.Controllers
                 ModelState.AddModelError("Password", "Invalid email or password");
                 return BadRequest(new ValidationProblemDetails(ModelState));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                ModelState.AddModelError("Email", "Invalid email or password");
-                return BadRequest(new ValidationProblemDetails(ModelState));
+                _logger.LogError(ex, "Unexpected error during login attempt for {Email}", model.Email);
+                return StatusCode(500, "An unexpected error occurred during login");
             }
         }
 

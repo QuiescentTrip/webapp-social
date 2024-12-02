@@ -104,16 +104,16 @@ namespace SocialMediaApi.Controllers
                 // Return updated user info
                 return Ok(new UserDto
                 {
-                    Username = user.UserName,
-                    Email = user.Email,
-                    Name = user.Name,
+                    Username = user.UserName ?? string.Empty,
+                    Email = user.Email ?? string.Empty,
+                    Name = user.Name ?? string.Empty,
                     ProfilePictureUrl = user.ProfilePictureUrl ?? string.Empty
                 });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error updating profile for user {UserId}", user.Id);
-                return StatusCode(500, new { message = "An error occurred while updating the profile" });
+                _logger.LogError(ex, "Failed to update profile for user {UserId}", User.Identity?.Name);
+                return StatusCode(500, "An unexpected error occurred while updating the profile");
             }
         }
     }
