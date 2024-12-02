@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Component(): JSX.Element {
   const groupMembers = [
-    { name: "Fabian Tangen", github: "https://github.com/QuiescentTrip" },
-    { name: "Sander Schultz", github: "https://github.com/SanderSchultz" },
-    { name: "Daniel Trofimovs", github: "https://github.com/Danieltrof" },
+    { name: "Candidate 323", github: "https://github.com/" },
+    { name: "Candidate 295", github: "https://github.com/" },
+    { name: "Candidate 331", github: "https://github.com/" },
   ];
   return (
     <footer>
